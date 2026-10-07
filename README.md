@@ -56,6 +56,8 @@ npm run test:headed                         # desktop Chrome, with a visible bro
 npm run report                              # open the HTML report of the last run
 npm run test:visual                         # visual regression only (@visual)
 npm run test:visual:update                  # re-capture the visual baseline after an intended change
+npm run lighthouse                          # Lighthouse CI, mobile: median of 3 runs, compared with the baseline
+npm run lighthouse:desktop                  # the same with the desktop preset
 npm run typecheck                           # TypeScript check without running tests
 ```
 
@@ -65,6 +67,8 @@ npm run typecheck                           # TypeScript check without running t
 | `mobile-chrome` | Pixel 7 emulation (close to C4) | `@mobile` only |
 | `mobile-safari` | iPhone 13 emulation, WebKit engine (close to C3, not a real device) | `@mobile` only |
 
+**Lighthouse CI** (`lighthouserc.json`, `lighthouserc.desktop.json`) checks 6 key pages and prints medians against `lighthouse/baseline-*.json`. It only warns, because REQ-015 has no threshold yet. After an intended change, save a new baseline with `node scripts/lighthouse-summary.mjs mobile --save-baseline`. Note: `@lhci/cli` pulls in outdated dependencies (`npm audit` reports issues in dev dependencies only). It runs locally against public pages and isn't part of the site.
+
 Tests run against the **live site**, so they are read-only and use 2 workers to keep the load low. Every test title starts with its check or test case ID (`S-07`, `TC-NAV-003`). A known open bug is marked with `test.fail()` and the bug ID, so the run stays green until the bug is fixed and then flags the test for cleanup.
 
 ## structure
@@ -72,6 +76,9 @@ Tests run against the **live site**, so they are read-only and use 2 workers to 
 ```
 ROADMAP.md                 # phases, milestones, status
 playwright.config.ts       # base URL, projects (desktop / mobile)
+lighthouserc*.json         # Lighthouse CI config (mobile / desktop)
+lighthouse/                # Lighthouse baselines (medians)
+scripts/                   # helper scripts (Lighthouse summary)
 tests/                     # automated tests (*.spec.ts)
   pages/                   # page objects
   support/                 # site map crawler
@@ -94,11 +101,11 @@ docs/
 - **Phase 1, test documentation:** done (requirements v1.0, strategy, plan, 5 checklists, 40 test cases, traceability, review).
 - **Phase 2, cycle 1 manual execution:** closed with deviations, signed off 2026-10-07. 33/37 executed test cases passed; 7 bugs and 5 suggestions ([summary report](docs/reports/2026-10-07-cycle-1.md)). Manual-only checks carry over to the next cycle.
 - **Phase 3, automation basics:** done. Playwright + TypeScript suite.
-- **Phase 4, automation coverage (in progress):** Page Object Model; checks over every page (links, anchors, files, SEO, UA/EN parity, language switcher, data consistency). 81 tests (incl. axe accessibility, keyboard and visual regression). 40 of 42 test cases automated.
+- **Phase 4, automation coverage:** done. Page Object Model; checks over every page (links, anchors, files, SEO, UA/EN parity, language switcher, data consistency). 81 Playwright tests (incl. axe accessibility, keyboard, visual regression) plus Lighthouse CI. 41 of 42 test cases automated.
 
 ## next step
 
-Phase 4: Lighthouse CI for performance.
+Phase 5: decide on CI (GitHub Actions) and reporting. This needs the repo on GitHub first.
 
 ## resources
 

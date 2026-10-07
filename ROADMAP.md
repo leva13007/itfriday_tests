@@ -2,7 +2,7 @@
 
 Where the project is going and in what order. Each phase ends with a clear **definition of done**. A phase starts only when the previous one is done.
 
-**Current phase: 4, Automation coverage** (phase 3 done 2026-10-07)
+**Current phase: 5, CI and reporting** (phase 4 done 2026-10-07; still to decide)
 
 | Phase | Goal | Status |
 |---|---|---|
@@ -10,7 +10,7 @@ Where the project is going and in what order. Each phase ends with a clear **def
 | 1. Test documentation | Full QA documentation set, written before any execution | ✅ done |
 | 2. Manual execution | Run the TCs and exploratory sessions, file real bugs, write report #1 | ✅ done, with deviations |
 | 3. Automation basics | Playwright + TypeScript, smoke and navigation TCs automated | ✅ done |
-| 4. Automation coverage | Links, visual, SEO, a11y, performance, refactor to Page Object Model | 🟡 in progress |
+| 4. Automation coverage | Links, visual, SEO, a11y, performance, refactor to Page Object Model | ✅ done |
 | 5. CI and reporting | Scheduled runs, public report | 💭 to decide |
 | 6. Polish and publish | Final README, results overview, public repo | ⏳ planned |
 
@@ -80,17 +80,17 @@ Goal: first green Playwright run.
 
 **Done when:** smoke + navigation run green locally with `npx playwright test`.
 
-## Phase 4: Automation coverage 🟡
+## Phase 4: Automation coverage ✅
 
 - [x] Refactor to Page Object Model (header, language switcher, page types) *([`tests/pages/`](tests/pages/), exposed as fixtures in [`tests/fixtures.ts`](tests/fixtures.ts))*
 - [x] Broken link checker (internal + external, crawled from the site map) *([`tests/site-map.spec.ts`](tests/site-map.spec.ts): every page, anchor, image and file; invites in `content.spec.ts`. LinkedIn stays manual: TC-LNK-005)*
 - [x] Visual regression with `toHaveScreenshot` (desktop + mobile, key pages) *([`tests/visual.spec.ts`](tests/visual.spec.ts): 9 pages × desktop Chrome + iPhone/WebKit; unblocks TC-VIS-001. Baselines are macOS-specific, CI needs its own)*
 - [x] SEO checks (title, description, `lang`, OG tags) *(TC-SEO-001…004 on every page)*
 - [x] Accessibility with `@axe-core/playwright` *([`tests/a11y.spec.ts`](tests/a11y.spec.ts): axe on representative pages in both themes, skip link, keyboard (unblocks TC-A11Y-003), image alternatives)*
-- [ ] Performance in automation: Lighthouse CI (`@lhci/cli`) over the key pages, median of 3 runs, compared against the cycle 1 [baseline](docs/reports/cycle-1/lighthouse/README.md). Budgets once REQ-015 gets a threshold. In phase 5 the same job runs in GitHub Actions
+- [x] Performance in automation: Lighthouse CI (`@lhci/cli`) over the key pages, median of 3 runs, compared against a saved baseline (`lighthouse/baseline-*.json`). Budgets once REQ-015 gets a threshold. In phase 5 the same job runs in GitHub Actions
 - [x] Data-driven tests over all stream/speaker pages *(site map crawl; TC-I18N-005, TC-I18N-007, TC-STR-004 from the exploratory follow-ups)*
 
-**Done when:** every `candidate` TC is `automated` or has a written reason why not.
+**Done when:** every `candidate` TC is `automated` or has a written reason why not. *(Met 2026-10-07: 41 of 42 automated; TC-LNK-005 stays manual-only because LinkedIn blocks automated requests.)*
 
 ## Phase 5: CI and reporting 💭
 

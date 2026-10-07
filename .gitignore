@@ -7,6 +7,10 @@ playwright-report/
 blob-report/
 playwright/.cache/
 
+# Lighthouse CI output (reports are large; medians are summarised by scripts/lighthouse-summary.mjs)
+.lighthouseci/
+lighthouse-results/
+
 # secrets
 .env
 .env.*

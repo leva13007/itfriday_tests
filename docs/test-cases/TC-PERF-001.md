@@ -6,7 +6,7 @@
 | Requirement | REQ-015 |
 | Priority | Low |
 | Type | Performance |
-| Automation | candidate |
+| Automation | automated (Lighthouse CI: `npm run lighthouse`, `npm run lighthouse:desktop`; config in `lighthouserc*.json`) |
 | Author | |
 | Created | 2026-10-07 |
 
@@ -43,3 +43,4 @@ Baseline only: there is no pass/fail threshold (decisions log, 2026-10-07). Late
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
 | 2026-10-07 | Lighthouse 13.5.0 CLI, Chrome 154 headless | Pass · baseline recorded for 6 pages × 2 devices ([baseline](../reports/cycle-1/lighthouse/README.md)). Stream pages on mobile: perf 64, LCP 11.5 s, CLS 0.216 → SUG-003 | SUG-003 | automation (supervised) |
+| 2026-10-07 | Lighthouse CI 0.15.1 (Lighthouse 12.6.1), Chrome headless, median of 3 | Pass · automation baseline saved to `lighthouse/baseline-{mobile,desktop}.json`. Mobile stream pages: perf 61–66, LCP ~11.2–11.6 s, CLS 0.19–0.28 (SUG-003) | SUG-003 | automated |

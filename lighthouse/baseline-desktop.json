@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-07",
+  "device": "desktop",
+  "pages": {
+    "/": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 443,
+      "cls": 0.004,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 455,
+      "cls": 0,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/022": {
+      "performance": 89,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 2005,
+      "cls": 0.089,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 451,
+      "cls": 0,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 404,
+      "cls": 0.004,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/022": {
+      "performance": 89,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1967,
+      "cls": 0.089,
+      "lighthouseVersion": "12.6.1"
+    }
+  }
+}

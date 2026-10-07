@@ -12,13 +12,16 @@
     "report": "playwright show-report",
     "typecheck": "tsc --noEmit",
     "test:visual": "playwright test --grep @visual",
-    "test:visual:update": "playwright test --grep @visual --update-snapshots"
+    "test:visual:update": "playwright test --grep @visual --update-snapshots",
+    "lighthouse": "lhci autorun && node scripts/lighthouse-summary.mjs mobile",
+    "lighthouse:desktop": "lhci autorun --config=lighthouserc.desktop.json && node scripts/lighthouse-summary.mjs desktop"
   },
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
+    "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.63.0",
     "@types/node": "^26.6.4",
     "typescript": "^7.0.2"

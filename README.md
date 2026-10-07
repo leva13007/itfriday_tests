@@ -23,6 +23,10 @@ Every step is documented: what is tested, how, and why. The repo can be read as 
 
 Phases, milestones and the current status are in [`ROADMAP.md`](ROADMAP.md).
 
+## results
+
+The [quality audit](docs/reports/2026-10-07-quality-audit.md) summarises the state of the site: a solid site with a few rough edges, 7 bugs and 5 improvement suggestions, with an action plan.
+
 ## approach
 
 1. **Analyse.** Map the site into testable requirements → [`docs/requirements.md`](docs/requirements.md)

@@ -70,7 +70,10 @@ Tests run against the **live site**, so they are read-only and use 2 workers to 
 ```
 ROADMAP.md                 # phases, milestones, status
 playwright.config.ts       # base URL, projects (desktop / mobile)
-tests/                     # automated tests: smoke, navigation, i18n, mobile
+tests/                     # automated tests (*.spec.ts)
+  pages/                   # page objects
+  support/                 # site map crawler
+  fixtures.ts              # page objects as fixtures, hydration wait
 docs/
   requirements.md          # what the site must do (REQ-xxx)
   01-test-strategy.md      # how we test, and why
@@ -88,11 +91,12 @@ docs/
 
 - **Phase 1, test documentation:** done (requirements v1.0, strategy, plan, 5 checklists, 40 test cases, traceability, review).
 - **Phase 2, cycle 1 manual execution:** closed with deviations, signed off 2026-10-07. 33/37 executed test cases passed; 7 bugs and 5 suggestions ([summary report](docs/reports/2026-10-07-cycle-1.md)). Manual-only checks carry over to the next cycle.
-- **Phase 3, automation basics:** Playwright + TypeScript suite with 30 tests (smoke, navigation, i18n, mobile), green in 3 runs in a row.
+- **Phase 3, automation basics:** done. Playwright + TypeScript suite.
+- **Phase 4, automation coverage (in progress):** Page Object Model; checks over every page (links, anchors, files, SEO, UA/EN parity, language switcher, data consistency). 56 tests, green in 3 runs in a row. 33 of 42 test cases automated.
 
 ## next step
 
-Review the first automated suite, then plan phase 4 (Page Object Model and data-driven checks).
+Phase 4: accessibility tests with `@axe-core/playwright` and keyboard checks.
 
 ## resources
 

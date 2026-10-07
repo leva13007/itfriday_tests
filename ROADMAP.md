@@ -83,12 +83,12 @@ Goal: first green Playwright run.
 ## Phase 4: Automation coverage 🟡
 
 - [x] Refactor to Page Object Model (header, language switcher, page types) *([`tests/pages/`](tests/pages/), exposed as fixtures in [`tests/fixtures.ts`](tests/fixtures.ts))*
-- [ ] Broken link checker (internal + external, crawled from the site map)
+- [x] Broken link checker (internal + external, crawled from the site map) *([`tests/site-map.spec.ts`](tests/site-map.spec.ts): every page, anchor, image and file; invites in `content.spec.ts`. LinkedIn stays manual: TC-LNK-005)*
 - [ ] Visual regression with `toHaveScreenshot` (desktop + mobile, key pages)
-- [ ] SEO checks (title, description, `lang`, OG tags)
+- [x] SEO checks (title, description, `lang`, OG tags) *(TC-SEO-001…004 on every page)*
 - [ ] Accessibility with `@axe-core/playwright`
 - [ ] Performance in automation: Lighthouse CI (`@lhci/cli`) over the key pages, median of 3 runs, compared against the cycle 1 [baseline](docs/reports/cycle-1/lighthouse/README.md). Budgets once REQ-015 gets a threshold. In phase 5 the same job runs in GitHub Actions
-- [ ] Data-driven tests over all stream/speaker pages
+- [x] Data-driven tests over all stream/speaker pages *(site map crawl; TC-I18N-005, TC-I18N-007, TC-STR-004 from the exploratory follow-ups)*
 
 **Done when:** every `candidate` TC is `automated` or has a written reason why not.
 

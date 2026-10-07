@@ -6,7 +6,7 @@
 | Requirement | REQ-001, REQ-007 |
 | Priority | High |
 | Type | Functional |
-| Automation | candidate |
+| Automation | automated ([`tests/site-map.spec.ts`](../../tests/site-map.spec.ts)) |
 | Author | |
 | Created | 2026-10-07 |
 

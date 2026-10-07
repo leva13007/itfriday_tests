@@ -22,6 +22,8 @@ The source of truth is **`ROADMAP.md`**: 0 Init → 1 Test documentation → 2 M
 ## Test code conventions
 
 - Playwright + TypeScript, npm. Config in `playwright.config.ts`, tests in `tests/*.spec.ts`.
+- Every full page load waits for Vue hydration (the `page` fixture in `tests/fixtures.ts`), because clicks before hydration can be lost. Don't remove it.
+- Checks over every page use the crawled site map (`tests/support/site-map.ts`), never a hard-coded page list: a new stream page appears every week.
 - Page objects live in `tests/pages/` (one class per page type or UI area) and are passed to tests as fixtures from `tests/fixtures.ts`. Specs import `test` and `expect` from `./fixtures`, not from `@playwright/test`. Locators belong in page objects; assertions stay in the specs.
 - Every test title starts with its ID: checklist check (`S-07 …`) or test case (`TC-NAV-003 …`). When a TC is automated, set its `Automation` field to `automated` with a link to the spec.
 - Prefer role-based locators (`getByRole`) that match what users and assistive tech see. Use a CSS class only when there's no accessible handle, and leave a comment saying why (e.g. the logo, BUG-003).

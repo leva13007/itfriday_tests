@@ -6,7 +6,7 @@
 | Requirement | REQ-006, REQ-010 |
 | Priority | Medium |
 | Type | Functional |
-| Automation | candidate |
+| Automation | automated ([`tests/content.spec.ts`](../../tests/content.spec.ts)) |
 | Author | |
 | Created | 2026-10-07 |
 

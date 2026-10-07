@@ -8,7 +8,7 @@ Update it whenever a REQ, TC or bug is added.
 |---|---|---|---|---|---|
 | REQ-001 | All pages return 200 | [TC-LNK-001](test-cases/TC-LNK-001.md), [TC-STR-002](test-cases/TC-STR-002.md) | smoke, links (A), seo (C03) |  | ✅ passed |
 | REQ-002 | Header nav works | [TC-NAV-001](test-cases/TC-NAV-001.md), [TC-NAV-002](test-cases/TC-NAV-002.md) | smoke, cross-browser, links (B) |  | ✅ passed |
-| REQ-003 | Language switch keeps page | [TC-I18N-001](test-cases/TC-I18N-001.md), [TC-I18N-002](test-cases/TC-I18N-002.md), [TC-I18N-003](test-cases/TC-I18N-003.md), [TC-I18N-004](test-cases/TC-I18N-004.md) | smoke, cross-browser |  | ✅ passed |
+| REQ-003 | Language switch keeps page | [TC-I18N-001](test-cases/TC-I18N-001.md), [TC-I18N-002](test-cases/TC-I18N-002.md), [TC-I18N-003](test-cases/TC-I18N-003.md), [TC-I18N-004](test-cases/TC-I18N-004.md), [TC-I18N-007](test-cases/TC-I18N-007.md) | smoke, cross-browser |  | ✅ passed |
 | REQ-004 | UA/EN parity | [TC-I18N-005](test-cases/TC-I18N-005.md), [TC-I18N-006](test-cases/TC-I18N-006.md) | links (A03, C08) | [BUG-002](reports/cycle-1/bugs/BUG-002.md) | ❌ failed |
 | REQ-005 | Logo → home | [TC-NAV-003](test-cases/TC-NAV-003.md) | smoke, links (B04) |  | ✅ passed |
 | REQ-006 | Wiki sidebar | [TC-WIKI-001](test-cases/TC-WIKI-001.md), [TC-WIKI-002](test-cases/TC-WIKI-002.md), [TC-WIKI-003](test-cases/TC-WIKI-003.md) | smoke, cross-browser, links (B03) |  | ✅ passed |
@@ -30,7 +30,7 @@ Found by exploratory testing with the consistency oracle (see the strategy §7).
 
 | Bug | Found in | Proposed requirement |
 |---|---|---|
-| [BUG-006](reports/cycle-1/bugs/BUG-006.md) | Exploratory: global UI | Speaker profiles list every stream the speaker took part in |
+| [BUG-006](reports/cycle-1/bugs/BUG-006.md) | Exploratory: global UI; now covered by [TC-STR-004](test-cases/TC-STR-004.md) | Speaker profiles list every stream the speaker took part in |
 | [BUG-007](reports/cycle-1/bugs/BUG-007.md) | Exploratory: global UI | REQ-022: the schedule page shows the next announced stream |
 
 Coverage after cycle 1, test case execution on C1 (2026-10-07):

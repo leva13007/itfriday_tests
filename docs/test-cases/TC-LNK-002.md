@@ -6,7 +6,7 @@
 | Requirement | REQ-008 |
 | Priority | Medium |
 | Type | Functional |
-| Automation | candidate |
+| Automation | automated ([`tests/content.spec.ts`](../../tests/content.spec.ts)): targets, Telegram and Discord invites. LinkedIn is checked manually (blocks automated requests) |
 | Author | |
 | Created | 2026-10-07 |
 

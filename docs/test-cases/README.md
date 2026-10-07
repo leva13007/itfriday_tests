@@ -31,7 +31,7 @@ One file per test case: `TC-<MODULE>-<NNN>.md`. Start from [`_template.md`](_tem
 
 ## Index
 
-40 test cases · priority: 13 High, 22 Medium, 5 Low · automation: 12 automated (1 partly), 27 candidate, 1 manual-only
+42 test cases · priority: 14 High, 23 Medium, 5 Low · automation: 33 automated (1 partly), 8 candidate, 1 manual-only
 
 Smoke is covered by the [smoke checklist](../checklists/smoke.md), not by test cases.
 
@@ -46,34 +46,36 @@ Smoke is covered by the [smoke checklist](../checklists/smoke.md), not by test c
 | [TC-I18N-002](TC-I18N-002.md) | Language switch UA → EN keeps the user on the same streams list | REQ-003 | High | automated |
 | [TC-I18N-003](TC-I18N-003.md) | Language switch UA → EN keeps the user on the same stream page | REQ-003 | High | automated |
 | [TC-I18N-004](TC-I18N-004.md) | Language switch UA → EN keeps the user on the same wiki page | REQ-003 | High | automated |
-| [TC-I18N-005](TC-I18N-005.md) | Every UA page has an EN counterpart and vice versa | REQ-004 | Medium | candidate |
+| [TC-I18N-005](TC-I18N-005.md) | Every UA page has an EN counterpart and vice versa | REQ-004 | Medium | automated |
 | [TC-I18N-006](TC-I18N-006.md) | Interface texts on EN pages are in English | REQ-004 | Medium | automated (partly) |
-| [TC-WIKI-001](TC-WIKI-001.md) | Wiki sidebar lists all 4 documents in order | REQ-006 | Medium | candidate |
-| [TC-WIKI-002](TC-WIKI-002.md) | Wiki sidebar links open the right document and highlight it | REQ-006 | Medium | candidate |
-| [TC-WIKI-003](TC-WIKI-003.md) | Wiki sidebar is reachable on mobile | REQ-006, REQ-010 | Medium | candidate |
-| [TC-STR-001](TC-STR-001.md) | Streams list links to every published stream page | REQ-016 | Medium | candidate |
-| [TC-STR-002](TC-STR-002.md) | Stream page shows its key information | REQ-001 | High | candidate |
-| [TC-STR-003](TC-STR-003.md) | Speaker link on a stream page opens the right profile | REQ-007 | High | candidate |
-| [TC-SPK-001](TC-SPK-001.md) | Speakers list links to every speaker profile | REQ-016 | Medium | candidate |
-| [TC-SPK-002](TC-SPK-002.md) | Speaker profile links to the speaker's streams | REQ-007 | High | candidate |
-| [TC-PST-001](TC-PST-001.md) | Posts list links to every post | REQ-016 | Medium | candidate |
-| [TC-LNK-001](TC-LNK-001.md) | Every page in the site map returns HTTP 200 | REQ-001, REQ-007 | High | candidate |
-| [TC-LNK-002](TC-LNK-002.md) | Home page hero buttons point to the community channels | REQ-008 | Medium | candidate |
-| [TC-LNK-003](TC-LNK-003.md) | Header social icons point to the community channels | REQ-008 | Medium | candidate |
-| [TC-LNK-004](TC-LNK-004.md) | External links open in a new tab | REQ-008 | Medium | candidate |
+| [TC-I18N-007](TC-I18N-007.md) | Language switcher points to the counterpart on every page | REQ-003 | High | automated |
+| [TC-WIKI-001](TC-WIKI-001.md) | Wiki sidebar lists all 4 documents in order | REQ-006 | Medium | automated |
+| [TC-WIKI-002](TC-WIKI-002.md) | Wiki sidebar links open the right document and highlight it | REQ-006 | Medium | automated |
+| [TC-WIKI-003](TC-WIKI-003.md) | Wiki sidebar is reachable on mobile | REQ-006, REQ-010 | Medium | automated |
+| [TC-STR-001](TC-STR-001.md) | Streams list links to every published stream page | REQ-016 | Medium | automated |
+| [TC-STR-002](TC-STR-002.md) | Stream page shows its key information | REQ-001 | High | automated |
+| [TC-STR-003](TC-STR-003.md) | Speaker link on a stream page opens the right profile | REQ-007 | High | automated |
+| [TC-STR-004](TC-STR-004.md) | Stream list, stream pages and speaker profiles agree on who spoke where | — (consistency) | Medium | automated |
+| [TC-SPK-001](TC-SPK-001.md) | Speakers list links to every speaker profile | REQ-016 | Medium | automated |
+| [TC-SPK-002](TC-SPK-002.md) | Speaker profile links to the speaker's streams | REQ-007 | High | automated |
+| [TC-PST-001](TC-PST-001.md) | Posts list links to every post | REQ-016 | Medium | automated |
+| [TC-LNK-001](TC-LNK-001.md) | Every page in the site map returns HTTP 200 | REQ-001, REQ-007 | High | automated |
+| [TC-LNK-002](TC-LNK-002.md) | Home page hero buttons point to the community channels | REQ-008 | Medium | automated |
+| [TC-LNK-003](TC-LNK-003.md) | Header social icons point to the community channels | REQ-008 | Medium | automated |
+| [TC-LNK-004](TC-LNK-004.md) | External links open in a new tab | REQ-008 | Medium | automated |
 | [TC-LNK-005](TC-LNK-005.md) | External links on the newest stream page resolve | REQ-008 | Medium | manual-only |
 | [TC-RSP-001](TC-RSP-001.md) | Hamburger menu replaces the header nav on mobile | REQ-010 | High | automated |
 | [TC-RSP-002](TC-RSP-002.md) | Tapping a mobile menu item navigates and closes the menu | REQ-010 | High | automated |
 | [TC-RSP-003](TC-RSP-003.md) | Pages have no horizontal scroll at mobile width | REQ-010 | High | candidate |
 | [TC-VIS-001](TC-VIS-001.md) | Visual baseline of the representative pages is captured | REQ-011 | Medium | candidate |
 | [TC-VIS-002](TC-VIS-002.md) | Representative pages match the visual baseline | REQ-011 | Medium | candidate |
-| [TC-SEO-001](TC-SEO-001.md) | Every page has a unique, descriptive title | REQ-012 | Medium | candidate |
-| [TC-SEO-002](TC-SEO-002.md) | Every page has its own meta description | REQ-012 | Medium | candidate |
-| [TC-SEO-003](TC-SEO-003.md) | Page language attribute matches the content language | REQ-012 | Medium | candidate |
-| [TC-SEO-004](TC-SEO-004.md) | Open Graph type and image are present on every page | REQ-013 | Low | candidate |
+| [TC-SEO-001](TC-SEO-001.md) | Every page has a unique, descriptive title | REQ-012 | Medium | automated |
+| [TC-SEO-002](TC-SEO-002.md) | Every page has its own meta description | REQ-012 | Medium | automated |
+| [TC-SEO-003](TC-SEO-003.md) | Page language attribute matches the content language | REQ-012 | Medium | automated |
+| [TC-SEO-004](TC-SEO-004.md) | Open Graph type and image are present on every page | REQ-013 | Low | automated |
 | [TC-A11Y-001](TC-A11Y-001.md) | Representative pages have no critical or serious axe violations | REQ-014 | Medium | candidate |
 | [TC-A11Y-002](TC-A11Y-002.md) | Skip link moves focus to the main content | REQ-014 | Medium | candidate |
 | [TC-A11Y-003](TC-A11Y-003.md) | Header is fully operable with the keyboard | REQ-014 | Medium | candidate |
 | [TC-A11Y-004](TC-A11Y-004.md) | Images have a text alternative | REQ-014 | Medium | candidate |
 | [TC-PERF-001](TC-PERF-001.md) | Lighthouse baseline is recorded for key pages | REQ-015 | Low | candidate |
-| [TC-ERR-001](TC-ERR-001.md) | Unknown URL shows a 404 page with a way back home | REQ-017 | Low | candidate |
+| [TC-ERR-001](TC-ERR-001.md) | Unknown URL shows a 404 page with a way back home | REQ-017 | Low | automated |

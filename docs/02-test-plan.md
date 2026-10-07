@@ -34,7 +34,7 @@ All requirements of v1.0, on both language versions (UA and EN):
 
 | Area | Requirements | Covered by |
 |---|---|---|
-| Availability | REQ-001, REQ-017 | Smoke checklist, TC-SMK, TC-NAV |
+| Availability | REQ-001, REQ-017 | Smoke checklist, TC-LNK-001, TC-STR-002, TC-ERR-001 |
 | Navigation | REQ-002, REQ-005, REQ-006 | TC-NAV, TC-WIKI |
 | Internationalisation | REQ-003, REQ-004 | TC-I18N |
 | Links | REQ-007, REQ-008 | TC-LNK, link checklist |

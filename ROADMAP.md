@@ -32,8 +32,8 @@ Goal: a complete, reviewed set of test docs, ready to execute.
 - [x] **1.2 Test strategy.** Fill every section of `01-test-strategy.md` *(v1.0, 2026-10-07)*
 - [x] **1.3 Test plan.** Fill `02-test-plan.md`: browsers/devices, entry/exit criteria, schedule, risks *(cycle 1 plan v1.0, 2026-10-07)*
 - [x] **1.4 Checklists.** Write `smoke.md`, `cross-browser.md`, `links.md`, `a11y.md`, `seo.md` *(v1.0, 2026-10-07)*
-- [ ] **1.5 Test cases.** At least one TC for every High and Medium REQ, with the `Automation` field set
-- [ ] **1.6 Traceability.** Matrix is complete, no High REQ left with ❌
+- [x] **1.5 Test cases.** At least one TC for every High and Medium REQ, with the `Automation` field set *(40 TCs covering all 17 REQs, 2026-10-07)*
+- [x] **1.6 Traceability.** Matrix is complete, no High REQ left with ❌
 - [ ] **1.7 Review.** Review all docs for consistency with the requirements, fixes applied
 
 **Done when:** every REQ has coverage planned (TC or checklist), and the docs are reviewed.

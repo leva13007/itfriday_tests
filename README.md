@@ -59,11 +59,11 @@ docs/
 
 ## where I left off
 
-Project initialised on 2026-10-07: repo, docs structure, templates, first test case, a first draft of the site map in `requirements.md`, and `ROADMAP.md`. Now in phase 1 (test documentation). Requirements v1.0 frozen (1.1) test strategy v1.0 (1.2) cycle 1 test plan (1.3) and 5 checklists (1.4) written, with all 82 live pages returning 200. No test code yet.
+Project initialised on 2026-10-07: repo, docs structure, templates, first test case, a first draft of the site map in `requirements.md`, and `ROADMAP.md`. Now in phase 1 (test documentation). Requirements v1.0 frozen (1.1) test strategy v1.0 (1.2) cycle 1 test plan (1.3) 5 checklists (1.4) and 40 test cases with a full traceability matrix (1.5, 1.6) written, with all 82 live pages returning 200. No test code yet.
 
 ## next step
 
-Write test cases for the High and Medium requirements in `docs/test-cases/` (ROADMAP 1.5).
+Review all docs for consistency with the requirements (ROADMAP 1.7).
 
 ## resources
 

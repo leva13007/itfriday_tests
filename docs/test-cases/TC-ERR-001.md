@@ -36,4 +36,4 @@
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | Chrome 154 / macOS (C1) + curl | Pass · 404 page and home link work; texts are English (see BUG-002) | — | automation (supervised) |

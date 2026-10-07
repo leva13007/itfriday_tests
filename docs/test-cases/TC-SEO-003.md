@@ -34,4 +34,4 @@
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | curl | Pass | — | automation (supervised) |

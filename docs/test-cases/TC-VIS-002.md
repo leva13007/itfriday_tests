@@ -40,4 +40,4 @@ Not executed in cycle 1 (no baseline yet). Automated in phase 4 with Playwright 
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | — | Not run · Excluded in cycle 1 (needs baseline) | — | automation (supervised) |

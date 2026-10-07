@@ -39,4 +39,4 @@ Kept manual: third-party sites (LinkedIn especially) block automated requests, s
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | Chrome 154 / macOS (C1) + curl | Pass · YouTube 022: scheduled live; LinkedIn checked in a browser | — | automation (supervised) |

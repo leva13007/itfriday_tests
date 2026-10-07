@@ -37,4 +37,4 @@
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | Chrome 154 / macOS (C1) | Pass · No flash observed; not measured frame by frame | — | automation (supervised) |

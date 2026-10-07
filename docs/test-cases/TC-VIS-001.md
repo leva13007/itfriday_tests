@@ -40,4 +40,4 @@ Cycle 1 creates the baseline. TC-VIS-002 compares against it from cycle 2 on.
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | Chrome 154 / macOS (C1) | Blocked · No full-page screenshot capability in automation; C3 not available. Run manually | — | automation (supervised) |

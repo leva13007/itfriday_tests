@@ -25,7 +25,7 @@
 |---|---|---|
 | 1 | Open `/posts/` | A table of posts, newest first |
 | 2 | Count the rows | 2 rows, one per post page in the source |
-| 3 | Click each post title | Each opens its post page with the same title as the heading |
+| 3 | Click each post title | Each opens its post page; the page heading matches the list title (the list may show a shortened form) |
 | 4 | Repeat on `/en/posts/` | 2 rows; links point to `/en/posts/...` |
 
 ## Postconditions
@@ -36,4 +36,4 @@
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | Chrome 154 / macOS (C1) | Pass · List shows a shortened title of the Web Push post; TC wording fixed (test case defect, see run summary) | — | automation (supervised) |

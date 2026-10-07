@@ -36,4 +36,4 @@
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | Chrome 154 / macOS (C1) | Pass · 22 UA + 22 EN rows, newest first | — | automation (supervised) |

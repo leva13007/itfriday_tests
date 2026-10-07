@@ -40,4 +40,4 @@ Baseline only: there is no pass/fail threshold (decisions log, 2026-10-07). Late
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | — | Not run · Lighthouse not available to automation; run manually | — | automation (supervised) |

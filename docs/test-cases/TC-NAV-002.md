@@ -51,4 +51,4 @@ TC-NAV-001 covers the "Стріми" item in more depth (active state, content).
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | Chrome 154 / macOS (C1) | Pass | — | automation (supervised) |

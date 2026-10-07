@@ -36,4 +36,4 @@
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | Chrome 154 / macOS (C1), 390px iframe | Pass · 20 pages; tables and code scroll inside their blocks | — | automation (supervised) |

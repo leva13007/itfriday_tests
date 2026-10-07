@@ -35,4 +35,4 @@
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | curl | Pass · 82/82 → 200 | — | automation (supervised) |

@@ -38,4 +38,4 @@ A site-wide description repeated on every page fails this case.
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | curl | Fail · 1 description for all 41 pages per language | BUG-001 | automation (supervised) |

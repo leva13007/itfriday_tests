@@ -43,10 +43,10 @@ Goal: a complete, reviewed set of test docs, ready to execute.
 Goal: prove the docs work on the real site and find real bugs.
 
 - [x] Run the smoke checklist *([2026-10-07, C1](docs/checklists/runs/2026-10-07-smoke-C1.md): 15/15, GO)*
-- [ ] Execute the TCs as the test plan's exit criteria require, and record results in each TC's execution history
+- [x] Execute the TCs as the test plan's exit criteria require, and record results in each TC's execution history *([C1, 2026-10-07](docs/reports/cycle-1/2026-10-07-execution-C1.md): 32 pass, 4 fail, 2 blocked, 2 not run)*
 - [ ] Run the cross-browser / mobile checklist
 - [ ] At least 3 exploratory sessions (from the charter ideas)
-- [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix
+- [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix *(4 reports written in [docs/reports/cycle-1/bugs](docs/reports/cycle-1/bugs/), to be filed when the repo is on GitHub)*
 - [ ] Retest fixed bugs (the site owner fixes them in the site repo)
 - [ ] Write the first test summary report (`docs/reports/`)
 

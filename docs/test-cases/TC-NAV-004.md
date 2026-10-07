@@ -36,4 +36,4 @@
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-07 | Chrome 154 / macOS (C1) | Pass · OS theme was Dark, so the run started dark; both directions verified | — | automation (supervised) |

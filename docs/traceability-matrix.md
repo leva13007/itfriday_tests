@@ -13,7 +13,7 @@ Update it whenever a REQ, TC or bug is added.
 | REQ-005 | Logo → home | [TC-NAV-003](test-cases/TC-NAV-003.md) | smoke, links (B04) |  | ✅ passed |
 | REQ-006 | Wiki sidebar | [TC-WIKI-001](test-cases/TC-WIKI-001.md), [TC-WIKI-002](test-cases/TC-WIKI-002.md), [TC-WIKI-003](test-cases/TC-WIKI-003.md) | smoke, cross-browser, links (B03) |  | ✅ passed |
 | REQ-007 | No internal 404s | [TC-LNK-001](test-cases/TC-LNK-001.md), [TC-SPK-002](test-cases/TC-SPK-002.md), [TC-STR-003](test-cases/TC-STR-003.md) | links (A–C) |  | ✅ passed |
-| REQ-008 | External links reachable | [TC-LNK-002](test-cases/TC-LNK-002.md), [TC-LNK-003](test-cases/TC-LNK-003.md), [TC-LNK-004](test-cases/TC-LNK-004.md), [TC-LNK-005](test-cases/TC-LNK-005.md) | smoke, links (D) |  | ✅ passed |
+| REQ-008 | External links reachable | [TC-LNK-002](test-cases/TC-LNK-002.md), [TC-LNK-003](test-cases/TC-LNK-003.md), [TC-LNK-004](test-cases/TC-LNK-004.md), [TC-LNK-005](test-cases/TC-LNK-005.md) | smoke, links (D) | [BUG-005](reports/cycle-1/bugs/BUG-005.md) | ❌ failed (links checklist) |
 | REQ-009 | Theme toggle | [TC-NAV-004](test-cases/TC-NAV-004.md), [TC-NAV-005](test-cases/TC-NAV-005.md) | smoke, cross-browser |  | ✅ passed |
 | REQ-010 | Mobile layout | [TC-RSP-001](test-cases/TC-RSP-001.md), [TC-RSP-002](test-cases/TC-RSP-002.md), [TC-RSP-003](test-cases/TC-RSP-003.md), [TC-WIKI-003](test-cases/TC-WIKI-003.md) | smoke, cross-browser, a11y (D04) |  | ✅ passed |
 | REQ-011 | No visual regressions | [TC-VIS-001](test-cases/TC-VIS-001.md), [TC-VIS-002](test-cases/TC-VIS-002.md) |  |  | ⏳ not executed |
@@ -27,4 +27,4 @@ Update it whenever a REQ, TC or bug is added.
 Coverage after cycle 1, test case execution on C1 (2026-10-07):
 ✅ passed: all linked TCs passed · ❌ failed: at least one linked TC failed · 🟡 partly executed: some TCs blocked or not run · ⏳ not executed
 
-Checklist results (links, SEO, a11y, cross-browser) are added when those runs are done.
+Checklist runs on 2026-10-07 (links, SEO, a11y) are included: REQ-008 failed in the links checklist (BUG-005). The cross-browser checklist is still to run.

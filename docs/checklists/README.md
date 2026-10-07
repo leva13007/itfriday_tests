@@ -26,6 +26,9 @@ The files above are the **masters**. Don't fill them in directly.
 | Date | Checklist | Config | Result |
 |---|---|---|---|
 | 2026-10-07 | [Smoke](runs/2026-10-07-smoke-C1.md) | C1 | 15/15 ✅ GO |
+| 2026-10-07 | [Links](runs/2026-10-07-links.md) | C1 + curl | 28/29 ✅ · 1 ❌ (BUG-005) |
+| 2026-10-07 | [SEO](runs/2026-10-07-seo.md) | curl | required 7/8 ✅ · 1 ❌ (BUG-001) · 11 advisory → SUG-001, SUG-002 |
+| 2026-10-07 | [a11y](runs/2026-10-07-a11y.md) | C1 | 10 ✅ · 11 ❌ (BUG-003, BUG-004) · 10 blocked/skipped (keyboard, VoiceOver) |
 
 ## Check IDs
 

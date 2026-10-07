@@ -8,3 +8,22 @@ Bug reports written with the [bug report template](../../../../.github/ISSUE_TEM
 | [BUG-002](BUG-002.md) | Interface texts are in English on Ukrainian pages | Minor | Medium | New | — |
 | [BUG-003](BUG-003.md) | Header logo link has no accessible name (logo images lack `alt`) | Major | Medium | New | — |
 | [BUG-004](BUG-004.md) | Insufficient colour contrast in code blocks and the primary hero button | Minor | Low | New | — |
+| [BUG-005](BUG-005.md) | Stream #007: `chrome://webrtc-internals` link can't be opened | Trivial | Low | New | — |
+
+## Improvement suggestions
+
+Filed with the [improvement suggestion template](../../../../.github/ISSUE_TEMPLATE/improvement_suggestion.md) (label `enhancement`). Not defects: no requirement is violated.
+
+| ID | Title | Source | Status | Issue |
+|---|---|---|---|---|
+| [SUG-001](SUG-001.md) | Add SEO and link-preview metadata (Open Graph, canonical, hreflang, sitemap) | SEO checklist | New | — |
+| [SUG-002](SUG-002.md) | Enforce HTTPS | SEO checklist | New | — |
+
+## Observations (not reported)
+
+Input for checks that haven't run yet.
+
+| Observation | For |
+|---|---|
+| Stream cover images are 1.3–2.6 MB PNGs; one speaker photo is 1.1 MB | TC-PERF-001 (Lighthouse) |
+| Stream cover alt text is "Stream #NNN" in English on UA pages and doesn't describe the topic | a11y review in the next cycle |

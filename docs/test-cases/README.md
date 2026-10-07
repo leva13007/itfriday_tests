@@ -25,28 +25,29 @@ One file per test case: `TC-<MODULE>-<NNN>.md`. Start from [`_template.md`](_tem
 - **Title:** a short statement of the expected behaviour, e.g. "Header 'Streams' link opens the streams list".
 - **One check per TC.** If a TC needs "and" in its title, split it.
 - **Priority:** High / Medium / Low, inherited from the linked REQ unless there's a reason.
-- **Automation:** `candidate` (stable, repetitive, worth automating), `automated`, or `manual-only` (needs human judgement, e.g. "text reads naturally").
+- **Automation:** `candidate` (stable, repetitive, worth automating), `automated` (links to the spec file), or `manual-only` (needs human judgement, e.g. "text reads naturally").
+- **Automated tests** carry the TC ID at the start of the test title (`test('TC-NAV-001 …')`), so a failing test points straight to its test case.
 - When you add a TC, add it to the [traceability matrix](../traceability-matrix.md).
 
 ## Index
 
-40 test cases · priority: 13 High, 22 Medium, 5 Low · automation: 38 candidate, 2 manual-only
+40 test cases · priority: 13 High, 22 Medium, 5 Low · automation: 12 automated (1 partly), 27 candidate, 1 manual-only
 
 Smoke is covered by the [smoke checklist](../checklists/smoke.md), not by test cases.
 
 | ID | Title | REQ | Priority | Automation |
 |---|---|---|---|---|
-| [TC-NAV-001](TC-NAV-001.md) | Header "Streams" link opens the streams list (UA) | REQ-002 | High | candidate |
-| [TC-NAV-002](TC-NAV-002.md) | Every header nav item opens its page | REQ-002 | High | candidate |
-| [TC-NAV-003](TC-NAV-003.md) | Logo returns to the home page of the current language | REQ-005 | Medium | candidate |
-| [TC-NAV-004](TC-NAV-004.md) | Theme toggle switches between light and dark | REQ-009 | Low | candidate |
-| [TC-NAV-005](TC-NAV-005.md) | Theme choice persists after reload and navigation | REQ-009 | Low | candidate |
-| [TC-I18N-001](TC-I18N-001.md) | Language switch UA → EN keeps the user on the same home page | REQ-003 | High | candidate |
-| [TC-I18N-002](TC-I18N-002.md) | Language switch UA → EN keeps the user on the same streams list | REQ-003 | High | candidate |
-| [TC-I18N-003](TC-I18N-003.md) | Language switch UA → EN keeps the user on the same stream page | REQ-003 | High | candidate |
-| [TC-I18N-004](TC-I18N-004.md) | Language switch UA → EN keeps the user on the same wiki page | REQ-003 | High | candidate |
+| [TC-NAV-001](TC-NAV-001.md) | Header "Streams" link opens the streams list (UA) | REQ-002 | High | automated |
+| [TC-NAV-002](TC-NAV-002.md) | Every header nav item opens its page | REQ-002 | High | automated |
+| [TC-NAV-003](TC-NAV-003.md) | Logo returns to the home page of the current language | REQ-005 | Medium | automated |
+| [TC-NAV-004](TC-NAV-004.md) | Theme toggle switches between light and dark | REQ-009 | Low | automated |
+| [TC-NAV-005](TC-NAV-005.md) | Theme choice persists after reload and navigation | REQ-009 | Low | automated |
+| [TC-I18N-001](TC-I18N-001.md) | Language switch UA → EN keeps the user on the same home page | REQ-003 | High | automated |
+| [TC-I18N-002](TC-I18N-002.md) | Language switch UA → EN keeps the user on the same streams list | REQ-003 | High | automated |
+| [TC-I18N-003](TC-I18N-003.md) | Language switch UA → EN keeps the user on the same stream page | REQ-003 | High | automated |
+| [TC-I18N-004](TC-I18N-004.md) | Language switch UA → EN keeps the user on the same wiki page | REQ-003 | High | automated |
 | [TC-I18N-005](TC-I18N-005.md) | Every UA page has an EN counterpart and vice versa | REQ-004 | Medium | candidate |
-| [TC-I18N-006](TC-I18N-006.md) | Interface texts on EN pages are in English | REQ-004 | Medium | manual-only |
+| [TC-I18N-006](TC-I18N-006.md) | Interface texts on EN pages are in English | REQ-004 | Medium | automated (partly) |
 | [TC-WIKI-001](TC-WIKI-001.md) | Wiki sidebar lists all 4 documents in order | REQ-006 | Medium | candidate |
 | [TC-WIKI-002](TC-WIKI-002.md) | Wiki sidebar links open the right document and highlight it | REQ-006 | Medium | candidate |
 | [TC-WIKI-003](TC-WIKI-003.md) | Wiki sidebar is reachable on mobile | REQ-006, REQ-010 | Medium | candidate |
@@ -61,8 +62,8 @@ Smoke is covered by the [smoke checklist](../checklists/smoke.md), not by test c
 | [TC-LNK-003](TC-LNK-003.md) | Header social icons point to the community channels | REQ-008 | Medium | candidate |
 | [TC-LNK-004](TC-LNK-004.md) | External links open in a new tab | REQ-008 | Medium | candidate |
 | [TC-LNK-005](TC-LNK-005.md) | External links on the newest stream page resolve | REQ-008 | Medium | manual-only |
-| [TC-RSP-001](TC-RSP-001.md) | Hamburger menu replaces the header nav on mobile | REQ-010 | High | candidate |
-| [TC-RSP-002](TC-RSP-002.md) | Tapping a mobile menu item navigates and closes the menu | REQ-010 | High | candidate |
+| [TC-RSP-001](TC-RSP-001.md) | Hamburger menu replaces the header nav on mobile | REQ-010 | High | automated |
+| [TC-RSP-002](TC-RSP-002.md) | Tapping a mobile menu item navigates and closes the menu | REQ-010 | High | automated |
 | [TC-RSP-003](TC-RSP-003.md) | Pages have no horizontal scroll at mobile width | REQ-010 | High | candidate |
 | [TC-VIS-001](TC-VIS-001.md) | Visual baseline of the representative pages is captured | REQ-011 | Medium | candidate |
 | [TC-VIS-002](TC-VIS-002.md) | Representative pages match the visual baseline | REQ-011 | Medium | candidate |

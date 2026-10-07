@@ -6,7 +6,7 @@
 | Requirement | REQ-005 |
 | Priority | Medium |
 | Type | Functional |
-| Automation | candidate |
+| Automation | automated ([`tests/navigation.spec.ts`](../../tests/navigation.spec.ts)) |
 | Author | |
 | Created | 2026-10-07 |
 

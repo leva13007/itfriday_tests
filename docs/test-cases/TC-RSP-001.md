@@ -6,7 +6,7 @@
 | Requirement | REQ-010 |
 | Priority | High |
 | Type | Functional |
-| Automation | candidate |
+| Automation | automated ([`tests/mobile.spec.ts`](../../tests/mobile.spec.ts)) |
 | Author | |
 | Created | 2026-10-07 |
 

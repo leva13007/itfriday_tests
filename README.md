@@ -41,10 +41,36 @@ Phases, milestones and the current status are in [`ROADMAP.md`](ROADMAP.md).
 - Visual regression (desktop and mobile)
 - SEO, accessibility (a11y) and performance
 
+## running the automated tests
+
+Requirements: [Node.js](https://nodejs.org) 20 or newer.
+
+```bash
+npm install                                 # install Playwright and TypeScript
+npx playwright install chromium webkit      # download the test browsers (once)
+
+npm test                                    # all tests, all projects
+npm run test:smoke                          # smoke checklist only (@smoke)
+npm run test:desktop                        # desktop Chrome only
+npm run test:headed                         # desktop Chrome, with a visible browser window
+npm run report                              # open the HTML report of the last run
+npm run typecheck                           # TypeScript check without running tests
+```
+
+| Project | Device | Runs |
+|---|---|---|
+| `desktop-chrome` | Chrome, 1440×900 (C1) | everything except `@mobile` |
+| `mobile-chrome` | Pixel 7 emulation (close to C4) | `@mobile` only |
+| `mobile-safari` | iPhone 13 emulation, WebKit engine (close to C3, not a real device) | `@mobile` only |
+
+Tests run against the **live site**, so they are read-only and use 2 workers to keep the load low. Every test title starts with its check or test case ID (`S-07`, `TC-NAV-003`). A known open bug is marked with `test.fail()` and the bug ID, so the run stays green until the bug is fixed and then flags the test for cleanup.
+
 ## structure
 
 ```
 ROADMAP.md                 # phases, milestones, status
+playwright.config.ts       # base URL, projects (desktop / mobile)
+tests/                     # automated tests: smoke, navigation, i18n, mobile
 docs/
   requirements.md          # what the site must do (REQ-xxx)
   01-test-strategy.md      # how we test, and why
@@ -60,11 +86,13 @@ docs/
 
 ## where I left off
 
-Phase 1 (test documentation) completed on 2026-10-07: requirements v1.0, test strategy, cycle 1 test plan, 5 checklists, 40 test cases, a full traceability matrix, and a document review (9 findings, 8 fixed). All 82 live pages returned 200 on the last check. Phase 2 started: entry gate passed for C1 (C2/C3 still to confirm), smoke run on C1 passed 15/15 (GO), 40 test cases executed on C1: 33 pass, 4 fail, 2 blocked, 1 not run. Links, SEO and a11y checklists done. Exploratory sessions 1–2 done. 7 bugs (1 Major, 5 Minor, 1 Trivial) and 5 improvement suggestions. Cycle 1 closed with deviations, signed off 2026-10-07 (manual-only checks carry over). Phase 2 done. Lighthouse baseline recorded. No test code yet.
+- **Phase 1, test documentation:** done (requirements v1.0, strategy, plan, 5 checklists, 40 test cases, traceability, review).
+- **Phase 2, cycle 1 manual execution:** closed with deviations, signed off 2026-10-07. 33/37 executed test cases passed; 7 bugs and 5 suggestions ([summary report](docs/reports/2026-10-07-cycle-1.md)). Manual-only checks carry over to the next cycle.
+- **Phase 3, automation basics:** Playwright + TypeScript suite with 30 tests (smoke, navigation, i18n, mobile), green in 3 runs in a row.
 
 ## next step
 
-Start phase 3: initialise Playwright + TypeScript and automate the smoke checklist.
+Review the first automated suite, then plan phase 4 (Page Object Model and data-driven checks).
 
 ## resources
 

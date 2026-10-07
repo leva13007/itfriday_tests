@@ -2,7 +2,7 @@
 
 Where the project is going and in what order. Each phase ends with a clear **definition of done**. A phase starts only when the previous one is done.
 
-**Current phase: 3, Automation basics** (phase 2 closed with deviations 2026-10-07)
+**Current phase: 3, Automation basics** (started 2026-10-07)
 
 | Phase | Goal | Status |
 |---|---|---|
@@ -70,12 +70,13 @@ These checks need a person with real devices or assistive technology, and can't 
 
 Goal: first green Playwright run.
 
-- [ ] Init Playwright + TypeScript (`package.json`, `playwright.config.ts`)
-- [ ] Automate the smoke TCs, flat style (no abstractions yet)
-- [ ] Automate the navigation and i18n TCs
-- [ ] Each test references its TC ID (in the title or as a tag); set the TC's `Automation` to `automated`
-- [ ] Desktop Chrome + mobile emulation projects
-- [ ] README section: how to run the tests locally
+- [x] Init Playwright + TypeScript (`package.json`, `playwright.config.ts`) *(Playwright 1.63, npm)*
+- [x] Automate the smoke checklist, flat style (no abstractions yet) *([`tests/smoke.spec.ts`](tests/smoke.spec.ts): S-01…S-15)*
+- [x] Automate the navigation and i18n TCs *(TC-NAV-001…005, TC-I18N-001…004 and 006; TC-I18N-005 moves to phase 4 with the data-driven checks)*
+- [x] Automate the mobile navigation TCs *(TC-RSP-001, 002)*
+- [x] Each test references its TC ID (in the title or as a tag); set the TC's `Automation` to `automated`
+- [x] Desktop Chrome + mobile emulation projects *(desktop-chrome, mobile-chrome, mobile-safari / WebKit)*
+- [x] README section: how to run the tests locally
 
 **Done when:** smoke + navigation run green locally with `npx playwright test`.
 

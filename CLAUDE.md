@@ -14,10 +14,19 @@ QA project for the live site https://itfriday.community (VitePress, UA at `/`, E
 
 The source of truth is **`ROADMAP.md`**: 0 Init → 1 Test documentation → 2 Manual execution → 3 Automation basics → 4 Automation coverage → 5 CI/reporting (undecided) → 6 Polish and publish.
 
-- **Do not write test code or add package.json/Playwright before phase 3.**
+- Test code exists from phase 3 on (see the conventions below).
 - A phase starts only when the previous phase's "done when" is met.
 - When a milestone is finished, tick it in `ROADMAP.md` and update the current-phase line.
 - In phase 3, keep code simple and readable: flat tests first, Page Object Model only in phase 4.
+
+## Test code conventions
+
+- Playwright + TypeScript, npm. Config in `playwright.config.ts`, tests in `tests/*.spec.ts`.
+- Every test title starts with its ID: checklist check (`S-07 …`) or test case (`TC-NAV-003 …`). When a TC is automated, set its `Automation` field to `automated` with a link to the spec.
+- Prefer role-based locators (`getByRole`) that match what users and assistive tech see. Use a CSS class only when there's no accessible handle, and leave a comment saying why (e.g. the logo, BUG-003).
+- Known open bugs: `test.fail()` plus an `issue` annotation with the bug ID. Remove both when the bug is fixed.
+- Production only: read-only tests, `workers: 2`, no load loops. Mobile-only tests are tagged `@mobile`.
+- Before committing: `npm run typecheck` and a full `npm test` run.
 
 ## Rules
 

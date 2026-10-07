@@ -9,7 +9,9 @@ A 10-minute sanity check that the site is up and its main paths work. A failure 
 | Duration | ~10 min |
 | Version | 1.0 (2026-10-07) |
 
-**How to run:** copy this file to `runs/YYYY-MM-DD-smoke-<config>.md`, fill in the header, then mark each line ✅ pass, ❌ fail (link the bug) or ⏭ skipped (say why).
+**Automated:** all 15 checks run as [`tests/smoke.spec.ts`](../../tests/smoke.spec.ts) (`npm run test:smoke`). The manual procedure below stays valid, for example on a real device.
+
+**How to run manually:** copy this file to `runs/YYYY-MM-DD-smoke-<config>.md`, fill in the header, then mark each line ✅ pass, ❌ fail (link the bug) or ⏭ skipped (say why).
 
 ## Run header
 

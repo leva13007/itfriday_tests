@@ -6,7 +6,7 @@
 | Requirement | REQ-009 |
 | Priority | Low |
 | Type | UI |
-| Automation | candidate |
+| Automation | automated ([`tests/navigation.spec.ts`](../../tests/navigation.spec.ts)) |
 | Author | |
 | Created | 2026-10-07 |
 

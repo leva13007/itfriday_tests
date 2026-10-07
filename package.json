@@ -1,0 +1,23 @@
+{
+  "name": "itfriday-testing",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Automated tests for https://itfriday.community (Playwright + TypeScript)",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:desktop": "playwright test --project=desktop-chrome",
+    "test:headed": "playwright test --project=desktop-chrome --headed",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}

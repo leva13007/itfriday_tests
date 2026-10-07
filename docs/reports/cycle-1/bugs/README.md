@@ -6,7 +6,7 @@ Bug reports written with the [bug report template](../../../../.github/ISSUE_TEM
 |---|---|---|---|---|---|
 | [BUG-001](BUG-001.md) | All pages share one meta description | Minor | Medium | New | — |
 | [BUG-002](BUG-002.md) | Interface texts are in English on Ukrainian pages | Minor | Medium | New | — |
-| [BUG-003](BUG-003.md) | Header logo link has no accessible name (logo images lack `alt`) | Major | Medium | New | — |
+| [BUG-003](BUG-003.md) | Header logo link has no accessible name (logo images have empty `alt`) | Major | Medium | New | — |
 | [BUG-004](BUG-004.md) | Insufficient colour contrast in code blocks and the primary hero button | Minor | Low | New | — |
 | [BUG-005](BUG-005.md) | Stream #007: `chrome://webrtc-internals` link can't be opened | Trivial | Low | New | — |
 | [BUG-006](BUG-006.md) | Speaker profile Олег Левченко: stream #012 is missing | Minor | Medium | New | — |

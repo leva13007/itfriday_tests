@@ -31,7 +31,7 @@ One file per test case: `TC-<MODULE>-<NNN>.md`. Start from [`_template.md`](_tem
 
 ## Index
 
-42 test cases · priority: 14 High, 23 Medium, 5 Low · automation: 33 automated (1 partly), 8 candidate, 1 manual-only
+42 test cases · priority: 14 High, 23 Medium, 5 Low · automation: 38 automated (1 partly), 3 candidate, 1 manual-only
 
 Smoke is covered by the [smoke checklist](../checklists/smoke.md), not by test cases.
 
@@ -66,16 +66,16 @@ Smoke is covered by the [smoke checklist](../checklists/smoke.md), not by test c
 | [TC-LNK-005](TC-LNK-005.md) | External links on the newest stream page resolve | REQ-008 | Medium | manual-only |
 | [TC-RSP-001](TC-RSP-001.md) | Hamburger menu replaces the header nav on mobile | REQ-010 | High | automated |
 | [TC-RSP-002](TC-RSP-002.md) | Tapping a mobile menu item navigates and closes the menu | REQ-010 | High | automated |
-| [TC-RSP-003](TC-RSP-003.md) | Pages have no horizontal scroll at mobile width | REQ-010 | High | candidate |
+| [TC-RSP-003](TC-RSP-003.md) | Pages have no horizontal scroll at mobile width | REQ-010 | High | automated |
 | [TC-VIS-001](TC-VIS-001.md) | Visual baseline of the representative pages is captured | REQ-011 | Medium | candidate |
 | [TC-VIS-002](TC-VIS-002.md) | Representative pages match the visual baseline | REQ-011 | Medium | candidate |
 | [TC-SEO-001](TC-SEO-001.md) | Every page has a unique, descriptive title | REQ-012 | Medium | automated |
 | [TC-SEO-002](TC-SEO-002.md) | Every page has its own meta description | REQ-012 | Medium | automated |
 | [TC-SEO-003](TC-SEO-003.md) | Page language attribute matches the content language | REQ-012 | Medium | automated |
 | [TC-SEO-004](TC-SEO-004.md) | Open Graph type and image are present on every page | REQ-013 | Low | automated |
-| [TC-A11Y-001](TC-A11Y-001.md) | Representative pages have no critical or serious axe violations | REQ-014 | Medium | candidate |
-| [TC-A11Y-002](TC-A11Y-002.md) | Skip link moves focus to the main content | REQ-014 | Medium | candidate |
-| [TC-A11Y-003](TC-A11Y-003.md) | Header is fully operable with the keyboard | REQ-014 | Medium | candidate |
-| [TC-A11Y-004](TC-A11Y-004.md) | Images have a text alternative | REQ-014 | Medium | candidate |
+| [TC-A11Y-001](TC-A11Y-001.md) | Representative pages have no critical or serious axe violations | REQ-014 | Medium | automated |
+| [TC-A11Y-002](TC-A11Y-002.md) | Skip link moves focus to the main content | REQ-014 | Medium | automated |
+| [TC-A11Y-003](TC-A11Y-003.md) | Header is fully operable with the keyboard | REQ-014 | Medium | automated |
+| [TC-A11Y-004](TC-A11Y-004.md) | Images have a text alternative | REQ-014 | Medium | automated |
 | [TC-PERF-001](TC-PERF-001.md) | Lighthouse baseline is recorded for key pages | REQ-015 | Low | candidate |
 | [TC-ERR-001](TC-ERR-001.md) | Unknown URL shows a 404 page with a way back home | REQ-017 | Low | automated |

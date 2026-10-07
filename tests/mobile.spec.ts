@@ -1,4 +1,5 @@
 import { test, expect } from './fixtures';
+import { representativePages, representativePagesEn } from './support/representative-pages';
 
 /**
  * Mobile navigation test cases (docs/test-cases/TC-RSP-*.md), automated.
@@ -30,5 +31,23 @@ test.describe('Mobile @mobile', () => {
     await mobileMenu.open();
     await mobileMenu.switchLanguage('English');
     await expect(page).toHaveURL(/\/en\/streams\/$/);
+  });
+
+  test('TC-RSP-003 Pages have no horizontal scroll at mobile width', async ({ page }) => {
+    test.setTimeout(90_000);
+    for (const { name, path } of [...representativePages, ...representativePagesEn]) {
+      await page.goto(path);
+      const { scrollWidth, viewport } = await page.evaluate(() => ({
+        scrollWidth: document.documentElement.scrollWidth,
+        viewport: window.innerWidth,
+      }));
+      expect.soft(scrollWidth, `${name} ${path}: page width vs viewport`).toBeLessThanOrEqual(viewport);
+    }
+    // Wide tables and code blocks must scroll inside their own box, not widen the page.
+    await page.goto('/streams/');
+    await expect(page.locator('.vp-doc table')).toHaveCSS('overflow-x', 'auto');
+    await page.goto('/posts/2026-06-22-web-push-api');
+    const codeBlock = page.locator('.vp-doc div[class*="language-"] pre').first();
+    await expect(codeBlock).toHaveCSS('overflow-x', /auto|scroll/);
   });
 });

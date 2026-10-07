@@ -4,4 +4,4 @@ One test summary report per cycle: `YYYY-MM-DD-cycle-N.md`. Start from [`_test-s
 
 | Cycle | Date | Result |
 |---|---|---|
-| 1 | in progress | [TC execution on C1](cycle-1/2026-10-07-execution-C1.md): 33/40 pass · links, SEO, a11y checklists done · Lighthouse baseline · exploratory 2/3 · 7 bugs, 5 suggestions ([list](cycle-1/bugs/)) |
+| 1 | 2026-10-07 | **[Summary report](2026-10-07-cycle-1.md)**: completed with deviations, 7 bugs, 5 suggestions · [TC execution on C1](cycle-1/2026-10-07-execution-C1.md): 33/40 pass · links, SEO, a11y checklists done · Lighthouse baseline · exploratory 2/3 · 7 bugs, 5 suggestions ([list](cycle-1/bugs/)) |

@@ -23,7 +23,7 @@
 
 | # | Action | Expected result |
 |---|---|---|
-| 1 | Build the page list from the site source | List of paths; record the count |
+| 1 | Build the page list from the site source (clone of https://github.com/leva13007/itfriday.community, see links checklist L-A) | List of paths; record the count |
 | 2 | Request each page with a 0.2 s pause between requests | Every page returns 200 |
 | 3 | Request `/streams/022` and `/streams/022.html` | Both return 200 |
 

@@ -19,10 +19,13 @@ Checks that internal links never lead to a 404, and that external links resolve.
 
 ## A. Every page responds
 
-Build the page list from the site source (one URL per Markdown page, both languages), then request each one:
+Build the page list from the [public site repo](https://github.com/leva13007/itfriday.community) (one URL per Markdown page, both languages), then request each one:
 
 ```bash
-# from the site repo root: list every page path
+# get the site source (once) and go to its root
+git clone --depth 1 https://github.com/leva13007/itfriday.community.git /tmp/itfriday-site && cd /tmp/itfriday-site
+
+# list every page path
 find . -name "*.md" -not -path "./node_modules/*" -not -path "./.github/*" \
   -not -name README.md -not -name CLAUDE.md \
   | sed 's|^\./||; s|\.md$||; s|index$||' | sort > /tmp/paths.txt

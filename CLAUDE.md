@@ -4,7 +4,9 @@ Guidance for Claude Code when working in this repo.
 
 ## What This Is
 
-QA project for the live site https://itfriday.community (VitePress, UA at `/`, EN at `/en/`, GitHub Pages). The site source lives in a separate repo: https://github.com/leva13007/itfriday.community. Read it to understand pages and config, but never change it from here.
+QA project for the live site https://itfriday.community (VitePress, UA at `/`, EN at `/en/`, GitHub Pages). The site source is a separate public repo: https://github.com/leva13007/itfriday.community. Read it (clone or browse on GitHub) to understand pages and config, but never change it from here.
+
+**Never reference local machine paths** (home directories, absolute paths, temp folders) in this repo. Everyone reading it has access to the public repos and the live site only.
 
 **Purpose:** a complete, end-to-end QA project for a real website. It should read as a full walkthrough of the testing process: analysis → planning → design → manual execution → bug reporting → automation.
 
@@ -30,3 +32,4 @@ The source of truth is **`ROADMAP.md`**: 0 Init → 1 Test documentation → 2 M
 - Bug reports use `.github/ISSUE_TEMPLATE/bug_report.md`.
 - Keep `README.md` "where I left off" / "next step" current (one next step only).
 - Never read or commit `.env` files.
+- Never commit local paths (`~/…`, `/Users/…`, temp folders). Refer to the public site repo by its GitHub URL.

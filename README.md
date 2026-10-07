@@ -68,6 +68,6 @@ Start phase 3: initialise Playwright + TypeScript and automate the smoke checkli
 
 ## resources
 
-- Site source: https://github.com/leva13007/itfriday.community
+- Site source (public): https://github.com/leva13007/itfriday.community
 - [Playwright docs](https://playwright.dev/docs/intro)
 - ISTQB Foundation glossary: https://glossary.istqb.org

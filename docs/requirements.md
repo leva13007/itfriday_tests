@@ -2,7 +2,7 @@
 
 The site has no formal specification, so these requirements are **derived** from the live site, its source config and common web standards. Each requirement is testable and has a stable ID.
 
-> Status: **frozen v1.0** (2026-10-07). Derived from the site source and verified against the live site (see the live check log). Any change after this point bumps the version and must be reflected in the traceability matrix.
+> Status: **frozen v1.0** (2026-10-07). Derived from the [site source](https://github.com/leva13007/itfriday.community) and verified against the live site (see the live check log). Any change after this point bumps the version and must be reflected in the traceability matrix.
 
 ## Site map (as of 2026-10-07)
 

@@ -1,0 +1,744 @@
+{
+  "date": "2026-10-07",
+  "device": "full-mobile",
+  "pages": {
+    "/": {
+      "performance": 100,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1656,
+      "cls": 0,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/about": {
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1657,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/": {
+      "performance": 100,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1661,
+      "cls": 0.006,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/about": {
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1684,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/issues": {
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1742,
+      "cls": 0.06,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/posts/": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1655,
+      "cls": 0,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/posts/2026-05-31-chomu-varto-robyty-dopovidi": {
+      "performance": 99,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1655,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/posts/2026-06-22-web-push-api": {
+      "performance": 99,
+      "accessibility": 91,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1731,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/schedule": {
+      "performance": 99,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1730,
+      "cls": 0.06,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/speak": {
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1656,
+      "cls": 0.06,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/speakers": {
+      "performance": 98,
+      "accessibility": 95,
+      "bestPractices": 96,
+      "seo": 100,
+      "lcpMs": 2262,
+      "cls": 0,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/speakers/ihor-kotov": {
+      "performance": 92,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1666,
+      "cls": 0.169,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/speakers/oleh-levchenko": {
+      "performance": 91,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1664,
+      "cls": 0.187,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/speakers/oleh-talanov": {
+      "performance": 92,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 2329,
+      "cls": 0.153,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/speakers/oleksandr-blazheiko": {
+      "performance": 91,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 2108,
+      "cls": 0.177,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/speakers/serhii-lytvyn": {
+      "performance": 92,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1660,
+      "cls": 0.173,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/": {
+      "performance": 99,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1654,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/001": {
+      "performance": 64,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 14722,
+      "cls": 0.218,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/002": {
+      "performance": 65,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11645,
+      "cls": 0.203,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/003": {
+      "performance": 66,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 10137,
+      "cls": 0.19,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/004": {
+      "performance": 63,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 10888,
+      "cls": 0.238,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/005": {
+      "performance": 62,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 12910,
+      "cls": 0.252,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/006": {
+      "performance": 65,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11271,
+      "cls": 0.203,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/007": {
+      "performance": 75,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11335,
+      "cls": 0,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/008": {
+      "performance": 63,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11184,
+      "cls": 0.23,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/009": {
+      "performance": 61,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11043,
+      "cls": 0.283,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/010": {
+      "performance": 66,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 8951,
+      "cls": 0.19,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/011": {
+      "performance": 61,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 14129,
+      "cls": 0.283,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/012": {
+      "performance": 65,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 13135,
+      "cls": 0.208,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/013": {
+      "performance": 65,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 13359,
+      "cls": 0.207,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/014": {
+      "performance": 74,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 12385,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/015": {
+      "performance": 65,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 14188,
+      "cls": 0.21,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/016": {
+      "performance": 65,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 14333,
+      "cls": 0.21,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/017": {
+      "performance": 65,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 13581,
+      "cls": 0.211,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/018": {
+      "performance": 64,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 10752,
+      "cls": 0.228,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/019": {
+      "performance": 85,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1711,
+      "cls": 0.283,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/020": {
+      "performance": 60,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11786,
+      "cls": 0.305,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/021": {
+      "performance": 74,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11635,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/streams/022": {
+      "performance": 66,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11192,
+      "cls": 0.191,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/wiki/formats": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1731,
+      "cls": 0.007,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/wiki/governance": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1730,
+      "cls": 0,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/wiki/mission": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1731,
+      "cls": 0.007,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/en/wiki/values": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1754,
+      "cls": 0,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/issues": {
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1748,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/posts/": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1654,
+      "cls": 0,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/posts/2026-05-31-chomu-varto-robyty-dopovidi": {
+      "performance": 97,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 2144,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/posts/2026-06-22-web-push-api": {
+      "performance": 97,
+      "accessibility": 91,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 2063,
+      "cls": 0.075,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/schedule": {
+      "performance": 83,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1680,
+      "cls": 0.343,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/speak": {
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1777,
+      "cls": 0.043,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/speakers": {
+      "performance": 99,
+      "accessibility": 95,
+      "bestPractices": 96,
+      "seo": 100,
+      "lcpMs": 1851,
+      "cls": 0,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/speakers/ihor-kotov": {
+      "performance": 91,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1659,
+      "cls": 0.182,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/speakers/oleh-levchenko": {
+      "performance": 99,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1748,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/speakers/oleh-talanov": {
+      "performance": 98,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 2263,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/speakers/oleksandr-blazheiko": {
+      "performance": 90,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 2121,
+      "cls": 0.191,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/speakers/serhii-lytvyn": {
+      "performance": 92,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 3164,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/": {
+      "performance": 99,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1655,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/001": {
+      "performance": 74,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 14869,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/002": {
+      "performance": 64,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11785,
+      "cls": 0.214,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/003": {
+      "performance": 60,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 10449,
+      "cls": 0.295,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/004": {
+      "performance": 58,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11189,
+      "cls": 0.337,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/005": {
+      "performance": 63,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 13216,
+      "cls": 0.237,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/006": {
+      "performance": 59,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11571,
+      "cls": 0.326,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/007": {
+      "performance": 62,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11488,
+      "cls": 0.251,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/008": {
+      "performance": 59,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11485,
+      "cls": 0.326,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/009": {
+      "performance": 64,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11124,
+      "cls": 0.221,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/010": {
+      "performance": 64,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 9166,
+      "cls": 0.217,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/011": {
+      "performance": 75,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 14491,
+      "cls": 0,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/012": {
+      "performance": 66,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 13612,
+      "cls": 0.19,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/013": {
+      "performance": 65,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 13594,
+      "cls": 0.208,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/014": {
+      "performance": 64,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 12543,
+      "cls": 0.228,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/015": {
+      "performance": 65,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 14487,
+      "cls": 0.211,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/016": {
+      "performance": 64,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 14776,
+      "cls": 0.198,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/017": {
+      "performance": 66,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 13896,
+      "cls": 0.195,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/018": {
+      "performance": 64,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11038,
+      "cls": 0.228,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/019": {
+      "performance": 88,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1663,
+      "cls": 0.227,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/020": {
+      "performance": 64,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 12158,
+      "cls": 0.217,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/021": {
+      "performance": 66,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11795,
+      "cls": 0.187,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/streams/022": {
+      "performance": 74,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 11640,
+      "cls": 0.054,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/wiki/formats": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1730,
+      "cls": 0,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/wiki/governance": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1728,
+      "cls": 0.008,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/wiki/mission": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1678,
+      "cls": 0.008,
+      "lighthouseVersion": "12.6.1"
+    },
+    "/wiki/values": {
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1729,
+      "cls": 0.001,
+      "lighthouseVersion": "12.6.1"
+    }
+  }
+}

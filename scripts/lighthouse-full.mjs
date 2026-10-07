@@ -1,7 +1,7 @@
 // Full Lighthouse run over EVERY page of the site, for occasional deep checks
 // (once a cycle, monthly, or overnight). The routine `npm run lighthouse` covers 6 key pages.
 //
-//   npm run lighthouse:full                         # all pages, mobile, 3 runs each (~1 h 15 min)
+//   npm run lighthouse:full                         # all pages, mobile, 3 runs each (~40 min)
 //   npm run lighthouse:full -- --lang ua            # Ukrainian pages only (half the time)
 //   npm run lighthouse:full -- --runs 1 --limit 5   # quick try-out
 //   npm run lighthouse:full:desktop                 # the same with the desktop preset
@@ -36,7 +36,8 @@ const pages = (await crawlSite(request, ORIGIN))
   .filter((page) => lang === 'all' || (lang === 'en') === isEnglish(page.path))
   .slice(0, limit);
 
-const minutes = Math.ceil((pages.length * runs * 18) / 60);
+// ~10 s per Lighthouse run on the site's pages (measured: 82 pages × 3 runs took 41 min).
+const minutes = Math.ceil((pages.length * runs * 10) / 60);
 console.log(`Lighthouse full run: ${pages.length} pages × ${runs} runs, ${device}. Expect about ${minutes} min.`);
 
 const name = `full-${device}`;

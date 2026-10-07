@@ -21,6 +21,12 @@ The files above are the **masters**. Don't fill them in directly.
 3. Mark each check ✅ pass · ❌ fail (link the GitHub Issue) · ⏭ skipped (say why) · ⚠️ unverified (links only).
 4. Fill in the result table and commit the run file.
 
+## Runs
+
+| Date | Checklist | Config | Result |
+|---|---|---|---|
+| 2026-10-07 | [Smoke](runs/2026-10-07-smoke-C1.md) | C1 | 15/15 ✅ GO |
+
 ## Check IDs
 
 Each check has a stable ID (`S-07`, `L-C03`, `A11Y-B02`, `SEO-A06` …) that bug reports and the traceability matrix refer to. When a master changes, keep existing IDs and add new ones at the end. Never renumber.

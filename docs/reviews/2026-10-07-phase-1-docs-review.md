@@ -48,7 +48,7 @@ Severity: **Major** = would cause a wrong test result or a process that can't be
 | R-04 | Exploratory README | Charter list didn't say which sessions belong to cycle 1. The plan (§4.2) fixes 3 of them | Minor | README points to plan §4.2; the list is the pool for later cycles | ✅ Fixed |
 | R-05 | Strategy §7 | The defect lifecycle has 8 statuses, but GitHub Issues only has open/closed. There was no way to record "Confirmed" or "Verified" | Major | Added a mapping of statuses to labels (`status: …`, `wontfix` / `duplicate` / `invalid`) | ✅ Fixed |
 | R-06 | Strategy §7, SEO checklist | `enhancement` issues were required for advisory findings, but there was no template for them | Minor | Added `.github/ISSUE_TEMPLATE/improvement_suggestion.md` and linked it | ✅ Fixed |
-| R-07 | Test plan §10 | The schedule showed test design ending 2026-10-17; it was finished on 2026-10-07 | Minor | Added an "Actual" column | ✅ Fixed |
+| R-07 | Test plan §10 | The schedule showed test design ending 2026-10-17; it was finished on 2026-10-07 | Minor | Added an "Actual" column. Later the dated schedule was replaced by an order of execution (plan §10), see the git history | ✅ Fixed |
 | R-08 | All 40 TCs | `Author` field is empty | Trivial | To be filled with the author's name before the entry gate | ⏳ Deferred |
 | R-09 | README | Repo structure didn't list `docs/reviews/` | Trivial | Added | ✅ Fixed |
 

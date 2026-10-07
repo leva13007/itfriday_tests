@@ -123,8 +123,8 @@ Execution starts when all of these are true:
 - [x] Test cases exist for every High and Medium requirement, and have been reviewed (roadmap 1.5, 1.7)
 - [x] Smoke, cross-browser, links, a11y and SEO checklists written (roadmap 1.4)
 - [x] Traceability matrix complete, with no High requirement uncovered (roadmap 1.6)
-- [ ] The live site responds (`/` returns 200)
-- [ ] Configurations C1–C3 are available
+- [x] The live site responds (`/` returns 200)
+- [ ] Configurations C1–C3 are available *(C1 confirmed 2026-10-07; C2 Safari and C3 iPhone still to confirm, needed only from step 5)*
 
 ## 7. Exit criteria
 
@@ -161,24 +161,22 @@ Leaving with known open bugs is allowed: the summary report lists them with seve
 | Updated traceability matrix | [`docs/traceability-matrix.md`](traceability-matrix.md) |
 | Test summary report | `docs/reports/YYYY-MM-DD-cycle-1.md` |
 
-## 10. Schedule
+## 10. Order of execution
 
-Planned dates. They move if the previous step finishes late. Effort is in focused working sessions (~2 h each).
+The cycle has no fixed dates. Activities run in this order. Each one starts when the previous one is done, except where noted.
 
-| Activity | Roadmap | Planned start | Planned end | Effort | Actual |
-|---|---|---|---|---|---|
-| Test plan | 1.3 | 2026-10-07 | 2026-10-07 | 1 | ✅ 2026-10-07 |
-| Checklists | 1.4 | 2026-10-08 | 2026-10-09 | 2 | ✅ 2026-10-07 |
-| Test cases | 1.5 | 2026-10-09 | 2026-10-16 | 5 | ✅ 2026-10-07 |
-| Traceability + docs review | 1.6, 1.7 | 2026-10-16 | 2026-10-17 | 1 | ✅ 2026-10-07 |
-| **Entry gate** | | 2026-10-19 | | | |
-| Smoke + functional execution (C1) | 2 | 2026-10-19 | 2026-10-23 | 3 | |
-| Cross-browser, a11y, SEO, performance, visual baseline | 2 | 2026-10-21 | 2026-10-27 | 3 | |
-| Exploratory sessions | 2 | 2026-10-19 | 2026-10-28 | 2 | |
-| Bug retests | 2 | as fixes land | 2026-10-29 | 1 | |
-| Test summary report | 2 | 2026-10-29 | 2026-10-30 | 1 | |
+| # | Activity | Starts when |
+|---|---|---|
+| 1 | Entry gate check (§6) | Phase 1 documentation is complete |
+| 2 | Smoke checklist on C1 | Entry gate passed. A NO-GO stops the cycle until fixed |
+| 3 | Functional test cases | Smoke is GO |
+| 4 | Links, SEO, a11y checklists; Lighthouse baseline | Smoke is GO; can run in parallel with step 3 |
+| 5 | Cross-browser checklist (C1–C4); visual baseline (TC-VIS-001) | Functional cases on C1 are done, so layout bugs aren't confused with functional ones |
+| 6 | Exploratory sessions (§4.2) | Any time after smoke is GO |
+| 7 | Bug retests | As fixes are deployed |
+| 8 | Test summary report | Exit criteria (§7) are evaluated |
 
-Stream days (Fridays) usually bring a deploy, so a smoke run is planned for every Friday and Saturday of the cycle.
+After every site deploy during the cycle, re-run smoke (stream days usually bring a deploy).
 
 ## 11. Roles
 
@@ -197,7 +195,6 @@ Cycle-specific risks. General project risks are in the [strategy](01-test-strate
 | No real iPhone or Android device available | Low | Medium | Simulator / DevTools device mode, with the limitation noted in the report |
 | Third-party sites block link checks | Medium | Low | Retest manually; report as "unverified" rather than as a bug |
 | Bug fixes depend on the site owner's availability | Medium | Medium | Exit criteria allow open non-critical bugs with acknowledgement |
-| Test design takes longer than planned | Medium | Low | Prioritise TCs for High requirements; Medium ones can be finished during execution |
 
 ## 13. Approval
 

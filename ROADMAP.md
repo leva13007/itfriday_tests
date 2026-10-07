@@ -30,7 +30,7 @@ Goal: a complete, reviewed set of test docs, ready to execute.
 
 - [x] **1.1 Requirements.** Verify `requirements.md` against the live site, resolve the open questions, freeze the REQ list *(v1.0 frozen 2026-10-07)*
 - [x] **1.2 Test strategy.** Fill every section of `01-test-strategy.md` *(v1.0, 2026-10-07)*
-- [x] **1.3 Test plan.** Fill `02-test-plan.md`: browsers/devices, entry/exit criteria, schedule, risks *(cycle 1 plan v1.0, 2026-10-07)*
+- [x] **1.3 Test plan.** Fill `02-test-plan.md`: browsers/devices, entry/exit criteria, order of execution, risks *(cycle 1 plan v1.0, 2026-10-07)*
 - [x] **1.4 Checklists.** Write `smoke.md`, `cross-browser.md`, `links.md`, `a11y.md`, `seo.md` *(v1.0, 2026-10-07)*
 - [x] **1.5 Test cases.** At least one TC for every High and Medium REQ, with the `Automation` field set *(40 TCs covering all 17 REQs, 2026-10-07)*
 - [x] **1.6 Traceability.** Matrix is complete, no High REQ left with ❌
@@ -42,7 +42,7 @@ Goal: a complete, reviewed set of test docs, ready to execute.
 
 Goal: prove the docs work on the real site and find real bugs.
 
-- [ ] Run the smoke checklist
+- [x] Run the smoke checklist *([2026-10-07, C1](docs/checklists/runs/2026-10-07-smoke-C1.md): 15/15, GO)*
 - [ ] Execute the TCs as the test plan's exit criteria require, and record results in each TC's execution history
 - [ ] Run the cross-browser / mobile checklist
 - [ ] At least 3 exploratory sessions (from the charter ideas)

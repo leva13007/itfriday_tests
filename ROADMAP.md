@@ -1,0 +1,102 @@
+# Roadmap
+
+Where the project is going and in what order. Each phase ends with a clear **definition of done**. A phase starts only when the previous one is done.
+
+**Current phase: 1, Test documentation** (started 2026-10-07)
+
+| Phase | Goal | Status |
+|---|---|---|
+| 0. Init | Repo, structure, templates | ✅ done |
+| 1. Test documentation | Full QA documentation set, written before any execution | 🟡 in progress |
+| 2. Manual execution | Run the TCs and exploratory sessions, file real bugs, write report #1 | ⏳ planned |
+| 3. Automation basics | Playwright + TypeScript, smoke and navigation TCs automated | ⏳ planned |
+| 4. Automation coverage | Links, visual, SEO, a11y, performance, refactor to Page Object Model | ⏳ planned |
+| 5. CI and reporting | Scheduled runs, public report | 💭 to decide |
+| 6. Handover | She rebuilds the project in her own repo; portfolio polish | ⏳ planned |
+
+---
+
+## Phase 0: Init ✅
+
+- [x] Git repo, `.gitignore`
+- [x] `README.md`, `CLAUDE.md`, `ROADMAP.md`
+- [x] Docs skeleton: strategy, plan, requirements, traceability, reports
+- [x] Templates: test case, exploratory session, test summary report, bug report
+- [x] Example test case `TC-NAV-001`
+
+## Phase 1: Test documentation 🟡
+
+Goal: a complete, reviewed set of test docs, ready to execute.
+
+- [ ] **1.1 Requirements.** Verify `requirements.md` against the live site, resolve the open questions, freeze the REQ list
+- [ ] **1.2 Test strategy.** Fill every section of `01-test-strategy.md`
+- [ ] **1.3 Test plan.** Fill `02-test-plan.md`: browsers/devices, entry/exit criteria, schedule, risks
+- [ ] **1.4 Checklists.** Write `smoke.md`, `cross-browser.md`, `a11y.md`, `seo.md`
+- [ ] **1.5 Test cases.** At least one TC for every High and Medium REQ, with the `Automation` field set
+- [ ] **1.6 Traceability.** Matrix is complete, no High REQ left with ❌
+- [ ] **1.7 Review.** Peer review of all docs (Oleh ↔ her), fixes applied
+
+**Done when:** every REQ has coverage planned (TC or checklist), and the docs are reviewed.
+
+## Phase 2: Manual execution ⏳
+
+Goal: prove the docs work on the real site and find real bugs.
+
+- [ ] Run the smoke checklist
+- [ ] Execute all TCs on the primary browser and record results in the execution history
+- [ ] Run the cross-browser / mobile checklist
+- [ ] At least 3 exploratory sessions (from the charter ideas)
+- [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix
+- [ ] Retest fixed bugs (the site owner fixes them in the site repo)
+- [ ] Write the first test summary report (`docs/reports/`)
+
+**Done when:** the cycle 1 report is written and exit criteria are evaluated.
+
+## Phase 3: Automation basics ⏳
+
+Goal: first green Playwright run, written by her.
+
+- [ ] JS/TS basics needed for tests (variables, functions, async/await, modules)
+- [ ] Init Playwright + TypeScript (`package.json`, `playwright.config.ts`)
+- [ ] Automate the smoke TCs, flat style (no abstractions yet)
+- [ ] Automate the navigation and i18n TCs
+- [ ] Each test references its TC ID (in the title or as a tag); set the TC's `Automation` to `automated`
+- [ ] Desktop Chrome + mobile emulation projects
+- [ ] README section: how to run the tests locally
+
+**Done when:** smoke + navigation run green locally with `npx playwright test`.
+
+## Phase 4: Automation coverage ⏳
+
+- [ ] Refactor to Page Object Model (header, language switcher, page types)
+- [ ] Broken link checker (internal + external, crawled from the site map)
+- [ ] Visual regression with `toHaveScreenshot` (desktop + mobile, key pages)
+- [ ] SEO checks (title, description, `lang`, OG tags)
+- [ ] Accessibility with `@axe-core/playwright`
+- [ ] Performance baseline (Lighthouse)
+- [ ] Data-driven tests over all stream/speaker pages
+
+**Done when:** every `candidate` TC is `automated` or has a written reason why not.
+
+## Phase 5: CI and reporting 💭
+
+Not decided yet. Tests run manually for now. Options to evaluate:
+
+- GitHub Actions: manual trigger + cron schedule against prod
+- Trigger after each site deploy (`repository_dispatch` from the site repo)
+- Allure or the Playwright HTML report published to GitHub Pages
+- Telegram notification on failure
+
+## Phase 6: Handover ⏳
+
+- [ ] She creates her own repo and rebuilds the project phase by phase
+- [ ] Portfolio README: what was done, skills shown, link to the report and the bugs found
+- [ ] Optional: IT Friday stream or video about the project
+
+---
+
+## Out of scope (for now)
+
+- Load / stress testing (production only)
+- Security testing
+- Testing the site's source code (unit tests live in the site repo, if ever)

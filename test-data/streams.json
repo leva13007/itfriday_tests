@@ -1,0 +1,370 @@
+{
+  "source": "Generated from the live site (deploy of Tue, 06 Oct 2026 16:47 GMT) on 2026-10-07.",
+  "reviewed": false,
+  "reviewedBy": null,
+  "reviewedOn": null,
+  "streams": [
+    {
+      "number": "001",
+      "date": "2026-05-15",
+      "title": {
+        "ua": "Запускаємо українське IT-ком'юніті з нуля",
+        "en": "Launching Ukrainian IT Community from scratch"
+      },
+      "listTopic": {
+        "ua": "Запускаємо українське IT-ком'юніті з нуля",
+        "en": "Launching Ukrainian IT Community from scratch"
+      },
+      "speakers": [
+        "oleh-levchenko"
+      ],
+      "youtubeId": "wht8lf-h9N8"
+    },
+    {
+      "number": "002",
+      "date": "2026-05-22",
+      "title": {
+        "ua": "React 19.2: <Activity /> + AI Language Teacher",
+        "en": "React 19.2: <Activity /> + AI Language Teacher"
+      },
+      "listTopic": {
+        "ua": "React 19.2: <Activity /> + AI Language Teacher",
+        "en": "React 19.2: <Activity /> + AI Language Teacher"
+      },
+      "speakers": [
+        "oleh-levchenko",
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "R5IXxa1e8K4"
+    },
+    {
+      "number": "003",
+      "date": "2026-05-29",
+      "title": {
+        "ua": "uWebSockets.js + React Conf 2025: useEffectEvent",
+        "en": "uWebSockets.js + React Conf 2025: useEffectEvent"
+      },
+      "listTopic": {
+        "ua": "uWebSockets.js + React Conf 2025: useEffectEvent",
+        "en": "uWebSockets.js + React Conf 2025: useEffectEvent"
+      },
+      "speakers": [
+        "oleh-levchenko",
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "7wR_NxpsSFw"
+    },
+    {
+      "number": "004",
+      "date": "2026-06-05",
+      "title": {
+        "ua": "uWebSockets.js Security + React Performance Tracks",
+        "en": "uWebSockets.js Security + React Performance Tracks"
+      },
+      "listTopic": {
+        "ua": "uWebSockets.js Security + React Performance Tracks",
+        "en": "uWebSockets.js Security + React Performance Tracks"
+      },
+      "speakers": [
+        "oleh-levchenko",
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "Pad_b_yQyt8"
+    },
+    {
+      "number": "005",
+      "date": "2026-06-12",
+      "title": {
+        "ua": "CTO, метал і Laravel + Inertia.js · Олег Таланов",
+        "en": "CTO, Metal & Laravel + Inertia.js · Oleh Talanov"
+      },
+      "listTopic": {
+        "ua": "CTO, метал і Laravel + Inertia.js · інтерв'ю з Олегом Талановим",
+        "en": "CTO, metal & Laravel + Inertia.js · interview with Oleh Talanov"
+      },
+      "speakers": [
+        "oleh-levchenko",
+        "oleh-talanov"
+      ],
+      "youtubeId": "bEW6pQlMDBc"
+    },
+    {
+      "number": "006",
+      "date": "2026-06-19",
+      "title": {
+        "ua": "React ViewTransition + PWA у WEB",
+        "en": "React ViewTransition + PWA in the Web"
+      },
+      "listTopic": {
+        "ua": "React ViewTransition + PWA у WEB",
+        "en": "React ViewTransition + PWA in the Web"
+      },
+      "speakers": [
+        "oleh-levchenko",
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "RJ9xqAfUl6M"
+    },
+    {
+      "number": "007",
+      "date": "2026-06-26",
+      "title": {
+        "ua": "React Fragment + WebRTC",
+        "en": "React Fragment + WebRTC"
+      },
+      "listTopic": {
+        "ua": "React Fragment + WebRTC",
+        "en": "React Fragment + WebRTC"
+      },
+      "speakers": [
+        "oleh-levchenko",
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "leT3mUEmIqA"
+    },
+    {
+      "number": "008",
+      "date": "2026-07-03",
+      "title": {
+        "ua": "CSP + React+Vite vs Next.js",
+        "en": "CSP + React+Vite vs Next.js"
+      },
+      "listTopic": {
+        "ua": "CSP + React+Vite vs Next.js",
+        "en": "CSP + React+Vite vs Next.js"
+      },
+      "speakers": [
+        "oleh-levchenko",
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "txdVcK2Sxno"
+    },
+    {
+      "number": "009",
+      "date": "2026-07-10",
+      "title": {
+        "ua": "tmux + AI-агенти",
+        "en": "tmux + AI Agents"
+      },
+      "listTopic": {
+        "ua": "tmux + AI-агенти",
+        "en": "tmux + AI Agents"
+      },
+      "speakers": [
+        "oleh-levchenko"
+      ],
+      "youtubeId": "jbw4x3ENiJ0"
+    },
+    {
+      "number": "010",
+      "date": "2026-07-17",
+      "title": {
+        "ua": "Огляд атак у вебі",
+        "en": "Web Attacks Overview"
+      },
+      "listTopic": {
+        "ua": "Огляд атак у вебі",
+        "en": "Web Attacks Overview"
+      },
+      "speakers": [
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "YDs0AGzYjoI"
+    },
+    {
+      "number": "011",
+      "date": "2026-07-24",
+      "title": {
+        "ua": "OWASP Top 10:2025",
+        "en": "OWASP Top 10:2025"
+      },
+      "listTopic": {
+        "ua": "OWASP Top 10:2025",
+        "en": "OWASP Top 10:2025"
+      },
+      "speakers": [
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "pUNYHsXrT6g"
+    },
+    {
+      "number": "012",
+      "date": "2026-07-31",
+      "title": {
+        "ua": "InertiaJS: SPA без окремого API? · Олег Таланов",
+        "en": "InertiaJS: SPA Without a Separate API? · Oleh Talanov"
+      },
+      "listTopic": {
+        "ua": "InertiaJS: SPA без окремого API?",
+        "en": "InertiaJS: SPA Without a Separate API?"
+      },
+      "speakers": [
+        "oleh-levchenko",
+        "oleh-talanov"
+      ],
+      "youtubeId": "Aq1-dGnv4II"
+    },
+    {
+      "number": "013",
+      "date": "2026-08-07",
+      "title": {
+        "ua": "STAR-метод: як ставити питання, щоб бачити факти, а не завчені відповіді",
+        "en": "Structured Interviews & the STAR Method"
+      },
+      "listTopic": {
+        "ua": "Структуроване інтерв'ю та метод STAR",
+        "en": "Structured Interviews & the STAR Method"
+      },
+      "speakers": [
+        "oleh-levchenko",
+        "ihor-kotov"
+      ],
+      "youtubeId": "5HmD8FImE2k"
+    },
+    {
+      "number": "014",
+      "date": "2026-08-14",
+      "title": {
+        "ua": "Методи аутентифікації користувача",
+        "en": "Web Authentication Methods"
+      },
+      "listTopic": {
+        "ua": "Методи аутентифікації користувача",
+        "en": "Web Authentication Methods"
+      },
+      "speakers": [
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "x2MGgT3qkN8"
+    },
+    {
+      "number": "015",
+      "date": "2026-08-21",
+      "title": {
+        "ua": "OAuth 2.0 та OpenID Connect",
+        "en": "OAuth 2.0 and OpenID Connect"
+      },
+      "listTopic": {
+        "ua": "OAuth 2.0 та OpenID Connect",
+        "en": "OAuth 2.0 and OpenID Connect"
+      },
+      "speakers": [
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "ZcHi3dm9tZQ"
+    },
+    {
+      "number": "016",
+      "date": "2026-08-28",
+      "title": {
+        "ua": "Специфікація як новий вихідний код",
+        "en": "Specification as the New Source Code"
+      },
+      "listTopic": {
+        "ua": "Специфікація як новий вихідний код",
+        "en": "Specification as the New Source Code"
+      },
+      "speakers": [
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "dy79Bdktwxo"
+    },
+    {
+      "number": "017",
+      "date": "2026-09-04",
+      "title": {
+        "ua": "Створюємо міні-Twitter за 2 години з AI-агентом наживо",
+        "en": "Live Build: Mini X in 2 Hours with an AI Agent"
+      },
+      "listTopic": {
+        "ua": "Живий кодинг: mini X за 2 години з AI-агентом",
+        "en": "Live Build: Mini X in 2 Hours with an AI Agent"
+      },
+      "speakers": [
+        "oleh-levchenko",
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "IGudWZHHq_I"
+    },
+    {
+      "number": "018",
+      "date": "2026-09-11",
+      "title": {
+        "ua": "LinkedIn, який працює на тебе",
+        "en": "LinkedIn That Works For You"
+      },
+      "listTopic": {
+        "ua": "LinkedIn, який працює на тебе",
+        "en": "LinkedIn That Works For You"
+      },
+      "speakers": [
+        "oleh-levchenko"
+      ],
+      "youtubeId": "v9dLbeQk3YY"
+    },
+    {
+      "number": "019",
+      "date": "2026-09-18",
+      "title": {
+        "ua": "Graphify: 70× менше токенів чи маркетинг?",
+        "en": "Graphify: 70× Fewer Tokens or Marketing?"
+      },
+      "listTopic": {
+        "ua": "Graphify: 70× менше токенів чи маркетинг?",
+        "en": "Graphify: 70× Fewer Tokens or Marketing?"
+      },
+      "speakers": [
+        "oleh-levchenko"
+      ],
+      "youtubeId": "Vn57Gw4Txz4"
+    },
+    {
+      "number": "020",
+      "date": "2026-09-25",
+      "title": {
+        "ua": "RAG: модель не мусить пам'ятати, вона мусить знайти",
+        "en": "RAG: The Model Doesn't Have to Remember — It Has to Find"
+      },
+      "listTopic": {
+        "ua": "RAG: модель не мусить пам'ятати, вона мусить знайти",
+        "en": "RAG: The Model Doesn't Have to Remember — It Has to Find"
+      },
+      "speakers": [
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "ZIyIUK7vGQU"
+    },
+    {
+      "number": "021",
+      "date": "2026-10-02",
+      "title": {
+        "ua": "Якщо ШІ вже пише код, навіщо потрібен розробник?",
+        "en": "If AI Already Writes the Code, What Is a Developer For?"
+      },
+      "listTopic": {
+        "ua": "Якщо ШІ вже пише код, навіщо потрібен розробник?",
+        "en": "If AI Already Writes the Code, What Is a Developer For?"
+      },
+      "speakers": [
+        "oleksandr-blazheiko"
+      ],
+      "youtubeId": "ROs1CGNbXdo"
+    },
+    {
+      "number": "022",
+      "date": "2026-10-09",
+      "title": {
+        "ua": "AI пише код. Хто отримує підвищення?",
+        "en": "AI Writes the Code. Who Gets the Promotion?"
+      },
+      "listTopic": {
+        "ua": "AI пише код. Хто отримує підвищення?",
+        "en": "AI Writes the Code. Who Gets the Promotion?"
+      },
+      "speakers": [
+        "serhii-lytvyn"
+      ],
+      "youtubeId": "icenkn7tmdY"
+    }
+  ]
+}

@@ -29,6 +29,7 @@ The source of truth is **`ROADMAP.md`**: 0 Init → 1 Test documentation → 2 M
 - Prefer role-based locators (`getByRole`) that match what users and assistive tech see. Use a CSS class only when there's no accessible handle, and leave a comment saying why (e.g. the logo, BUG-003).
 - Known open bugs: `test.fail()` plus an `issue` annotation with the bug ID. Remove both when the bug is fixed.
 - Production only: read-only tests, `workers: 2`, no load loops. Mobile-only tests are tagged `@mobile`.
+- `test-data/*.json` is the content oracle, owned by the site owner. Never edit it to make a test pass: decide whether the site or the data is wrong, and ask the owner if unsure. Keep facts in one place inside it (speaker → streams is derived from `streams.json`).
 - Visual baselines (`tests/visual.spec.ts-snapshots/`) are committed. Re-capture them with `npm run test:visual:update` only after an intended visual change, and review every changed image before committing. Never update them to make a failing test pass without looking.
 - Before committing: `npm run typecheck` and a full `npm test` run.
 

@@ -31,7 +31,7 @@ One file per test case: `TC-<MODULE>-<NNN>.md`. Start from [`_template.md`](_tem
 
 ## Index
 
-42 test cases · priority: 14 High, 23 Medium, 5 Low · automation: 41 automated (1 partly), 0 candidate, 1 manual-only (TC-LNK-005: LinkedIn blocks automated requests)
+45 test cases · priority: 14 High, 26 Medium, 5 Low · automation: 44 automated (1 partly), 1 manual-only (TC-LNK-005: LinkedIn blocks automated requests)
 
 Smoke is covered by the [smoke checklist](../checklists/smoke.md), not by test cases.
 
@@ -56,8 +56,11 @@ Smoke is covered by the [smoke checklist](../checklists/smoke.md), not by test c
 | [TC-STR-002](TC-STR-002.md) | Stream page shows its key information | REQ-001 | High | automated |
 | [TC-STR-003](TC-STR-003.md) | Speaker link on a stream page opens the right profile | REQ-007 | High | automated |
 | [TC-STR-004](TC-STR-004.md) | Stream list, stream pages and speaker profiles agree on who spoke where | — (consistency) | Medium | automated |
+| [TC-STR-005](TC-STR-005.md) | Streams list matches the expected streams | REQ-016 | Medium | automated |
+| [TC-STR-006](TC-STR-006.md) | Every stream page matches the expected stream | REQ-016 | Medium | automated |
 | [TC-SPK-001](TC-SPK-001.md) | Speakers list links to every speaker profile | REQ-016 | Medium | automated |
 | [TC-SPK-002](TC-SPK-002.md) | Speaker profile links to the speaker's streams | REQ-007 | High | automated |
+| [TC-SPK-003](TC-SPK-003.md) | Speakers and their profiles match the expected speakers | REQ-016 | Medium | automated |
 | [TC-PST-001](TC-PST-001.md) | Posts list links to every post | REQ-016 | Medium | automated |
 | [TC-LNK-001](TC-LNK-001.md) | Every page in the site map returns HTTP 200 | REQ-001, REQ-007 | High | automated |
 | [TC-LNK-002](TC-LNK-002.md) | Home page hero buttons point to the community channels | REQ-008 | Medium | automated |

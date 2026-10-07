@@ -78,6 +78,7 @@ ROADMAP.md                 # phases, milestones, status
 playwright.config.ts       # base URL, projects (desktop / mobile)
 lighthouserc*.json         # Lighthouse CI config (mobile / desktop)
 lighthouse/                # Lighthouse baselines (medians)
+test-data/                 # expected streams and speakers: the content oracle
 scripts/                   # helper scripts (Lighthouse summary)
 tests/                     # automated tests (*.spec.ts)
   pages/                   # page objects
@@ -105,7 +106,7 @@ docs/
 
 ## next step
 
-Phase 5: decide on CI (GitHub Actions) and reporting. This needs the repo on GitHub first.
+Site owner: review `test-data/` (the content oracle) and mark it reviewed. Then phase 5: CI and reporting.
 
 ## resources
 

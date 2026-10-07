@@ -77,6 +77,20 @@ Testing follows a deliberate order. Each step feeds the next:
 | **Error guessing** | Likely weak spots from experience: the newest stream page, UA/EN mismatches, trailing slashes and `.html` variants, unknown URLs, external links to YouTube and Telegram. |
 | **Exploratory testing** | Session-based, with written charters and notes (see [exploratory/](exploratory/)). |
 
+### Test oracles
+
+An oracle is the source of truth a test compares the site against. Which one a check uses decides what it can and can't find.
+
+| Oracle | Used by | Finds | Can't find |
+|---|---|---|---|
+| **Requirements** ([requirements.md](requirements.md)) | Most test cases and checklists | Behaviour that differs from what was agreed | Content errors |
+| **Expected content** ([`test-data/`](../test-data/README.md): streams, speakers), maintained by the site owner | TC-STR-005, TC-STR-006, TC-SPK-003 | Missing, extra or wrong streams and speakers, **even when the mistake is the same everywhere on the site** | Content that isn't in the files (e.g. stream descriptions) |
+| **Consistency** (the site compared with itself) | TC-STR-001, TC-STR-004, TC-I18N-005, TC-I18N-007, exploratory testing | Facts that differ between two places on the site | A mistake repeated everywhere |
+| **Standards** (WCAG, Core Web Vitals, SEO practice) | a11y and SEO checks, Lighthouse | Accessibility, performance, metadata issues | Anything about content |
+| **Visual baseline** (approved screenshots) | TC-VIS-002 | Unintended layout changes | Whether the approved look was right in the first place |
+
+The site's own source files (Markdown) are **not** used as an oracle for content: the site is built from them, so comparing the two would be comparing the site with itself.
+
 ## 6. Environments and tools
 
 | Item | Value |

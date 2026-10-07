@@ -90,6 +90,8 @@ Goal: first green Playwright run.
 - [x] Performance in automation: Lighthouse CI (`@lhci/cli`) over the key pages, median of 3 runs, compared against a saved baseline (`lighthouse/baseline-*.json`). Budgets once REQ-015 gets a threshold. In phase 5 the same job runs in GitHub Actions
 - [x] Data-driven tests over all stream/speaker pages *(site map crawl; TC-I18N-005, TC-I18N-007, TC-STR-004 from the exploratory follow-ups)*
 
+- [ ] Content oracle: expected streams and speakers in `test-data/`, checked by TC-STR-005, TC-STR-006, TC-SPK-003 *(draft generated from the site 2026-10-07, waiting for the site owner's review)*
+
 **Done when:** every `candidate` TC is `automated` or has a written reason why not. *(Met 2026-10-07: 41 of 42 automated; TC-LNK-005 stays manual-only because LinkedIn blocks automated requests.)*
 
 ## Phase 5: CI and reporting 💭

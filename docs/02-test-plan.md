@@ -124,7 +124,7 @@ Execution starts when all of these are true:
 - [x] Smoke, cross-browser, links, a11y and SEO checklists written (roadmap 1.4)
 - [x] Traceability matrix complete, with no High requirement uncovered (roadmap 1.6)
 - [x] The live site responds (`/` returns 200)
-- [ ] Configurations C1–C3 are available *(C1 confirmed 2026-10-07; C2 Safari and C3 iPhone still to confirm, needed only from step 5)*
+- [ ] Configurations C1–C3 are available *(C1 confirmed 2026-10-07. C2 and C3 are on hold together with all manual-only checks, see the [roadmap](../ROADMAP.md#-on-hold-manual-only-checks))*
 
 ## 7. Exit criteria
 

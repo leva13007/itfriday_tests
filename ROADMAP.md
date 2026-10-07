@@ -45,13 +45,26 @@ Goal: prove the docs work on the real site and find real bugs.
 - [x] Run the smoke checklist *([2026-10-07, C1](docs/checklists/runs/2026-10-07-smoke-C1.md): 15/15, GO)*
 - [x] Execute the TCs as the test plan's exit criteria require, and record results in each TC's execution history *([C1, 2026-10-07](docs/reports/cycle-1/2026-10-07-execution-C1.md): 33 pass, 4 fail, 2 blocked, 1 not run)*
 - [x] Run the links, SEO and a11y checklists *(2026-10-07, [runs](docs/checklists/runs/))*
-- [ ] Run the cross-browser / mobile checklist
+- [ ] ⏸ Run the cross-browser / mobile checklist *(on hold, see below)*
 - [ ] At least 3 exploratory sessions (from the charter ideas)
-- [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix *(5 bugs + 2 suggestions written in [docs/reports/cycle-1/bugs](docs/reports/cycle-1/bugs/), to be filed when the repo is on GitHub)*
+- [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix *(5 bugs + 3 suggestions written in [docs/reports/cycle-1/bugs](docs/reports/cycle-1/bugs/), to be filed when the repo is on GitHub)*
 - [ ] Retest fixed bugs (the site owner fixes them in the site repo)
 - [ ] Write the first test summary report (`docs/reports/`)
 
 **Done when:** the cycle 1 report is written and exit criteria are evaluated.
+
+### ⏸ On hold: manual-only checks
+
+These checks need a person with real devices or assistive technology, and can't be run by browser automation. They are on hold. Everything else in cycle 1 continues without them, and the summary report lists them as open.
+
+| Check | Why it needs manual execution |
+|---|---|
+| Cross-browser checklist on C2 (Safari, macOS), C3 (iPhone), C4 (Android) | Real browsers / devices |
+| TC-A11Y-003 and a11y checklist section B (keyboard) | Keyboard input isn't reliable in automation |
+| a11y checklist section E (VoiceOver) | Screen reader on a real device |
+| TC-VIS-001 (visual baseline, C1 + C3) | Full-page screenshots and a real iPhone |
+| Exploratory session 3 (real iPhone) | Real device |
+| SEO-C07 (Telegram link preview) | Needs a message sent from a personal account |
 
 ## Phase 3: Automation basics ⏳
 

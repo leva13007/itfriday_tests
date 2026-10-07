@@ -64,7 +64,7 @@ Phase 1 (test documentation) completed on 2026-10-07: requirements v1.0, test st
 
 ## next step
 
-Run the cross-browser checklist on C2 Safari and C3 iPhone, and the manual-only checks (keyboard, VoiceOver, visual baseline).
+Manual-only checks are on hold (see ROADMAP). Next automatable step: exploratory sessions 1 and 2 on C1.
 
 ## resources
 

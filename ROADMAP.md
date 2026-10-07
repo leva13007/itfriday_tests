@@ -2,14 +2,14 @@
 
 Where the project is going and in what order. Each phase ends with a clear **definition of done**. A phase starts only when the previous one is done.
 
-**Current phase: 2, Manual execution** (phase 1 completed 2026-10-07)
+**Current phase: 3, Automation basics** (phase 2 closed with deviations 2026-10-07)
 
 | Phase | Goal | Status |
 |---|---|---|
 | 0. Init | Repo, structure, templates | ✅ done |
 | 1. Test documentation | Full QA documentation set, written before any execution | ✅ done |
-| 2. Manual execution | Run the TCs and exploratory sessions, file real bugs, write report #1 | 🟡 next |
-| 3. Automation basics | Playwright + TypeScript, smoke and navigation TCs automated | ⏳ planned |
+| 2. Manual execution | Run the TCs and exploratory sessions, file real bugs, write report #1 | ✅ done, with deviations |
+| 3. Automation basics | Playwright + TypeScript, smoke and navigation TCs automated | 🟡 next |
 | 4. Automation coverage | Links, visual, SEO, a11y, performance, refactor to Page Object Model | ⏳ planned |
 | 5. CI and reporting | Scheduled runs, public report | 💭 to decide |
 | 6. Polish and publish | Final README, results overview, public repo | ⏳ planned |
@@ -38,7 +38,7 @@ Goal: a complete, reviewed set of test docs, ready to execute.
 
 **Done when:** every REQ has coverage planned (TC or checklist), and the docs are reviewed.
 
-## Phase 2: Manual execution 🟡
+## Phase 2: Manual execution ✅ (with deviations)
 
 Goal: prove the docs work on the real site and find real bugs.
 
@@ -49,13 +49,13 @@ Goal: prove the docs work on the real site and find real bugs.
 - [ ] At least 3 exploratory sessions (from the charter ideas) *(2 of 3 done 2026-10-07; session 3 needs a real iPhone, on hold)*
 - [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix *(7 bugs + 5 suggestions written in [docs/reports/cycle-1/bugs](docs/reports/cycle-1/bugs/), to be filed when the repo is on GitHub)*
 - [ ] Retest fixed bugs (the site owner fixes them in the site repo)
-- [x] Write the first test summary report *([cycle 1](docs/reports/2026-10-07-cycle-1.md): completed with deviations, awaiting site owner sign-off)*
+- [x] Write the first test summary report *([cycle 1](docs/reports/2026-10-07-cycle-1.md): closed with deviations, signed off 2026-10-07)*
 
 **Done when:** the cycle 1 report is written and exit criteria are evaluated.
 
 ### ⏸ On hold: manual-only checks
 
-These checks need a person with real devices or assistive technology, and can't be run by browser automation. They are on hold. Everything else in cycle 1 continues without them, and the summary report lists them as open.
+These checks need a person with real devices or assistive technology, and can't be run by browser automation. They are on hold and **carry over to the next cycle**. Cycle 1 was closed without them (signed off 2026-10-07).
 
 | Check | Why it needs manual execution |
 |---|---|
@@ -66,7 +66,7 @@ These checks need a person with real devices or assistive technology, and can't 
 | Exploratory session 3 (real iPhone) | Real device |
 | SEO-C07 (Telegram link preview) | Needs a message sent from a personal account |
 
-## Phase 3: Automation basics ⏳
+## Phase 3: Automation basics 🟡
 
 Goal: first green Playwright run.
 

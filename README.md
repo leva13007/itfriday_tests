@@ -60,11 +60,11 @@ docs/
 
 ## where I left off
 
-Phase 1 (test documentation) completed on 2026-10-07: requirements v1.0, test strategy, cycle 1 test plan, 5 checklists, 40 test cases, a full traceability matrix, and a document review (9 findings, 8 fixed). All 82 live pages returned 200 on the last check. Phase 2 started: entry gate passed for C1 (C2/C3 still to confirm), smoke run on C1 passed 15/15 (GO), 40 test cases executed on C1: 33 pass, 4 fail, 2 blocked, 1 not run. Links, SEO and a11y checklists done. Exploratory sessions 1–2 done. 7 bugs (1 Major, 5 Minor, 1 Trivial) and 5 improvement suggestions. Cycle 1 summary report written: completed with deviations (manual-only checks on hold). Lighthouse baseline recorded. No test code yet.
+Phase 1 (test documentation) completed on 2026-10-07: requirements v1.0, test strategy, cycle 1 test plan, 5 checklists, 40 test cases, a full traceability matrix, and a document review (9 findings, 8 fixed). All 82 live pages returned 200 on the last check. Phase 2 started: entry gate passed for C1 (C2/C3 still to confirm), smoke run on C1 passed 15/15 (GO), 40 test cases executed on C1: 33 pass, 4 fail, 2 blocked, 1 not run. Links, SEO and a11y checklists done. Exploratory sessions 1–2 done. 7 bugs (1 Major, 5 Minor, 1 Trivial) and 5 improvement suggestions. Cycle 1 closed with deviations, signed off 2026-10-07 (manual-only checks carry over). Phase 2 done. Lighthouse baseline recorded. No test code yet.
 
 ## next step
 
-Get the site owner's sign-off on the [cycle 1 report](docs/reports/2026-10-07-cycle-1.md), then start phase 3 (Playwright).
+Start phase 3: initialise Playwright + TypeScript and automate the smoke checklist.
 
 ## resources
 

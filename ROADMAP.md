@@ -2,15 +2,15 @@
 
 Where the project is going and in what order. Each phase ends with a clear **definition of done**. A phase starts only when the previous one is done.
 
-**Current phase: 3, Automation basics** (started 2026-10-07)
+**Current phase: 4, Automation coverage** (phase 3 done 2026-10-07)
 
 | Phase | Goal | Status |
 |---|---|---|
 | 0. Init | Repo, structure, templates | ✅ done |
 | 1. Test documentation | Full QA documentation set, written before any execution | ✅ done |
 | 2. Manual execution | Run the TCs and exploratory sessions, file real bugs, write report #1 | ✅ done, with deviations |
-| 3. Automation basics | Playwright + TypeScript, smoke and navigation TCs automated | 🟡 next |
-| 4. Automation coverage | Links, visual, SEO, a11y, performance, refactor to Page Object Model | ⏳ planned |
+| 3. Automation basics | Playwright + TypeScript, smoke and navigation TCs automated | ✅ done |
+| 4. Automation coverage | Links, visual, SEO, a11y, performance, refactor to Page Object Model | 🟡 in progress |
 | 5. CI and reporting | Scheduled runs, public report | 💭 to decide |
 | 6. Polish and publish | Final README, results overview, public repo | ⏳ planned |
 
@@ -66,7 +66,7 @@ These checks need a person with real devices or assistive technology, and can't 
 | Exploratory session 3 (real iPhone) | Real device |
 | SEO-C07 (Telegram link preview) | Needs a message sent from a personal account |
 
-## Phase 3: Automation basics 🟡
+## Phase 3: Automation basics ✅
 
 Goal: first green Playwright run.
 
@@ -80,9 +80,9 @@ Goal: first green Playwright run.
 
 **Done when:** smoke + navigation run green locally with `npx playwright test`.
 
-## Phase 4: Automation coverage ⏳
+## Phase 4: Automation coverage 🟡
 
-- [ ] Refactor to Page Object Model (header, language switcher, page types)
+- [x] Refactor to Page Object Model (header, language switcher, page types) *([`tests/pages/`](tests/pages/), exposed as fixtures in [`tests/fixtures.ts`](tests/fixtures.ts))*
 - [ ] Broken link checker (internal + external, crawled from the site map)
 - [ ] Visual regression with `toHaveScreenshot` (desktop + mobile, key pages)
 - [ ] SEO checks (title, description, `lang`, OG tags)

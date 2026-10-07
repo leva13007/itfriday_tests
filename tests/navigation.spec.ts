@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 /**
  * Navigation test cases (docs/test-cases/TC-NAV-*.md), automated.
@@ -22,76 +22,67 @@ function urlFor(path: string): RegExp {
   return path.endsWith('/') ? new RegExp(`${escaped}$`) : new RegExp(`${escaped}(\\.html)?$`);
 }
 
-test('TC-NAV-001 Header "Стріми" link opens the streams list (UA)', async ({ page }) => {
+test('TC-NAV-001 Header "Стріми" link opens the streams list (UA)', async ({ page, header, streamsList }) => {
   await page.goto('/');
-  const nav = page.getByRole('navigation', { name: 'Main Navigation' });
-  await nav.getByRole('link', { name: 'Стріми' }).click();
+  await header.navLink('Стріми').click();
   await expect(page).toHaveURL(/\/streams\/$/);
-  await expect(nav.getByRole('link', { name: 'Стріми' })).toHaveClass(/active/);
-  await expect(page.locator('.vp-doc table tbody tr').first()).toBeVisible();
+  await expect(header.navLink('Стріми')).toHaveClass(/active/);
+  await expect(streamsList.rows.first()).toBeVisible();
 });
 
-test('TC-NAV-002 Every header nav item opens its page (UA and EN)', async ({ page }) => {
-  const nav = page.getByRole('navigation', { name: 'Main Navigation' });
-
+test('TC-NAV-002 Every header nav item opens its page (UA and EN)', async ({ page, header }) => {
   await page.goto('/');
   for (const item of navItems) {
-    await nav.getByRole('link', { name: item.ua, exact: true }).click();
+    await header.navLink(item.ua).click();
     await expect(page).toHaveURL(urlFor(item.path));
     await expect(page.locator('.vp-doc h1')).toBeVisible();
   }
 
   await page.goto('/en/');
   for (const item of navItems) {
-    await nav.getByRole('link', { name: item.en, exact: true }).click();
+    await header.navLink(item.en).click();
     await expect(page).toHaveURL(urlFor('/en' + item.path));
     await expect(page.locator('.vp-doc h1')).toBeVisible();
   }
 });
 
-test('TC-NAV-003 Logo returns to the home page of the current language', async ({ page }) => {
-  // The logo link has no accessible name (BUG-003), so it is located by its class.
-  const logo = page.locator('.VPNavBarTitle a');
-
-  await page.goto('/streams/022');
-  await logo.click();
+test('TC-NAV-003 Logo returns to the home page of the current language', async ({ page, header, streamPage }) => {
+  await streamPage.goto('022');
+  await header.logo.click();
   await expect(page).toHaveURL(/\/$/);
   await expect(page).not.toHaveURL(/\/en\//);
 
-  await page.goto('/en/streams/022');
-  await logo.click();
+  await streamPage.goto('022', 'en');
+  await header.logo.click();
   await expect(page).toHaveURL(/\/en\/$/);
 });
 
-test('TC-NAV-004 Theme toggle switches between light and dark', async ({ page }) => {
+test('TC-NAV-004 Theme toggle switches between light and dark', async ({ page, header }) => {
   await page.goto('/');
   const html = page.locator('html');
-  const toggle = page.locator('.VPNavBarAppearance').getByRole('switch');
   // The site shows /logo-dark.png in the light theme and /logo-light.png in the dark theme.
-  const visibleLogo = page.locator('.VPNavBarTitle img:visible');
-
   await expect(html).not.toHaveClass(/dark/);
-  await expect(visibleLogo).toHaveAttribute('src', '/logo-dark.png');
+  await expect(header.visibleLogoImage).toHaveAttribute('src', '/logo-dark.png');
 
-  await toggle.click();
+  await header.themeToggle.click();
   await expect(html).toHaveClass(/dark/);
-  await expect(visibleLogo).toHaveAttribute('src', '/logo-light.png');
+  await expect(header.visibleLogoImage).toHaveAttribute('src', '/logo-light.png');
 
-  await toggle.click();
+  await header.themeToggle.click();
   await expect(html).not.toHaveClass(/dark/);
-  await expect(visibleLogo).toHaveAttribute('src', '/logo-dark.png');
+  await expect(header.visibleLogoImage).toHaveAttribute('src', '/logo-dark.png');
 });
 
-test('TC-NAV-005 Theme choice persists after reload and navigation', async ({ page }) => {
+test('TC-NAV-005 Theme choice persists after reload and navigation', async ({ page, header }) => {
   await page.goto('/');
   const html = page.locator('html');
-  await page.locator('.VPNavBarAppearance').getByRole('switch').click();
+  await header.themeToggle.click();
   await expect(html).toHaveClass(/dark/);
 
   await page.reload();
   await expect(html).toHaveClass(/dark/);
 
-  await page.getByRole('navigation', { name: 'Main Navigation' }).getByRole('link', { name: 'Про нас' }).click();
+  await header.navLink('Про нас').click();
   await expect(page).toHaveURL(/\/about(\.html)?$/);
   await expect(html).toHaveClass(/dark/);
 });

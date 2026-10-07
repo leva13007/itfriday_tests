@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 /**
  * Mobile navigation test cases (docs/test-cases/TC-RSP-*.md), automated.
@@ -6,33 +6,29 @@ import { test, expect } from '@playwright/test';
  */
 
 test.describe('Mobile @mobile', () => {
-  test('TC-RSP-001 Hamburger menu replaces the header nav on mobile', async ({ page }) => {
+  test('TC-RSP-001 Hamburger menu replaces the header nav on mobile', async ({ page, header, mobileMenu }) => {
     await page.goto('/');
-    await expect(page.getByRole('navigation', { name: 'Main Navigation' })).toBeHidden();
+    await expect(header.nav).toBeHidden();
 
-    const hamburger = page.getByRole('button', { name: 'mobile navigation' });
-    await hamburger.click();
-    const menu = page.locator('.VPNavScreen');
-    await expect(menu).toBeVisible();
-    await expect(menu.locator('.VPNavScreenMenuLink')).toHaveCount(8);
-    await expect(menu.locator('.VPNavScreenTranslations')).toBeVisible();
-    await expect(menu.locator('.VPNavScreenAppearance')).toBeVisible();
+    await mobileMenu.open();
+    await expect(mobileMenu.screen).toBeVisible();
+    await expect(mobileMenu.links).toHaveCount(8);
+    await expect(mobileMenu.languageGroup).toBeVisible();
+    await expect(mobileMenu.appearance).toBeVisible();
 
-    await hamburger.click();
-    await expect(menu).toBeHidden();
+    await mobileMenu.hamburger.click();
+    await expect(mobileMenu.screen).toBeHidden();
   });
 
-  test('TC-RSP-002 Tapping a mobile menu item navigates and closes the menu', async ({ page }) => {
+  test('TC-RSP-002 Tapping a mobile menu item navigates and closes the menu', async ({ page, mobileMenu }) => {
     await page.goto('/');
-    await page.getByRole('button', { name: 'mobile navigation' }).click();
-    const menu = page.locator('.VPNavScreen');
-    await menu.locator('.VPNavScreenMenuLink', { hasText: 'Стріми' }).click();
+    await mobileMenu.open();
+    await mobileMenu.link('Стріми').click();
     await expect(page).toHaveURL(/\/streams\/$/);
-    await expect(menu).toBeHidden();
+    await expect(mobileMenu.screen).toBeHidden();
 
-    await page.getByRole('button', { name: 'mobile navigation' }).click();
-    await menu.locator('.VPNavScreenTranslations button').click();
-    await menu.locator('.VPNavScreenTranslations').getByRole('link', { name: 'English' }).click();
+    await mobileMenu.open();
+    await mobileMenu.switchLanguage('English');
     await expect(page).toHaveURL(/\/en\/streams\/$/);
   });
 });

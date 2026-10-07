@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 /**
  * Smoke checklist (docs/checklists/smoke.md), automated.
@@ -20,17 +20,15 @@ test.describe('Smoke @smoke', () => {
     await expect(page.locator('.VPHero .name')).toHaveText('IT Friday');
   });
 
-  test('S-03 Header shows logo, 8 nav items, language switcher and theme toggle', async ({ page }) => {
+  test('S-03 Header shows logo, 8 nav items, language switcher and theme toggle', async ({ page, header }) => {
     await page.goto('/');
-    // The logo link has no accessible name (BUG-003), so it is located by its class.
-    await expect(page.locator('.VPNavBarTitle a')).toBeVisible();
-    const nav = page.getByRole('navigation', { name: 'Main Navigation' });
-    await expect(nav.getByRole('link')).toHaveCount(8);
-    await expect(page.getByRole('button', { name: 'Change language' })).toBeVisible();
-    await expect(page.locator('.VPNavBarAppearance').getByRole('switch')).toBeVisible();
+    await expect(header.logo).toBeVisible();
+    await expect(header.nav.getByRole('link')).toHaveCount(8);
+    await expect(header.languageButton).toBeVisible();
+    await expect(header.themeToggle).toBeVisible();
   });
 
-  test('S-04 Every header nav item opens its page', async ({ page }) => {
+  test('S-04 Every header nav item opens its page', async ({ page, header }) => {
     const items = [
       { name: 'Про нас', url: /\/about(\.html)?$/ },
       { name: 'Стріми', url: /\/streams\/$/ },
@@ -42,50 +40,44 @@ test.describe('Smoke @smoke', () => {
       { name: 'Issues', url: /\/issues(\.html)?$/ },
     ];
     await page.goto('/');
-    const nav = page.getByRole('navigation', { name: 'Main Navigation' });
     for (const item of items) {
-      await nav.getByRole('link', { name: item.name, exact: true }).click();
+      await header.navLink(item.name).click();
       await expect(page).toHaveURL(item.url);
       await expect(page.locator('.vp-doc h1')).toBeVisible();
     }
   });
 
-  test('S-05 Language switch on the streams list keeps the page', async ({ page }) => {
-    await page.goto('/streams/');
-    await page.getByRole('button', { name: 'Change language' }).click();
-    await page.locator('.VPNavBarTranslations').getByRole('link', { name: 'English' }).click();
+  test('S-05 Language switch on the streams list keeps the page', async ({ page, header, streamsList }) => {
+    await streamsList.goto();
+    await header.switchLanguage('English');
     await expect(page).toHaveURL(/\/en\/streams\/$/);
   });
 
-  test('S-06 Streams list shows the newest stream first', async ({ page }) => {
-    await page.goto('/streams/');
-    const numbers = await page.locator('.vp-doc table tbody tr td:first-child').allInnerTexts();
+  test('S-06 Streams list shows the newest stream first', async ({ streamsList }) => {
+    await streamsList.goto();
+    const numbers = await streamsList.streamNumbers();
     expect(numbers.length).toBeGreaterThan(0);
-    const asInts = numbers.map((n) => parseInt(n, 10));
-    expect(asInts[0]).toBe(Math.max(...asInts));
+    expect(numbers[0]).toBe(Math.max(...numbers));
   });
 
-  test('S-07 Newest stream page shows title, date, cover and YouTube link', async ({ page }) => {
-    await page.goto('/streams/');
-    await page.locator('.vp-doc table tbody tr').first().locator('td:first-child a').click();
-    await expect(page.locator('.vp-doc h1')).toContainText('#');
-    await expect(page.locator('.vp-doc')).toContainText('Дата:');
-    const cover = page.locator('.vp-doc img').first();
-    await expect(cover).toBeVisible();
+  test('S-07 Newest stream page shows title, date, cover and YouTube link', async ({ streamsList, streamPage }) => {
+    await streamsList.goto();
+    await streamsList.openNewest();
+    await expect(streamPage.heading).toContainText('#');
+    await expect(streamPage.content).toContainText('Дата:');
+    await expect(streamPage.cover).toBeVisible();
     // toBeVisible() waits for the <img> element, not for the ~2 MB file behind it,
     // so poll until the browser has actually decoded the image.
-    await expect
-      .poll(() => cover.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0), { timeout: 15_000 })
-      .toBe(true);
-    await expect(page.locator('.vp-doc a[href*="youtube.com"]').first()).toBeVisible();
+    await expect.poll(() => streamPage.isCoverLoaded(), { timeout: 15_000 }).toBe(true);
+    await expect(streamPage.youtubeLinks.first()).toBeVisible();
   });
 
-  test('S-08 Speakers list and a speaker profile load', async ({ page }) => {
+  test('S-08 Speakers list and a speaker profile load', async ({ page, speakerPage }) => {
     await page.goto('/speakers');
     await expect(page.locator('.vp-doc h1')).toHaveText(/Спікери/);
     await page.locator('.vp-doc a[href^="/speakers/"]').first().click();
     await expect(page).toHaveURL(/\/speakers\/[a-z-]+(\.html)?$/);
-    await expect(page.locator('.vp-doc h1')).toBeVisible();
+    await expect(speakerPage.heading).toBeVisible();
   });
 
   test('S-09 Wiki page has a sidebar with 4 documents', async ({ page }) => {
@@ -93,50 +85,47 @@ test.describe('Smoke @smoke', () => {
     await expect(page.locator('.VPSidebar').getByRole('link')).toHaveCount(4);
   });
 
-  test('S-10 Logo returns to the home page', async ({ page }) => {
+  test('S-10 Logo returns to the home page', async ({ page, header }) => {
     await page.goto('/wiki/mission');
-    await page.locator('.VPNavBarTitle a').click();
+    await header.logo.click();
     await expect(page).toHaveURL(/\/$/);
   });
 
-  test('S-11 Theme toggle switches light and dark', async ({ page }) => {
+  test('S-11 Theme toggle switches light and dark', async ({ page, header }) => {
     await page.goto('/');
     const html = page.locator('html');
-    const toggle = page.locator('.VPNavBarAppearance').getByRole('switch');
     await expect(html).not.toHaveClass(/dark/);
-    await toggle.click();
+    await header.themeToggle.click();
     await expect(html).toHaveClass(/dark/);
-    await toggle.click();
+    await header.themeToggle.click();
     await expect(html).not.toHaveClass(/dark/);
   });
 
-  test('S-12 Mobile: hamburger menu opens with the nav items @mobile', async ({ page }) => {
+  test('S-12 Mobile: hamburger menu opens with the nav items @mobile', async ({ page, mobileMenu }) => {
     await page.goto('/');
-    await page.getByRole('button', { name: 'mobile navigation' }).click();
-    await expect(page.locator('.VPNavScreen')).toBeVisible();
-    await expect(page.locator('.VPNavScreenMenuLink')).toHaveCount(8);
+    await mobileMenu.open();
+    await expect(mobileMenu.screen).toBeVisible();
+    await expect(mobileMenu.links).toHaveCount(8);
     const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
-    const viewportWidth = page.viewportSize()!.width;
-    expect(scrollWidth).toBeLessThanOrEqual(viewportWidth);
+    expect(scrollWidth).toBeLessThanOrEqual(page.viewportSize()!.width);
   });
 
-  test('S-13 Unknown URL returns a 404 page with a home link', async ({ page }) => {
+  test('S-13 Unknown URL returns a 404 page with a home link', async ({ page, notFound }) => {
     const response = await page.goto('/does-not-exist');
     expect(response?.status()).toBe(404);
-    // Visible text is "Take me home", but the accessible name (aria-label) is "go to home".
-    await page.getByRole('link', { name: 'go to home' }).click();
+    await notFound.homeLink.click();
     await expect(page).toHaveURL(/\/$/);
   });
 
-  test('S-14 No console errors on the home page and the newest stream page', async ({ page }) => {
+  test('S-14 No console errors on the home page and the newest stream page', async ({ page, streamsList }) => {
     const errors: string[] = [];
     page.on('pageerror', (error) => errors.push(error.message));
     page.on('console', (message) => {
       if (message.type() === 'error') errors.push(message.text());
     });
     await page.goto('/');
-    await page.goto('/streams/');
-    await page.locator('.vp-doc table tbody tr').first().locator('td:first-child a').click();
+    await streamsList.goto();
+    await streamsList.openNewest();
     await page.waitForLoadState('networkidle');
     expect(errors).toEqual([]);
   });

@@ -93,7 +93,7 @@ Testing follows a deliberate order. Each step feeds the next:
 
 ## 7. Defect management
 
-**Where:** GitHub Issues in this repo, label `bug`. Fixes are made by the site owner in the site's own repository. The Issue links to the fixing commit or PR.
+**Where:** GitHub Issues in this repo, label `bug`. Advisory findings with no requirement behind them (e.g. a missing `sitemap.xml`) are filed with the label `enhancement`: improvement suggestions, not defects. Fixes are made by the site owner in the site's own repository. The Issue links to the fixing commit or PR.
 
 **Lifecycle:**
 

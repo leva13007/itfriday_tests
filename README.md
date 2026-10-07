@@ -59,11 +59,11 @@ docs/
 
 ## where I left off
 
-Project initialised on 2026-10-07: repo, docs structure, templates, first test case, a first draft of the site map in `requirements.md`, and `ROADMAP.md`. Now in phase 1 (test documentation). Requirements v1.0 frozen (1.1) and test strategy v1.0 written (1.2), with all 82 live pages returning 200. No test code yet.
+Project initialised on 2026-10-07: repo, docs structure, templates, first test case, a first draft of the site map in `requirements.md`, and `ROADMAP.md`. Now in phase 1 (test documentation). Requirements v1.0 frozen (1.1) test strategy v1.0 (1.2) and cycle 1 test plan (1.3) written, with all 82 live pages returning 200. No test code yet.
 
 ## next step
 
-Fill in `docs/02-test-plan.md` for cycle 1 (ROADMAP 1.3).
+Write the checklists in `docs/checklists/` (ROADMAP 1.4).
 
 ## resources
 

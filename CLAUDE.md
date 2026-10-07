@@ -47,7 +47,7 @@ See `docs/README.md`. In short:
 - All QA docs and READMEs are in **English**.
 - Write every doc and (later) all code complete and finished, not as placeholders or homework.
 - Keep everything explainable: no unexplained magic, and every doc says *why*, not just *what*.
-- **No meta-commentary in the repo.** Docs and code must read as a normal professional QA project. Don't mention who the project is for, learning goals, portfolios or onboarding.
+- **No meta-commentary in the repo.** Docs and code must read as a normal professional QA project. Don't mention who the project is for, learning goals or portfolios. The team onboarding guide (`docs/onboarding.md`) is a normal project document: keep it current when the workflow, commands or structure change.
 - Target environment is **production only**. Tests must be read-only, with no load or stress testing against the live site.
 - Test case IDs follow `TC-<MODULE>-<NNN>`, requirements `REQ-<NNN>`, bugs = GitHub Issue numbers. Module codes are listed in `docs/test-cases/README.md`.
 - Every TC links to at least one REQ and has an `Automation` field (`candidate` / `automated` / `manual-only`).

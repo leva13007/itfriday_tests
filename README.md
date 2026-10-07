@@ -19,6 +19,10 @@ Every step is documented: what is tested, how, and why. The repo can be read as 
 | Languages | Ukrainian (default, `/`) and English (`/en/`) |
 | Environment | Production only. No staging. |
 
+## new to the project?
+
+Start with the [onboarding guide](docs/onboarding.md): how the project works, how to run the tests, everyday tasks and a glossary, in one page.
+
 ## roadmap
 
 Phases, milestones and the current status are in [`ROADMAP.md`](ROADMAP.md).

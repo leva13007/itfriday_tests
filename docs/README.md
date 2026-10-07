@@ -2,10 +2,13 @@
 
 Two kinds of documents live here. **Living documents** describe how the site is tested and change as the site and the tests change. **History** records what happened. Once a cycle, review or audit is closed, its folder or file is frozen.
 
+New to the project? Start with the [onboarding guide](onboarding.md).
+
 ## Living documents
 
 | What | Where |
 |---|---|
+| Onboarding: how the project works, setup, everyday tasks, glossary | [onboarding.md](onboarding.md) |
 | Requirements (REQ-xxx) | [requirements.md](requirements.md) |
 | Test strategy: approach, techniques, test oracles, defect process, risks | [test-strategy.md](test-strategy.md) |
 | Test cases (TC-xxx) | [test-cases/](test-cases/README.md) |

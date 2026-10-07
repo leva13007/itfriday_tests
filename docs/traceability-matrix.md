@@ -24,6 +24,15 @@ Update it whenever a REQ, TC or bug is added.
 | REQ-016 | Lists link to all detail pages | [TC-PST-001](test-cases/TC-PST-001.md), [TC-SPK-001](test-cases/TC-SPK-001.md), [TC-STR-001](test-cases/TC-STR-001.md) | smoke, links (C02, C04, C06) |  | ✅ passed |
 | REQ-017 | 404 page | [TC-ERR-001](test-cases/TC-ERR-001.md) | smoke, seo (C05) |  | ✅ passed |
 
+## Defects without a requirement
+
+Found by exploratory testing with the consistency oracle (see the strategy §7). Each proposes a new requirement.
+
+| Bug | Found in | Proposed requirement |
+|---|---|---|
+| [BUG-006](reports/cycle-1/bugs/BUG-006.md) | Exploratory: global UI | Speaker profiles list every stream the speaker took part in |
+| [BUG-007](reports/cycle-1/bugs/BUG-007.md) | Exploratory: global UI | REQ-022: the schedule page shows the next announced stream |
+
 Coverage after cycle 1, test case execution on C1 (2026-10-07):
 ✅ passed: all linked TCs passed · ❌ failed: at least one linked TC failed · 🟡 partly executed: some TCs blocked or not run · ⏳ not executed
 

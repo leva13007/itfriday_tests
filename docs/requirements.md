@@ -67,4 +67,4 @@ Priority: **High** = the site is unusable or embarrassing without it · **Medium
 
 ## Open questions
 
-- Not yet checked on the live site: mobile menu, search (none configured?), and whether the 404 page links back home. These move to the first exploratory session.
+- ~~Not yet checked on the live site: mobile menu, search, 404 home link.~~ Resolved 2026-10-07: mobile menu works (smoke, RSP-001); **there is no site search** (exploratory session "global UI", SUG-005); the 404 page links home (TC-ERR-001).

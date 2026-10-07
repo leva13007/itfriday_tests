@@ -46,8 +46,8 @@ Goal: prove the docs work on the real site and find real bugs.
 - [x] Execute the TCs as the test plan's exit criteria require, and record results in each TC's execution history *([C1, 2026-10-07](docs/reports/cycle-1/2026-10-07-execution-C1.md): 33 pass, 4 fail, 2 blocked, 1 not run)*
 - [x] Run the links, SEO and a11y checklists *(2026-10-07, [runs](docs/checklists/runs/))*
 - [ ] ⏸ Run the cross-browser / mobile checklist *(on hold, see below)*
-- [ ] At least 3 exploratory sessions (from the charter ideas)
-- [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix *(5 bugs + 3 suggestions written in [docs/reports/cycle-1/bugs](docs/reports/cycle-1/bugs/), to be filed when the repo is on GitHub)*
+- [ ] At least 3 exploratory sessions (from the charter ideas) *(2 of 3 done 2026-10-07; session 3 needs a real iPhone, on hold)*
+- [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix *(7 bugs + 5 suggestions written in [docs/reports/cycle-1/bugs](docs/reports/cycle-1/bugs/), to be filed when the repo is on GitHub)*
 - [ ] Retest fixed bugs (the site owner fixes them in the site repo)
 - [ ] Write the first test summary report (`docs/reports/`)
 

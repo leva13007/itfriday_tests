@@ -18,4 +18,6 @@ The sessions for cycle 1 are fixed in [test plan §4.2](../02-test-plan.md#42-ex
 
 | Date | Charter | Duration | Bugs |
 |---|---|---|---|
-| | | | |
+| 2026-10-07 | [Global UI](2026-10-07-global-ui.md) (plan §4.2, #1) | ~10 min | BUG-006, BUG-007; SUG-004, SUG-005 |
+| 2026-10-07 | [Language switching](2026-10-07-language-switching.md) (plan §4.2, #2) | ~5 min | none new |
+| — | Real iPhone (plan §4.2, #3) | ⏸ on hold | |

@@ -114,6 +114,8 @@ New → Confirmed → In progress → Fixed → Verified → Closed
 | Rejected | Not a defect, duplicate, or won't fix (with a reason) | Site owner |
 | Reopened | Retest failed | Tester |
 
+**Defects without a written requirement.** Exploratory testing can find a defect that no requirement covers. If the product contradicts itself (e.g. two pages state different facts) or clearly fails its own purpose, it is a **bug** even without a requirement: the *consistency oracle*. The report names the oracle and proposes a requirement. Findings that are only "could be better" stay suggestions (`enhancement`).
+
 **Tracking statuses in GitHub.** GitHub Issues only have *open* and *closed*, so the statuses above are labels: `status: confirmed`, `status: in progress`, `status: fixed`, `status: verified`, `status: reopened`. An open issue without a status label is *New*. *Closed* is the closed issue. *Rejected* is closed with the label `wontfix`, `duplicate` or `invalid` and a comment explaining why.
 
 **Severity** (impact on the user):

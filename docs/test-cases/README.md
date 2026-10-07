@@ -31,7 +31,7 @@ One file per test case: `TC-<MODULE>-<NNN>.md`. Start from [`_template.md`](_tem
 
 ## Index
 
-42 test cases · priority: 14 High, 23 Medium, 5 Low · automation: 38 automated (1 partly), 3 candidate, 1 manual-only
+42 test cases · priority: 14 High, 23 Medium, 5 Low · automation: 40 automated (1 partly), 1 candidate, 1 manual-only
 
 Smoke is covered by the [smoke checklist](../checklists/smoke.md), not by test cases.
 
@@ -67,8 +67,8 @@ Smoke is covered by the [smoke checklist](../checklists/smoke.md), not by test c
 | [TC-RSP-001](TC-RSP-001.md) | Hamburger menu replaces the header nav on mobile | REQ-010 | High | automated |
 | [TC-RSP-002](TC-RSP-002.md) | Tapping a mobile menu item navigates and closes the menu | REQ-010 | High | automated |
 | [TC-RSP-003](TC-RSP-003.md) | Pages have no horizontal scroll at mobile width | REQ-010 | High | automated |
-| [TC-VIS-001](TC-VIS-001.md) | Visual baseline of the representative pages is captured | REQ-011 | Medium | candidate |
-| [TC-VIS-002](TC-VIS-002.md) | Representative pages match the visual baseline | REQ-011 | Medium | candidate |
+| [TC-VIS-001](TC-VIS-001.md) | Visual baseline of the representative pages is captured | REQ-011 | Medium | automated |
+| [TC-VIS-002](TC-VIS-002.md) | Representative pages match the visual baseline | REQ-011 | Medium | automated |
 | [TC-SEO-001](TC-SEO-001.md) | Every page has a unique, descriptive title | REQ-012 | Medium | automated |
 | [TC-SEO-002](TC-SEO-002.md) | Every page has its own meta description | REQ-012 | Medium | automated |
 | [TC-SEO-003](TC-SEO-003.md) | Page language attribute matches the content language | REQ-012 | Medium | automated |

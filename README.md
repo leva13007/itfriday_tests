@@ -54,6 +54,8 @@ npm run test:smoke                          # smoke checklist only (@smoke)
 npm run test:desktop                        # desktop Chrome only
 npm run test:headed                         # desktop Chrome, with a visible browser window
 npm run report                              # open the HTML report of the last run
+npm run test:visual                         # visual regression only (@visual)
+npm run test:visual:update                  # re-capture the visual baseline after an intended change
 npm run typecheck                           # TypeScript check without running tests
 ```
 
@@ -92,11 +94,11 @@ docs/
 - **Phase 1, test documentation:** done (requirements v1.0, strategy, plan, 5 checklists, 40 test cases, traceability, review).
 - **Phase 2, cycle 1 manual execution:** closed with deviations, signed off 2026-10-07. 33/37 executed test cases passed; 7 bugs and 5 suggestions ([summary report](docs/reports/2026-10-07-cycle-1.md)). Manual-only checks carry over to the next cycle.
 - **Phase 3, automation basics:** done. Playwright + TypeScript suite.
-- **Phase 4, automation coverage (in progress):** Page Object Model; checks over every page (links, anchors, files, SEO, UA/EN parity, language switcher, data consistency). 63 tests (incl. axe accessibility and keyboard checks). 38 of 42 test cases automated.
+- **Phase 4, automation coverage (in progress):** Page Object Model; checks over every page (links, anchors, files, SEO, UA/EN parity, language switcher, data consistency). 81 tests (incl. axe accessibility, keyboard and visual regression). 40 of 42 test cases automated.
 
 ## next step
 
-Phase 4: visual regression with `toHaveScreenshot`, then Lighthouse CI.
+Phase 4: Lighthouse CI for performance.
 
 ## resources
 

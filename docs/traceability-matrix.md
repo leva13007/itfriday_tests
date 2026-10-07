@@ -16,7 +16,7 @@ Update it whenever a REQ, TC or bug is added.
 | REQ-008 | External links reachable | [TC-LNK-002](test-cases/TC-LNK-002.md), [TC-LNK-003](test-cases/TC-LNK-003.md), [TC-LNK-004](test-cases/TC-LNK-004.md), [TC-LNK-005](test-cases/TC-LNK-005.md) | smoke, links (D) | [BUG-005](reports/cycle-1/bugs/BUG-005.md) | ❌ failed (links checklist) |
 | REQ-009 | Theme toggle | [TC-NAV-004](test-cases/TC-NAV-004.md), [TC-NAV-005](test-cases/TC-NAV-005.md) | smoke, cross-browser |  | ✅ passed |
 | REQ-010 | Mobile layout | [TC-RSP-001](test-cases/TC-RSP-001.md), [TC-RSP-002](test-cases/TC-RSP-002.md), [TC-RSP-003](test-cases/TC-RSP-003.md), [TC-WIKI-003](test-cases/TC-WIKI-003.md) | smoke, cross-browser, a11y (D04) |  | ✅ passed |
-| REQ-011 | No visual regressions | [TC-VIS-001](test-cases/TC-VIS-001.md), [TC-VIS-002](test-cases/TC-VIS-002.md) |  |  | ⏳ not executed |
+| REQ-011 | No visual regressions | [TC-VIS-001](test-cases/TC-VIS-001.md), [TC-VIS-002](test-cases/TC-VIS-002.md) |  |  | ✅ passed (automated baseline 2026-10-07) |
 | REQ-012 | Title/description/lang | [TC-SEO-001](test-cases/TC-SEO-001.md), [TC-SEO-002](test-cases/TC-SEO-002.md), [TC-SEO-003](test-cases/TC-SEO-003.md) | seo (A), a11y (C01, C06) | [BUG-001](reports/cycle-1/bugs/BUG-001.md) | ❌ failed |
 | REQ-013 | OG tags | [TC-SEO-004](test-cases/TC-SEO-004.md) | seo (A) |  | ✅ passed |
 | REQ-014 | a11y | [TC-A11Y-001](test-cases/TC-A11Y-001.md), [TC-A11Y-002](test-cases/TC-A11Y-002.md), [TC-A11Y-003](test-cases/TC-A11Y-003.md), [TC-A11Y-004](test-cases/TC-A11Y-004.md) | a11y (A–E) | [BUG-003](reports/cycle-1/bugs/BUG-003.md), [BUG-004](reports/cycle-1/bugs/BUG-004.md) | ❌ failed |

@@ -6,7 +6,7 @@
 | Requirement | REQ-011 |
 | Priority | Medium |
 | Type | Visual |
-| Automation | candidate |
+| Automation | automated ([`tests/visual.spec.ts`](../../tests/visual.spec.ts)) |
 | Author | |
 | Created | 2026-10-07 |
 
@@ -41,3 +41,4 @@ Not executed in cycle 1 (no baseline yet). Automated in phase 4 with Playwright 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
 | 2026-10-07 | — | Not run · Excluded in cycle 1 (needs baseline) | — | automation (supervised) |
+| 2026-10-07 | Chromium + WebKit emulation (Playwright 1.63) | Pass · 18/18 screenshots match the baseline, 3 runs in a row | — | automated |

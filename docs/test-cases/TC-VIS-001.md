@@ -6,7 +6,7 @@
 | Requirement | REQ-011 |
 | Priority | Medium |
 | Type | Visual |
-| Automation | candidate |
+| Automation | automated ([`tests/visual.spec.ts`](../../tests/visual.spec.ts)) |
 | Author | |
 | Created | 2026-10-07 |
 
@@ -41,3 +41,4 @@ Cycle 1 creates the baseline. TC-VIS-002 compares against it from cycle 2 on.
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
 | 2026-10-07 | Chrome 154 / macOS (C1) | Blocked · No full-page screenshot capability in automation; C3 not available. Run manually | — | automation (supervised) |
+| 2026-10-07 | Chromium 1440×900 + WebKit iPhone 13 emulation (Playwright 1.63) | Pass · baseline of 9 pages × 2 devices captured with `npm run test:visual:update` and reviewed; growing tables cut to 3 rows and masked. Emulation, not a real iPhone (C3 stays on hold) | — | automated |

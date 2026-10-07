@@ -2,13 +2,13 @@
 
 Where the project is going and in what order. Each phase ends with a clear **definition of done**. A phase starts only when the previous one is done.
 
-**Current phase: 1, Test documentation** (started 2026-10-07)
+**Current phase: 2, Manual execution** (phase 1 completed 2026-10-07)
 
 | Phase | Goal | Status |
 |---|---|---|
 | 0. Init | Repo, structure, templates | ✅ done |
-| 1. Test documentation | Full QA documentation set, written before any execution | 🟡 in progress |
-| 2. Manual execution | Run the TCs and exploratory sessions, file real bugs, write report #1 | ⏳ planned |
+| 1. Test documentation | Full QA documentation set, written before any execution | ✅ done |
+| 2. Manual execution | Run the TCs and exploratory sessions, file real bugs, write report #1 | 🟡 next |
 | 3. Automation basics | Playwright + TypeScript, smoke and navigation TCs automated | ⏳ planned |
 | 4. Automation coverage | Links, visual, SEO, a11y, performance, refactor to Page Object Model | ⏳ planned |
 | 5. CI and reporting | Scheduled runs, public report | 💭 to decide |
@@ -24,7 +24,7 @@ Where the project is going and in what order. Each phase ends with a clear **def
 - [x] Templates: test case, exploratory session, test summary report, bug report
 - [x] First test case `TC-NAV-001`
 
-## Phase 1: Test documentation 🟡
+## Phase 1: Test documentation ✅
 
 Goal: a complete, reviewed set of test docs, ready to execute.
 
@@ -34,16 +34,16 @@ Goal: a complete, reviewed set of test docs, ready to execute.
 - [x] **1.4 Checklists.** Write `smoke.md`, `cross-browser.md`, `links.md`, `a11y.md`, `seo.md` *(v1.0, 2026-10-07)*
 - [x] **1.5 Test cases.** At least one TC for every High and Medium REQ, with the `Automation` field set *(40 TCs covering all 17 REQs, 2026-10-07)*
 - [x] **1.6 Traceability.** Matrix is complete, no High REQ left with ❌
-- [ ] **1.7 Review.** Review all docs for consistency with the requirements, fixes applied
+- [x] **1.7 Review.** Review all docs for consistency with the requirements, fixes applied *([review](docs/reviews/2026-10-07-phase-1-docs-review.md): 9 findings, 8 fixed)*
 
 **Done when:** every REQ has coverage planned (TC or checklist), and the docs are reviewed.
 
-## Phase 2: Manual execution ⏳
+## Phase 2: Manual execution 🟡
 
 Goal: prove the docs work on the real site and find real bugs.
 
 - [ ] Run the smoke checklist
-- [ ] Execute all TCs on the primary browser and record results in the execution history
+- [ ] Execute the TCs as the test plan's exit criteria require, and record results in each TC's execution history
 - [ ] Run the cross-browser / mobile checklist
 - [ ] At least 3 exploratory sessions (from the charter ideas)
 - [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix

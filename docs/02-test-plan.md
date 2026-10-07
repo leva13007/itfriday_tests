@@ -120,9 +120,9 @@ Optional, if time allows: keyboard-only navigation; stream and speaker pages for
 Execution starts when all of these are true:
 
 - [x] Requirements v1.0 frozen (2026-10-07)
-- [ ] Test cases exist for every High and Medium requirement, and have been reviewed (roadmap 1.5)
-- [ ] Smoke, cross-browser, links, a11y and SEO checklists written (roadmap 1.4)
-- [ ] Traceability matrix complete, with no High requirement uncovered (roadmap 1.6)
+- [x] Test cases exist for every High and Medium requirement, and have been reviewed (roadmap 1.5, 1.7)
+- [x] Smoke, cross-browser, links, a11y and SEO checklists written (roadmap 1.4)
+- [x] Traceability matrix complete, with no High requirement uncovered (roadmap 1.6)
 - [ ] The live site responds (`/` returns 200)
 - [ ] Configurations C1–C3 are available
 
@@ -130,7 +130,7 @@ Execution starts when all of these are true:
 
 The cycle is complete when:
 
-- [ ] 100% of High-priority and ≥ 90% of Medium-priority test cases executed on C1
+- [ ] 100% of High-priority and ≥ 90% of Medium-priority test cases executed (on C1, or on the configuration a TC's preconditions name). TC-VIS-002 is excluded in cycle 1: it needs the baseline this cycle creates
 - [ ] All checklists executed on their configurations
 - [ ] At least 3 exploratory sessions completed and written up
 - [ ] Every failed test has a linked bug report (or a documented reason, e.g. a test case defect that was fixed)
@@ -165,18 +165,18 @@ Leaving with known open bugs is allowed: the summary report lists them with seve
 
 Planned dates. They move if the previous step finishes late. Effort is in focused working sessions (~2 h each).
 
-| Activity | Roadmap | Planned start | Planned end | Effort |
-|---|---|---|---|---|
-| Test plan | 1.3 | 2026-10-07 | 2026-10-07 | 1 |
-| Checklists | 1.4 | 2026-10-08 | 2026-10-09 | 2 |
-| Test cases | 1.5 | 2026-10-09 | 2026-10-16 | 5 |
-| Traceability + docs review | 1.6, 1.7 | 2026-10-16 | 2026-10-17 | 1 |
-| **Entry gate** | | 2026-10-19 | | |
-| Smoke + functional execution (C1) | 2 | 2026-10-19 | 2026-10-23 | 3 |
-| Cross-browser, a11y, SEO, performance, visual baseline | 2 | 2026-10-21 | 2026-10-27 | 3 |
-| Exploratory sessions | 2 | 2026-10-19 | 2026-10-28 | 2 |
-| Bug retests | 2 | as fixes land | 2026-10-29 | 1 |
-| Test summary report | 2 | 2026-10-29 | 2026-10-30 | 1 |
+| Activity | Roadmap | Planned start | Planned end | Effort | Actual |
+|---|---|---|---|---|---|
+| Test plan | 1.3 | 2026-10-07 | 2026-10-07 | 1 | ✅ 2026-10-07 |
+| Checklists | 1.4 | 2026-10-08 | 2026-10-09 | 2 | ✅ 2026-10-07 |
+| Test cases | 1.5 | 2026-10-09 | 2026-10-16 | 5 | ✅ 2026-10-07 |
+| Traceability + docs review | 1.6, 1.7 | 2026-10-16 | 2026-10-17 | 1 | ✅ 2026-10-07 |
+| **Entry gate** | | 2026-10-19 | | | |
+| Smoke + functional execution (C1) | 2 | 2026-10-19 | 2026-10-23 | 3 | |
+| Cross-browser, a11y, SEO, performance, visual baseline | 2 | 2026-10-21 | 2026-10-27 | 3 | |
+| Exploratory sessions | 2 | 2026-10-19 | 2026-10-28 | 2 | |
+| Bug retests | 2 | as fixes land | 2026-10-29 | 1 | |
+| Test summary report | 2 | 2026-10-29 | 2026-10-30 | 1 | |
 
 Stream days (Fridays) usually bring a deploy, so a smoke run is planned for every Friday and Saturday of the cycle.
 

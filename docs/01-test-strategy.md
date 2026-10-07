@@ -93,7 +93,7 @@ Testing follows a deliberate order. Each step feeds the next:
 
 ## 7. Defect management
 
-**Where:** GitHub Issues in this repo, label `bug`. Advisory findings with no requirement behind them (e.g. a missing `sitemap.xml`) are filed with the label `enhancement`: improvement suggestions, not defects. Fixes are made by the site owner in the site's own repository. The Issue links to the fixing commit or PR.
+**Where:** GitHub Issues in this repo, label `bug`. Advisory findings with no requirement behind them (e.g. a missing `sitemap.xml`) are filed with the label `enhancement`, using the [improvement suggestion template](../.github/ISSUE_TEMPLATE/improvement_suggestion.md): improvement suggestions, not defects. Fixes are made by the site owner in the site's own repository. The Issue links to the fixing commit or PR.
 
 **Lifecycle:**
 
@@ -113,6 +113,8 @@ New → Confirmed → In progress → Fixed → Verified → Closed
 | Closed | Done | Tester |
 | Rejected | Not a defect, duplicate, or won't fix (with a reason) | Site owner |
 | Reopened | Retest failed | Tester |
+
+**Tracking statuses in GitHub.** GitHub Issues only have *open* and *closed*, so the statuses above are labels: `status: confirmed`, `status: in progress`, `status: fixed`, `status: verified`, `status: reopened`. An open issue without a status label is *New*. *Closed* is the closed issue. *Rejected* is closed with the label `wontfix`, `duplicate` or `invalid` and a comment explaining why.
 
 **Severity** (impact on the user):
 

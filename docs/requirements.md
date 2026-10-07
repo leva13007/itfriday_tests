@@ -56,7 +56,7 @@ Priority: **High** = the site is unusable or embarrassing without it · **Medium
 |---|---|---|
 | 2026-10-07 | HTTP status of all 82 pages from the site source (41 UA + 41 EN) | ✅ 82/82 → 200 |
 | 2026-10-07 | Unknown URL | ✅ 404 with a 404 page |
-| 2026-10-07 | UA/EN page parity in the source | ✅ identical: 23 stream files, 5 speakers, 3 post files, 4 wiki pages per language |
+| 2026-10-07 | UA/EN page parity in the source | ✅ identical per language: 22 stream pages + list, 5 speaker pages + list, 2 posts + list, 4 wiki pages |
 
 ## Decisions
 

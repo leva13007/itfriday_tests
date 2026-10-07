@@ -54,16 +54,17 @@ docs/
   exploratory/             # session charters + findings
   traceability-matrix.md
   reports/                 # test summary reports
+  reviews/                 # document reviews (static testing)
 .github/ISSUE_TEMPLATE/    # bug report template
 ```
 
 ## where I left off
 
-Project initialised on 2026-10-07: repo, docs structure, templates, first test case, a first draft of the site map in `requirements.md`, and `ROADMAP.md`. Now in phase 1 (test documentation). Requirements v1.0 frozen (1.1) test strategy v1.0 (1.2) cycle 1 test plan (1.3) 5 checklists (1.4) and 40 test cases with a full traceability matrix (1.5, 1.6) written, with all 82 live pages returning 200. No test code yet.
+Phase 1 (test documentation) completed on 2026-10-07: requirements v1.0, test strategy, cycle 1 test plan, 5 checklists, 40 test cases, a full traceability matrix, and a document review (9 findings, 8 fixed). All 82 live pages returned 200 on the last check. No test execution or test code yet.
 
 ## next step
 
-Review all docs for consistency with the requirements (ROADMAP 1.7).
+Pass the cycle 1 entry gate (test plan §6) and start phase 2 with the smoke checklist.
 
 ## resources
 

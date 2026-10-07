@@ -10,7 +10,7 @@ import { representativePages } from './support/representative-pages';
 /**
  * Known open accessibility bugs, excluded from the axe scan so the scan still catches
  * NEW serious issues while these are being fixed. Remove an entry when its bug is fixed.
- * The bugs themselves are still tested: BUG-003 by TC-A11Y-004 below.
+ * The bugs themselves are still tested: BUG-003 by TC-A11Y-004, BUG-004 by TC-A11Y-005 below.
  */
 const KNOWN_ISSUES = {
   // BUG-003: the logo link has no accessible name.
@@ -120,4 +120,23 @@ test('TC-A11Y-004 Images have a text alternative', async ({ page }) => {
     problems.push(...[...new Set(found)].map((problem) => `${path}: ${problem}`));
   }
   expect(problems).toEqual([]);
+});
+
+test('TC-A11Y-005 Text has sufficient colour contrast in code blocks and the hero button', async ({ page }) => {
+  test.info().annotations.push({ type: 'issue', description: 'BUG-004' });
+  test.fail();
+  // The pages and themes where BUG-004 was found. No exclusions: this test is about exactly those elements.
+  const scans = [
+    { path: '/', theme: 'light' },
+    { path: '/posts/2026-06-22-web-push-api', theme: 'light' },
+    { path: '/posts/2026-06-22-web-push-api', theme: 'dark' },
+  ] as const;
+
+  for (const { path, theme } of scans) {
+    await page.emulateMedia({ colorScheme: theme });
+    await page.goto(path);
+    const results = await new AxeBuilder({ page }).withRules(['color-contrast']).analyze();
+    const lowContrast = results.violations.flatMap((v) => v.nodes.map((n) => n.target.join(' ')));
+    expect.soft(lowContrast, `${path} (${theme} theme)`).toEqual([]);
+  }
 });

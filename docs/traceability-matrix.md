@@ -19,7 +19,7 @@ Update it whenever a REQ, TC or bug is added.
 | REQ-011 | No visual regressions | [TC-VIS-001](test-cases/TC-VIS-001.md), [TC-VIS-002](test-cases/TC-VIS-002.md) |  |  | ✅ passed (automated baseline 2026-10-07) |
 | REQ-012 | Title/description/lang | [TC-SEO-001](test-cases/TC-SEO-001.md), [TC-SEO-002](test-cases/TC-SEO-002.md), [TC-SEO-003](test-cases/TC-SEO-003.md) | seo (A), a11y (C01, C06) | [BUG-001](defects/BUG-001.md) | ❌ failed |
 | REQ-013 | OG tags | [TC-SEO-004](test-cases/TC-SEO-004.md) | seo (A) |  | ✅ passed |
-| REQ-014 | a11y | [TC-A11Y-001](test-cases/TC-A11Y-001.md), [TC-A11Y-002](test-cases/TC-A11Y-002.md), [TC-A11Y-003](test-cases/TC-A11Y-003.md), [TC-A11Y-004](test-cases/TC-A11Y-004.md) | a11y (A–E) | [BUG-003](defects/BUG-003.md), [BUG-004](defects/BUG-004.md) | ❌ failed |
+| REQ-014 | a11y | [TC-A11Y-001](test-cases/TC-A11Y-001.md), [TC-A11Y-002](test-cases/TC-A11Y-002.md), [TC-A11Y-003](test-cases/TC-A11Y-003.md), [TC-A11Y-004](test-cases/TC-A11Y-004.md), [TC-A11Y-005](test-cases/TC-A11Y-005.md) | a11y (A–E) | [BUG-003](defects/BUG-003.md), [BUG-004](defects/BUG-004.md) | ❌ failed |
 | REQ-015 | Performance | [TC-PERF-001](test-cases/TC-PERF-001.md), [TC-PERF-002](test-cases/TC-PERF-002.md) |  | [SUG-003](defects/SUG-003.md) (suggestion) | ✅ passed (baseline recorded) |
 | REQ-016 | Lists link to all detail pages | [TC-PST-001](test-cases/TC-PST-001.md), [TC-SPK-001](test-cases/TC-SPK-001.md), [TC-STR-001](test-cases/TC-STR-001.md), [TC-STR-005](test-cases/TC-STR-005.md), [TC-STR-006](test-cases/TC-STR-006.md), [TC-SPK-003](test-cases/TC-SPK-003.md) | smoke, links (C02, C04, C06) |  | ✅ passed |
 | REQ-017 | 404 page | [TC-ERR-001](test-cases/TC-ERR-001.md) | smoke, seo (C05) |  | ✅ passed |
@@ -31,7 +31,7 @@ Found by exploratory testing with the consistency oracle (see the strategy §7).
 | Bug | Found in | Proposed requirement |
 |---|---|---|
 | [BUG-006](defects/BUG-006.md) | Exploratory: global UI; now covered by [TC-STR-004](test-cases/TC-STR-004.md) | Speaker profiles list every stream the speaker took part in |
-| [BUG-007](defects/BUG-007.md) | Exploratory: global UI | REQ-022: the schedule page shows the next announced stream |
+| [BUG-007](defects/BUG-007.md) | Exploratory: global UI; now covered by [TC-STR-007](test-cases/TC-STR-007.md) | REQ-022: the schedule page shows the next announced stream |
 
 Coverage after cycle 1, test case execution on C1 (2026-10-07):
 ✅ passed: all linked TCs passed · ❌ failed: at least one linked TC failed · 🟡 partly executed: some TCs blocked or not run · ⏳ not executed

@@ -42,6 +42,20 @@ export function streamsOf(slug: string): string[] {
   return expectedStreams.filter((s) => s.speakers.includes(slug)).map((s) => s.number);
 }
 
+/** Today's date in Kyiv (the community's time zone) as YYYY-MM-DD. */
+export function todayInKyiv(): string {
+  // The en-CA locale formats dates as YYYY-MM-DD, the same as the oracle.
+  return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Kyiv' }).format(new Date());
+}
+
+/**
+ * The next announced stream: the earliest stream dated today or later.
+ * A stream stays "next" for its whole day. Undefined when nothing is announced yet.
+ */
+export function nextStream(today = todayInKyiv()): ExpectedStream | undefined {
+  return expectedStreams.filter((s) => s.date >= today).sort((a, b) => a.date.localeCompare(b.date))[0];
+}
+
 /** "2026-10-09" → "09.10.2026", the format of the streams list. */
 export function listDate(isoDate: string): string {
   const [year, month, day] = isoDate.split('-');

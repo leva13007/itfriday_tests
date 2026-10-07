@@ -2,6 +2,7 @@ import { test as base } from '@playwright/test';
 import { Header } from './pages/Header';
 import { MobileMenu } from './pages/MobileMenu';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { SchedulePage } from './pages/SchedulePage';
 import { SpeakerPage } from './pages/SpeakerPage';
 import { StreamPage } from './pages/StreamPage';
 import { StreamsListPage } from './pages/StreamsListPage';
@@ -14,6 +15,7 @@ type PageObjects = {
   streamPage: StreamPage;
   speakerPage: SpeakerPage;
   notFound: NotFoundPage;
+  schedulePage: SchedulePage;
   wikiPage: WikiPage;
 };
 
@@ -50,6 +52,7 @@ export const test = base.extend<PageObjects>({
   streamPage: async ({ page }, use) => use(new StreamPage(page)),
   speakerPage: async ({ page }, use) => use(new SpeakerPage(page)),
   notFound: async ({ page }, use) => use(new NotFoundPage(page)),
+  schedulePage: async ({ page }, use) => use(new SchedulePage(page)),
   wikiPage: async ({ page }, use) => use(new WikiPage(page)),
 });
 

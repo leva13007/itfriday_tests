@@ -1,5 +1,5 @@
 import { test, expect } from './fixtures';
-import { expectedSpeakers, expectedStreams, listDate, oracleReviewed, streamsOf } from './support/test-data';
+import { expectedSpeakers, expectedStreams, listDate, nextStream, oracleReviewed, streamsOf } from './support/test-data';
 
 /**
  * Site content vs. the test oracle (test-data/*.json), in both directions:
@@ -90,5 +90,19 @@ test('TC-SPK-003 Speakers and their profiles match the expected speakers', async
       const streams = await speakerPage.streamLinks.evaluateAll((links) => links.map((a) => a.getAttribute('href')!.match(/streams\/(\d{3})/)![1]));
       expect.soft(streams.sort(), `${where} streams on profile`).toEqual(streamsOf(expected.slug).sort());
     }
+  }
+});
+
+test('TC-STR-007 Schedule page shows the next announced stream', async ({ schedulePage }) => {
+  const next = nextStream();
+  // Between a stream and the next announcement there is nothing to show, and
+  // "will be announced in Telegram" is the right text.
+  test.skip(!next, 'no stream dated today or later in test-data/streams.json');
+  test.info().annotations.push({ type: 'issue', description: 'BUG-007' });
+  test.fail();
+
+  for (const { code } of languages) {
+    await schedulePage.goto(code);
+    await expect.soft(schedulePage.streamLinks(next!.number).first(), `${code}: link to #${next!.number}`).toBeAttached();
   }
 });

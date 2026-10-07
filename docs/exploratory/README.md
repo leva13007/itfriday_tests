@@ -6,6 +6,7 @@ One file per session: `YYYY-MM-DD-<short-topic>.md`. Start from [`_session-templ
 
 ## Charter ideas
 
+- **First session (from requirements analysis):** explore the global UI (mobile menu, search, the 404 page) to discover behaviour the requirements don't describe yet.
 - Explore **language switching** on every page type to discover pages without a counterpart or with a wrong redirect.
 - Explore the site at **mobile width** to discover layout and menu issues.
 - Explore **stream and speaker pages** to discover broken embeds, missing images and inconsistent content between UA and EN.

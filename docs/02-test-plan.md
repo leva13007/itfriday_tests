@@ -29,11 +29,12 @@
 
 | Browser / device | Viewport | Priority |
 |---|---|---|
-| Chrome (desktop) | 1440×900 | *High* |
-| Firefox (desktop) | | |
-| Safari (desktop) | | |
-| Mobile Safari (iPhone) | 390×844 | |
-| Chrome (Android) | | |
+| Chrome (desktop, macOS/Windows) | 1440×900 | *High* |
+| Safari (desktop, macOS) | 1440×900 | |
+| Safari (iPhone) | 390×844 | |
+| Chrome (Android) | 412×915 | |
+
+*Browser scope agreed on 2026-10-07: Chrome and Safari only. Set the priorities and fill in the versions you test on.*
 
 ## 5. Entry criteria
 

@@ -1,6 +1,6 @@
 # Test Cases
 
-One file per test case: `TC-<MODULE>-<NNN>.md`. Start from [`_template.md`](_template.md). [`TC-NAV-001.md`](TC-NAV-001.md) is a worked example.
+One file per test case: `TC-<MODULE>-<NNN>.md`. Start from [`_template.md`](_template.md). [`TC-NAV-001.md`](TC-NAV-001.md) shows the expected level of detail.
 
 ## Module codes
 

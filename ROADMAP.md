@@ -12,7 +12,7 @@ Where the project is going and in what order. Each phase ends with a clear **def
 | 3. Automation basics | Playwright + TypeScript, smoke and navigation TCs automated | ⏳ planned |
 | 4. Automation coverage | Links, visual, SEO, a11y, performance, refactor to Page Object Model | ⏳ planned |
 | 5. CI and reporting | Scheduled runs, public report | 💭 to decide |
-| 6. Handover | She rebuilds the project in her own repo; portfolio polish | ⏳ planned |
+| 6. Polish and publish | Final README, results overview, public repo | ⏳ planned |
 
 ---
 
@@ -20,21 +20,21 @@ Where the project is going and in what order. Each phase ends with a clear **def
 
 - [x] Git repo, `.gitignore`
 - [x] `README.md`, `CLAUDE.md`, `ROADMAP.md`
-- [x] Docs skeleton: strategy, plan, requirements, traceability, reports
+- [x] Docs structure: strategy, plan, requirements, traceability, reports
 - [x] Templates: test case, exploratory session, test summary report, bug report
-- [x] Example test case `TC-NAV-001`
+- [x] First test case `TC-NAV-001`
 
 ## Phase 1: Test documentation 🟡
 
 Goal: a complete, reviewed set of test docs, ready to execute.
 
-- [ ] **1.1 Requirements.** Verify `requirements.md` against the live site, resolve the open questions, freeze the REQ list
-- [ ] **1.2 Test strategy.** Fill every section of `01-test-strategy.md`
+- [x] **1.1 Requirements.** Verify `requirements.md` against the live site, resolve the open questions, freeze the REQ list *(v1.0 frozen 2026-10-07)*
+- [x] **1.2 Test strategy.** Fill every section of `01-test-strategy.md` *(v1.0, 2026-10-07)*
 - [ ] **1.3 Test plan.** Fill `02-test-plan.md`: browsers/devices, entry/exit criteria, schedule, risks
 - [ ] **1.4 Checklists.** Write `smoke.md`, `cross-browser.md`, `a11y.md`, `seo.md`
 - [ ] **1.5 Test cases.** At least one TC for every High and Medium REQ, with the `Automation` field set
 - [ ] **1.6 Traceability.** Matrix is complete, no High REQ left with ❌
-- [ ] **1.7 Review.** Peer review of all docs (Oleh ↔ her), fixes applied
+- [ ] **1.7 Review.** Review all docs for consistency with the requirements, fixes applied
 
 **Done when:** every REQ has coverage planned (TC or checklist), and the docs are reviewed.
 
@@ -54,9 +54,8 @@ Goal: prove the docs work on the real site and find real bugs.
 
 ## Phase 3: Automation basics ⏳
 
-Goal: first green Playwright run, written by her.
+Goal: first green Playwright run.
 
-- [ ] JS/TS basics needed for tests (variables, functions, async/await, modules)
 - [ ] Init Playwright + TypeScript (`package.json`, `playwright.config.ts`)
 - [ ] Automate the smoke TCs, flat style (no abstractions yet)
 - [ ] Automate the navigation and i18n TCs
@@ -87,11 +86,11 @@ Not decided yet. Tests run manually for now. Options to evaluate:
 - Allure or the Playwright HTML report published to GitHub Pages
 - Telegram notification on failure
 
-## Phase 6: Handover ⏳
+## Phase 6: Polish and publish ⏳
 
-- [ ] She creates her own repo and rebuilds the project phase by phase
-- [ ] Portfolio README: what was done, skills shown, link to the report and the bugs found
-- [ ] Optional: IT Friday stream or video about the project
+- [ ] README results overview: what was tested, coverage, bugs found, links to the reports
+- [ ] Clean up the repo history and docs, then publish on GitHub
+- [ ] Optional: an IT Friday stream or video about the project
 
 ---
 

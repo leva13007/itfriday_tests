@@ -8,7 +8,7 @@ stack: Markdown, GitHub Issues, Playwright, TypeScript
 
 QA project for [itfriday.community](https://itfriday.community), the public website of the IT Friday community. It covers the whole testing cycle, from planning and test design to manual execution, bug reporting and (later) test automation with Playwright.
 
-It is built as a **portfolio project for a junior QA engineer**: it shows the process, not just test code.
+Every step is documented: what is tested, how, and why. The repo can be read as a complete walkthrough of testing a real website.
 
 ## system under test
 
@@ -59,11 +59,11 @@ docs/
 
 ## where I left off
 
-Project initialised on 2026-10-07: repo, docs skeleton, templates, one example TC, a first draft of the site map in `requirements.md`, and `ROADMAP.md`. Now in phase 1 (test documentation). No test code yet.
+Project initialised on 2026-10-07: repo, docs structure, templates, first test case, a first draft of the site map in `requirements.md`, and `ROADMAP.md`. Now in phase 1 (test documentation). Requirements v1.0 frozen (1.1) and test strategy v1.0 written (1.2), with all 82 live pages returning 200. No test code yet.
 
 ## next step
 
-Review `docs/requirements.md` against the live site and finalise the REQ list (ROADMAP 1.1).
+Fill in `docs/02-test-plan.md` for cycle 1 (ROADMAP 1.3).
 
 ## resources
 

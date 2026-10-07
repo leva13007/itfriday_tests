@@ -1,7 +1,5 @@
 # TC-NAV-001: Header "Streams" link opens the streams list (UA)
 
-*Example test case showing the expected level of detail.*
-
 | Field | Value |
 |---|---|
 | Module | NAV |

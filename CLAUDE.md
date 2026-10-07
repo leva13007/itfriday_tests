@@ -6,21 +6,23 @@ Guidance for Claude Code when working in this repo.
 
 QA project for the live site https://itfriday.community (VitePress, UA at `/`, EN at `/en/`, GitHub Pages). The site source lives in a separate repo: https://github.com/leva13007/itfriday.community. Read it to understand pages and config, but never change it from here.
 
-**Purpose: a portfolio project for a junior QA engineer** who comes from manual QA and doesn't code yet. Oleh builds it here first, then she reproduces it in her own repo. Optimise for an honest, defendable portfolio that shows the process.
+**Purpose:** a complete, end-to-end QA project for a real website. It should read as a full walkthrough of the testing process: analysis → planning → design → manual execution → bug reporting → automation.
 
 ## Phases
 
-The source of truth is **`ROADMAP.md`**: 0 Init → 1 Test documentation → 2 Manual execution → 3 Automation basics → 4 Automation coverage → 5 CI/reporting (undecided) → 6 Handover.
+The source of truth is **`ROADMAP.md`**: 0 Init → 1 Test documentation → 2 Manual execution → 3 Automation basics → 4 Automation coverage → 5 CI/reporting (undecided) → 6 Polish and publish.
 
 - **Do not write test code or add package.json/Playwright before phase 3.**
 - A phase starts only when the previous phase's "done when" is met.
 - When a milestone is finished, tick it in `ROADMAP.md` and update the current-phase line.
-- In phase 3, keep it beginner-friendly: flat tests first, Page Object Model only in phase 4.
+- In phase 3, keep code simple and readable: flat tests first, Page Object Model only in phase 4.
 
 ## Rules
 
 - All QA docs and READMEs are in **English**.
-- Help, don't replace: provide scaffolding, templates and examples, and review her work. Don't mass-generate finished test cases unless explicitly asked.
+- Write every doc and (later) all code complete and finished, not as placeholders or homework.
+- Keep everything explainable: no unexplained magic, and every doc says *why*, not just *what*.
+- **No meta-commentary in the repo.** Docs and code must read as a normal professional QA project. Don't mention who the project is for, learning goals, portfolios or onboarding.
 - Target environment is **production only**. Tests must be read-only, with no load or stress testing against the live site.
 - Test case IDs follow `TC-<MODULE>-<NNN>`, requirements `REQ-<NNN>`, bugs = GitHub Issue numbers. Module codes are listed in `docs/test-cases/README.md`.
 - Every TC links to at least one REQ and has an `Automation` field (`candidate` / `automated` / `manual-only`).

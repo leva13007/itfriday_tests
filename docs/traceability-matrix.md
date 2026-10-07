@@ -20,7 +20,7 @@ Update it whenever a REQ, TC or bug is added.
 | REQ-012 | Title/description/lang | [TC-SEO-001](test-cases/TC-SEO-001.md), [TC-SEO-002](test-cases/TC-SEO-002.md), [TC-SEO-003](test-cases/TC-SEO-003.md) | seo (A), a11y (C01, C06) | [BUG-001](reports/cycle-1/bugs/BUG-001.md) | ❌ failed |
 | REQ-013 | OG tags | [TC-SEO-004](test-cases/TC-SEO-004.md) | seo (A) |  | ✅ passed |
 | REQ-014 | a11y | [TC-A11Y-001](test-cases/TC-A11Y-001.md), [TC-A11Y-002](test-cases/TC-A11Y-002.md), [TC-A11Y-003](test-cases/TC-A11Y-003.md), [TC-A11Y-004](test-cases/TC-A11Y-004.md) | a11y (A–E) | [BUG-003](reports/cycle-1/bugs/BUG-003.md), [BUG-004](reports/cycle-1/bugs/BUG-004.md) | ❌ failed |
-| REQ-015 | Performance | [TC-PERF-001](test-cases/TC-PERF-001.md) |  |  | ⏳ not executed |
+| REQ-015 | Performance | [TC-PERF-001](test-cases/TC-PERF-001.md) |  | [SUG-003](reports/cycle-1/bugs/SUG-003.md) (suggestion) | ✅ passed (baseline recorded) |
 | REQ-016 | Lists link to all detail pages | [TC-PST-001](test-cases/TC-PST-001.md), [TC-SPK-001](test-cases/TC-SPK-001.md), [TC-STR-001](test-cases/TC-STR-001.md) | smoke, links (C02, C04, C06) |  | ✅ passed |
 | REQ-017 | 404 page | [TC-ERR-001](test-cases/TC-ERR-001.md) | smoke, seo (C05) |  | ✅ passed |
 

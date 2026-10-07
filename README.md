@@ -60,11 +60,11 @@ docs/
 
 ## where I left off
 
-Phase 1 (test documentation) completed on 2026-10-07: requirements v1.0, test strategy, cycle 1 test plan, 5 checklists, 40 test cases, a full traceability matrix, and a document review (9 findings, 8 fixed). All 82 live pages returned 200 on the last check. Phase 2 started: entry gate passed for C1 (C2/C3 still to confirm), smoke run on C1 passed 15/15 (GO), 40 test cases executed on C1: 32 pass, 4 fail, 2 blocked, 2 not run. Links, SEO and a11y checklists done. 5 bugs (1 Major, 3 Minor, 1 Trivial) and 2 improvement suggestions. No test code yet.
+Phase 1 (test documentation) completed on 2026-10-07: requirements v1.0, test strategy, cycle 1 test plan, 5 checklists, 40 test cases, a full traceability matrix, and a document review (9 findings, 8 fixed). All 82 live pages returned 200 on the last check. Phase 2 started: entry gate passed for C1 (C2/C3 still to confirm), smoke run on C1 passed 15/15 (GO), 40 test cases executed on C1: 32 pass, 4 fail, 2 blocked, 2 not run. Links, SEO and a11y checklists done. 5 bugs (1 Major, 3 Minor, 1 Trivial) and 3 improvement suggestions. Lighthouse baseline recorded. No test code yet.
 
 ## next step
 
-Run the cross-browser checklist on C2 Safari and C3 iPhone, and the manual-only checks (keyboard, VoiceOver, Lighthouse, visual baseline).
+Run the cross-browser checklist on C2 Safari and C3 iPhone, and the manual-only checks (keyboard, VoiceOver, visual baseline).
 
 ## resources
 

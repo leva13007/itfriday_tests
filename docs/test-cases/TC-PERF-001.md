@@ -25,6 +25,8 @@
 |---|---|---|
 | 1 | Open DevTools → Lighthouse, select all categories, device "Desktop", and run on each page | Report generated |
 | 2 | Repeat with device "Mobile" | Report generated |
+
+CLI alternative (same result, scriptable): `npx lighthouse@13.5.0 <url> [--preset=desktop] --output=html --output=json`
 | 3 | Record the 4 category scores and LCP, CLS, TBT for each run in the cycle summary report | Table with one row per page × device |
 | 4 | Save each report as HTML in `docs/reports/cycle-1/lighthouse/` | Reports stored |
 
@@ -40,4 +42,4 @@ Baseline only: there is no pass/fail threshold (decisions log, 2026-10-07). Late
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| 2026-10-07 | — | Not run · Lighthouse not available to automation; run manually | — | automation (supervised) |
+| 2026-10-07 | Lighthouse 13.5.0 CLI, Chrome 154 headless | Pass · baseline recorded for 6 pages × 2 devices ([baseline](../reports/cycle-1/lighthouse/README.md)). Stream pages on mobile: perf 64, LCP 11.5 s, CLS 0.216 → SUG-003 | SUG-003 | automation (supervised) |

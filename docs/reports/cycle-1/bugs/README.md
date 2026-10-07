@@ -18,6 +18,7 @@ Filed with the [improvement suggestion template](../../../../.github/ISSUE_TEMPL
 |---|---|---|---|---|
 | [SUG-001](SUG-001.md) | Add SEO and link-preview metadata (Open Graph, canonical, hreflang, sitemap) | SEO checklist | New | — |
 | [SUG-002](SUG-002.md) | Enforce HTTPS | SEO checklist | New | — |
+| [SUG-003](SUG-003.md) | Optimise stream cover images (mobile LCP 11.5 s, CLS 0.21) | TC-PERF-001 | New | — |
 
 ## Observations (not reported)
 
@@ -25,5 +26,4 @@ Input for checks that haven't run yet.
 
 | Observation | For |
 |---|---|
-| Stream cover images are 1.3–2.6 MB PNGs; one speaker photo is 1.1 MB | TC-PERF-001 (Lighthouse) |
 | Stream cover alt text is "Stream #NNN" in English on UA pages and doesn't describe the topic | a11y review in the next cycle |

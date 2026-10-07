@@ -73,7 +73,7 @@ Goal: first green Playwright run.
 - [ ] Visual regression with `toHaveScreenshot` (desktop + mobile, key pages)
 - [ ] SEO checks (title, description, `lang`, OG tags)
 - [ ] Accessibility with `@axe-core/playwright`
-- [ ] Performance baseline (Lighthouse)
+- [ ] Performance in automation: Lighthouse CI (`@lhci/cli`) over the key pages, median of 3 runs, compared against the cycle 1 [baseline](docs/reports/cycle-1/lighthouse/README.md). Budgets once REQ-015 gets a threshold. In phase 5 the same job runs in GitHub Actions
 - [ ] Data-driven tests over all stream/speaker pages
 
 **Done when:** every `candidate` TC is `automated` or has a written reason why not.

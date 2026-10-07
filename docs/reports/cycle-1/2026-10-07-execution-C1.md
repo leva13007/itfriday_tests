@@ -22,10 +22,10 @@ Execution of all 40 test cases on the primary configuration (test plan §10, ste
 
 | Result | Count | Test cases |
 |---|---|---|
-| ✅ Pass | 32 | NAV-001…005, I18N-001…005, WIKI-001…003, STR-001…003, SPK-001…002, PST-001, LNK-001…005, RSP-001…003, SEO-001, SEO-003, SEO-004, A11Y-002, ERR-001 |
+| ✅ Pass | 33 | NAV-001…005, I18N-001…005, WIKI-001…003, STR-001…003, SPK-001…002, PST-001, LNK-001…005, RSP-001…003, SEO-001, SEO-003, SEO-004, A11Y-002, ERR-001, PERF-001 (run later the same day, see below) |
 | ❌ Fail | 4 | I18N-006, SEO-002, A11Y-001, A11Y-004 |
 | ⛔ Blocked | 2 | VIS-001 (no full-page capture in automation, C3 not available), A11Y-003 (keyboard input unreliable in automation) |
-| ⏭ Not run | 2 | VIS-002 (excluded in cycle 1), PERF-001 (Lighthouse not available to automation) |
+| ⏭ Not run | 1 | VIS-002 (excluded in cycle 1) |
 | **Total** | **40** | |
 
 **By priority:**
@@ -34,7 +34,7 @@ Execution of all 40 test cases on the primary configuration (test plan §10, ste
 |---|---|---|---|---|
 | High | 13 | 13 (100%) | 13 | 0 |
 | Medium | 22 | 19 of 21 eligible (90%) | 15 | 4 |
-| Low | 5 | 4 | 4 | 0 |
+| Low | 5 | 5 | 5 | 0 |
 
 The High and Medium exit criteria (test plan §7) are met for this step. VIS-002 is excluded from the Medium count as the plan defines.
 
@@ -78,6 +78,10 @@ Moderate issues (not failing TC-A11Y-001, recorded for the a11y checklist): `lan
 
 ## Still to do in cycle 1
 
-- TC-VIS-001, TC-A11Y-003, TC-PERF-001: manual execution
+- TC-VIS-001, TC-A11Y-003: manual execution
+
+## Update: TC-PERF-001
+
+Run later on 2026-10-07 with the Lighthouse CLI (`npx lighthouse@13.5.0`, Chrome 154 headless): baseline recorded for 6 pages × desktop/mobile, see the [Lighthouse baseline](lighthouse/README.md). Result: Pass (baseline only). Stream pages on mobile score 64 (LCP 11.5 s, CLS 0.216), filed as [SUG-003](bugs/SUG-003.md).
 - Checklists: links, SEO, a11y, cross-browser (C2, C3, C4)
 - Exploratory sessions 1–3

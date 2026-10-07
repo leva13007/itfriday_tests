@@ -16,10 +16,12 @@
     "lighthouse": "lhci autorun && node scripts/lighthouse-summary.mjs mobile",
     "lighthouse:desktop": "lhci autorun --config=lighthouserc.desktop.json && node scripts/lighthouse-summary.mjs desktop",
     "lighthouse:open": "node scripts/lighthouse-summary.mjs mobile --open",
-    "lighthouse:desktop:open": "node scripts/lighthouse-summary.mjs desktop --open"
+    "lighthouse:desktop:open": "node scripts/lighthouse-summary.mjs desktop --open",
+    "lighthouse:full": "node scripts/lighthouse-full.mjs",
+    "lighthouse:full:desktop": "node scripts/lighthouse-full.mjs --device desktop"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22.18"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",

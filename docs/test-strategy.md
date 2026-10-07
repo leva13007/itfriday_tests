@@ -45,7 +45,7 @@ The site has no application code of its own (VitePress renders Markdown), so uni
 | Cross-browser / responsive | Yes | Checklist on Chrome and Safari, desktop and mobile | Safari (WebKit) renders differently from Chrome; mobile is a large share of traffic |
 | Accessibility | Yes | Checklist + axe DevTools, automated axe later | Legal and ethical baseline; the site should be usable by everyone |
 | SEO | Yes | Checklist (view source / DevTools) | Affects discoverability and link previews in Telegram and LinkedIn |
-| Performance | Yes (baseline) | Lighthouse, scores recorded per cycle | Static site, so it is expected to be fast. We watch for regressions without a hard target |
+| Performance | Yes (baseline) | Lighthouse on 6 key pages routinely, on every page in occasional full runs; page and image weight of every page in each test run | Static site, so it is expected to be fast. We watch for regressions without a hard target |
 | Exploratory | Yes | Time-boxed sessions with charters | Finds what scripted tests don't anticipate |
 | Load / stress | **No** | — | Production only: we must not put load on the live site, and GitHub Pages capacity isn't ours to test |
 | Security | **No** | — | Static site, no user input or auth. The attack surface belongs to GitHub Pages |

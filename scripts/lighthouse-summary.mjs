@@ -4,6 +4,7 @@
 //   node scripts/lighthouse-summary.mjs mobile                   # compare with the baseline
 //   node scripts/lighthouse-summary.mjs mobile --save-baseline   # make this run the new baseline
 //   node scripts/lighthouse-summary.mjs mobile --open            # open the median HTML reports in the browser
+//   node scripts/lighthouse-summary.mjs full-mobile --worst-first  # results of a full run, slowest pages first
 //
 // REQ-015 sets no threshold, so this only reports. Drops of 10+ points are flagged.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -12,11 +13,12 @@ import { spawn } from 'node:child_process';
 const device = process.argv[2] ?? 'mobile';
 const saveBaseline = process.argv.includes('--save-baseline');
 const openReports = process.argv.includes('--open');
+const worstFirst = process.argv.includes('--worst-first');
 const manifestPath = `lighthouse-results/${device}/manifest.json`;
 const baselinePath = `lighthouse/baseline-${device}.json`;
 
 if (!existsSync(manifestPath)) {
-  console.error(`No results at ${manifestPath}. Run "npm run lighthouse${device === 'desktop' ? ':desktop' : ''}" first.`);
+  console.error(`No results at ${manifestPath}. Run the matching npm run lighthouse… script first.`);
   process.exit(1);
 }
 
@@ -42,7 +44,9 @@ for (const run of manifest.filter((r) => r.isRepresentativeRun)) {
 const baseline = existsSync(baselinePath) ? JSON.parse(readFileSync(baselinePath, 'utf8')) : null;
 console.log(`\nLighthouse (${device}, median of ${manifest.length / Object.keys(current).length} runs)` + (baseline ? `, compared with the baseline of ${baseline.date}` : ', no baseline yet'));
 console.log('page                   perf  a11y  bp   seo  LCP ms   CLS    vs baseline');
-for (const [path, r] of Object.entries(current)) {
+const entries = Object.entries(current);
+if (worstFirst) entries.sort(([, a], [, b]) => a.performance - b.performance);
+for (const [path, r] of entries) {
   const b = baseline?.pages[path];
   const delta = b ? r.performance - b.performance : null;
   const note = delta === null ? '—' : `${delta >= 0 ? '+' : ''}${delta} perf${delta <= -10 ? '  ⚠ drop' : ''}`;

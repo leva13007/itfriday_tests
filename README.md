@@ -47,7 +47,7 @@ The [quality audit](docs/audits/2026-10-quality-audit.md) summarises the state o
 
 ## running the automated tests
 
-Requirements: [Node.js](https://nodejs.org) 20 or newer.
+Requirements: [Node.js](https://nodejs.org) 22.18 or newer (scripts import TypeScript directly).
 
 ```bash
 npm install                                 # install Playwright and TypeScript
@@ -62,6 +62,8 @@ npm run test:visual                         # visual regression only (@visual)
 npm run test:visual:update                  # re-capture the visual baseline after an intended change
 npm run lighthouse                          # Lighthouse CI, mobile: median of 3 runs, compared with the baseline
 npm run lighthouse:desktop                  # the same with the desktop preset
+npm run lighthouse:open                     # open the median HTML reports of the last run
+npm run lighthouse:full                     # Lighthouse on EVERY page (~1 h 15 min, unattended)
 npm run typecheck                           # TypeScript check without running tests
 ```
 
@@ -72,6 +74,17 @@ npm run typecheck                           # TypeScript check without running t
 | `mobile-safari` | iPhone 13 emulation, WebKit engine (close to C3, not a real device) | `@mobile` only |
 
 **Lighthouse CI** (`lighthouserc.json`, `lighthouserc.desktop.json`) checks 6 key pages and prints medians against `lighthouse/baseline-*.json`. It only warns, because REQ-015 has no threshold yet. After an intended change, save a new baseline with `node scripts/lighthouse-summary.mjs mobile --save-baseline`. Note: `@lhci/cli` pulls in outdated dependencies (`npm audit` reports issues in dev dependencies only). It runs locally against public pages and isn't part of the site.
+
+### Everyday vs. full runs
+
+| | Everyday (after a deploy) | Full (once a cycle, monthly, or overnight) |
+|---|---|---|
+| Command | `npm test`, `npm run lighthouse` | `npm run lighthouse:full` (+ `:desktop`) |
+| Pages | Playwright: all pages for cheap checks, representative pages for deep ones. Lighthouse: 6 key pages | Lighthouse on every page found by the crawler |
+| Time | ~1 min + ~5 min | ~1 h 15 min per device |
+| Needs a person | No | No: start it and leave it |
+
+Page weight of every page (`TC-PERF-002`, part of `npm test`) bridges the two: it measures every page's images in ~30 s, so the everyday run still notices a heavy new cover between full runs. In phase 5, CI runs the everyday set on each deploy and the full set on a schedule.
 
 ### Lighthouse reports: viewing and showing their value
 

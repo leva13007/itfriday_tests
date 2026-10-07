@@ -98,7 +98,7 @@ Goal: first green Playwright run.
 
 Not decided yet. Tests run manually for now. Options to evaluate:
 
-- GitHub Actions: manual trigger + cron schedule against prod
+- GitHub Actions: manual trigger + cron schedule against prod. Two schedules: the everyday set (`npm test` + `npm run lighthouse`) after each site deploy, and the full set (`npm run lighthouse:full`, mobile + desktop) monthly or nightly
 - Trigger after each site deploy (`repository_dispatch` from the site repo)
 - Allure or the Playwright HTML report published to GitHub Pages
 - Telegram notification on failure

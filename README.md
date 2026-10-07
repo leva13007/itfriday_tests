@@ -25,17 +25,17 @@ Phases, milestones and the current status are in [`ROADMAP.md`](ROADMAP.md).
 
 ## results
 
-The [quality audit](docs/reports/2026-10-07-quality-audit.md) summarises the state of the site: a solid site with a few rough edges, 7 bugs and 5 improvement suggestions, with an action plan.
+The [quality audit](docs/audits/2026-10-quality-audit.md) summarises the state of the site: a solid site with a few rough edges, 7 bugs and 5 improvement suggestions, with an action plan.
 
 ## approach
 
 1. **Analyse.** Map the site into testable requirements → [`docs/requirements.md`](docs/requirements.md)
-2. **Plan.** Strategy and plan → [`docs/01-test-strategy.md`](docs/01-test-strategy.md), [`docs/02-test-plan.md`](docs/02-test-plan.md)
+2. **Plan.** Strategy and plan → [`docs/01-test-strategy.md`](docs/test-strategy.md), [`docs/02-test-plan.md`](docs/cycles/2026-10-cycle-1/test-plan.md)
 3. **Design.** Test cases and checklists → [`docs/test-cases/`](docs/test-cases/), [`docs/checklists/`](docs/checklists/)
 4. **Execute manually.** Scripted runs plus exploratory sessions → [`docs/exploratory/`](docs/exploratory/)
 5. **Report bugs.** GitHub Issues, using the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md)
 6. **Trace.** Requirements ↔ test cases ↔ bugs → [`docs/traceability-matrix.md`](docs/traceability-matrix.md)
-7. **Summarise.** Test summary report per cycle → [`docs/reports/`](docs/reports/)
+7. **Summarise.** Test summary report per cycle → [`docs/reports/`](docs/cycles/)
 8. **Automate.** Regression subset in Playwright + TypeScript (phases 3–4)
 
 ## test scope
@@ -73,6 +73,15 @@ npm run typecheck                           # TypeScript check without running t
 
 **Lighthouse CI** (`lighthouserc.json`, `lighthouserc.desktop.json`) checks 6 key pages and prints medians against `lighthouse/baseline-*.json`. It only warns, because REQ-015 has no threshold yet. After an intended change, save a new baseline with `node scripts/lighthouse-summary.mjs mobile --save-baseline`. Note: `@lhci/cli` pulls in outdated dependencies (`npm audit` reports issues in dev dependencies only). It runs locally against public pages and isn't part of the site.
 
+### Lighthouse reports: viewing and showing their value
+
+- **View locally:** after `npm run lighthouse`, run `npm run lighthouse:open` (or `lighthouse:desktop:open`). It opens the HTML report of the median run of each page: scores, metrics, the filmstrip of the page loading, and the list of opportunities with estimated savings.
+- **Share one report:** drag its `.json` file from `lighthouse-results/` onto the [Lighthouse Viewer](https://googlechrome.github.io/lighthouse/viewer/). Anyone can then open it in a browser, with nothing installed.
+- **Show the value with before / after.** Save a baseline, ship one fix, run again. The summary prints the difference per page, e.g. after optimising the cover images (SUG-003) the stream page row turns from "perf 66, LCP 11 576 ms" into the new numbers with "+N perf". One such pair of numbers explains the work better than any report.
+- **Over time (phase 5):** in CI every run keeps its HTML reports as build artifacts; for history charts across runs, a Lighthouse CI server can be added later.
+
+The full HTML reports are not committed: each run produces several MB. `lighthouse/baseline-*.json` (medians) and the summary table are what stays in git.
+
 Tests run against the **live site**, so they are read-only and use 2 workers to keep the load low. Every test title starts with its check or test case ID (`S-07`, `TC-NAV-003`). A known open bug is marked with `test.fail()` and the bug ID, so the run stays green until the bug is fixed and then flags the test for cleanup.
 
 ## structure
@@ -82,29 +91,25 @@ ROADMAP.md                 # phases, milestones, status
 playwright.config.ts       # base URL, projects (desktop / mobile)
 lighthouserc*.json         # Lighthouse CI config (mobile / desktop)
 lighthouse/                # Lighthouse baselines (medians)
-test-data/                 # expected streams and speakers: the content oracle
 scripts/                   # helper scripts (Lighthouse summary)
 tests/                     # automated tests (*.spec.ts)
   pages/                   # page objects
-  support/                 # site map crawler
+  support/                 # site map crawler, test data loader
   fixtures.ts              # page objects as fixtures, hydration wait
-docs/
-  requirements.md          # what the site must do (REQ-xxx)
-  01-test-strategy.md      # how we test, and why
-  02-test-plan.md          # what/when/who, entry/exit criteria, risks
-  test-cases/              # TC-<MODULE>-<NNN>.md
-  checklists/              # smoke, cross-browser, a11y, SEO
-  exploratory/             # session charters + findings
-  traceability-matrix.md
-  reports/                 # test summary reports
-  reviews/                 # document reviews (static testing)
-.github/ISSUE_TEMPLATE/    # bug report template
+test-data/                 # expected streams and speakers: the content oracle
+docs/                      # see docs/README.md for the full map
+  requirements.md, test-strategy.md, traceability-matrix.md
+  test-cases/  checklists/  exploratory/  templates/   # living documents
+  defects/                 # bug and suggestion register, across cycles
+  cycles/                  # one frozen folder per test cycle
+  audits/  reviews/        # quality audits, document reviews
+.github/ISSUE_TEMPLATE/    # bug report and improvement suggestion templates
 ```
 
 ## where I left off
 
 - **Phase 1, test documentation:** done (requirements v1.0, strategy, plan, 5 checklists, 40 test cases, traceability, review).
-- **Phase 2, cycle 1 manual execution:** closed with deviations, signed off 2026-10-07. 33/37 executed test cases passed; 7 bugs and 5 suggestions ([summary report](docs/reports/2026-10-07-cycle-1.md)). Manual-only checks carry over to the next cycle.
+- **Phase 2, cycle 1 manual execution:** closed with deviations, signed off 2026-10-07. 33/37 executed test cases passed; 7 bugs and 5 suggestions ([summary report](docs/cycles/2026-10-cycle-1/README.md)). Manual-only checks carry over to the next cycle.
 - **Phase 3, automation basics:** done. Playwright + TypeScript suite.
 - **Phase 4, automation coverage:** done. Page Object Model; checks over every page (links, anchors, files, SEO, UA/EN parity, language switcher, data consistency). 81 Playwright tests (incl. axe accessibility, keyboard, visual regression) plus Lighthouse CI. 41 of 42 test cases automated.
 

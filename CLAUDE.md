@@ -19,6 +19,15 @@ The source of truth is **`ROADMAP.md`**: 0 Init → 1 Test documentation → 2 M
 - When a milestone is finished, tick it in `ROADMAP.md` and update the current-phase line.
 - In phase 3, keep code simple and readable: flat tests first, Page Object Model only in phase 4.
 
+## Documentation structure
+
+See `docs/README.md`. In short:
+- Living documents (requirements, strategy, test cases, checklist masters, matrix, defects, templates) are updated in place.
+- Each test cycle has one folder, `docs/cycles/YYYY-MM-cycle-N/`, holding everything it produces. Its `README.md` is the summary report. A closed cycle is frozen: never add to it later.
+- Defects live in `docs/defects/` (one register across cycles), never inside a cycle folder.
+- Generated output (Playwright reports, traces, Lighthouse HTML, screenshots of runs) stays out of git. Commit only human-written documents, short summaries and the visual baselines.
+- Automated day-to-day runs are not written up in `docs/`.
+
 ## Test code conventions
 
 - Playwright + TypeScript, npm. Config in `playwright.config.ts`, tests in `tests/*.spec.ts`.

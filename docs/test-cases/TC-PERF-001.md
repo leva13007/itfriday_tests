@@ -28,7 +28,7 @@
 
 CLI alternative (same result, scriptable): `npx lighthouse@13.5.0 <url> [--preset=desktop] --output=html --output=json`
 | 3 | Record the 4 category scores and LCP, CLS, TBT for each run in the cycle summary report | Table with one row per page × device |
-| 4 | Save each report as HTML in `docs/reports/cycle-1/lighthouse/` | Reports stored |
+| 4 | Record the medians in the cycle folder (`docs/cycles/<cycle>/lighthouse.md`); keep full HTML reports out of git | Results recorded |
 
 ## Postconditions
 
@@ -42,5 +42,5 @@ Baseline only: there is no pass/fail threshold (decisions log, 2026-10-07). Late
 
 | Date | Browser / device | Result | Bug | Tester |
 |---|---|---|---|---|
-| 2026-10-07 | Lighthouse 13.5.0 CLI, Chrome 154 headless | Pass · baseline recorded for 6 pages × 2 devices ([baseline](../reports/cycle-1/lighthouse/README.md)). Stream pages on mobile: perf 64, LCP 11.5 s, CLS 0.216 → SUG-003 | SUG-003 | automation (supervised) |
+| 2026-10-07 | Lighthouse 13.5.0 CLI, Chrome 154 headless | Pass · baseline recorded for 6 pages × 2 devices ([baseline](../cycles/2026-10-cycle-1/lighthouse.md)). Stream pages on mobile: perf 64, LCP 11.5 s, CLS 0.216 → SUG-003 | SUG-003 | automation (supervised) |
 | 2026-10-07 | Lighthouse CI 0.15.1 (Lighthouse 12.6.1), Chrome headless, median of 3 | Pass · automation baseline saved to `lighthouse/baseline-{mobile,desktop}.json`. Mobile stream pages: perf 61–66, LCP ~11.2–11.6 s, CLS 0.19–0.28 (SUG-003) | SUG-003 | automated |

@@ -16,19 +16,14 @@ Checklists are lighter than test cases: one line per check, no detailed steps. U
 
 The files above are the **masters**. Don't fill them in directly.
 
-1. Copy the master to `runs/YYYY-MM-DD-<checklist>[-<config>].md`, e.g. `runs/2026-10-19-smoke-C1.md`.
+1. Copy the master into the current cycle's `runs/` folder as `YYYY-MM-DD-<checklist>[-<config>].md`, e.g. `docs/cycles/2026-10-cycle-1/runs/2026-10-07-smoke-C1.md`.
 2. Fill in the run header, including the deploy under test (`last-modified` of `/`).
 3. Mark each check ✅ pass · ❌ fail (link the GitHub Issue) · ⏭ skipped (say why) · ⚠️ unverified (links only).
 4. Fill in the result table and commit the run file.
 
 ## Runs
 
-| Date | Checklist | Config | Result |
-|---|---|---|---|
-| 2026-10-07 | [Smoke](runs/2026-10-07-smoke-C1.md) | C1 | 15/15 ✅ GO |
-| 2026-10-07 | [Links](runs/2026-10-07-links.md) | C1 + curl | 28/29 ✅ · 1 ❌ (BUG-005) |
-| 2026-10-07 | [SEO](runs/2026-10-07-seo.md) | curl | required 7/8 ✅ · 1 ❌ (BUG-001) · 11 advisory → SUG-001, SUG-002 |
-| 2026-10-07 | [a11y](runs/2026-10-07-a11y.md) | C1 | 10 ✅ · 11 ❌ (BUG-003, BUG-004) · 10 blocked/skipped (keyboard, VoiceOver) |
+Filled-in runs live in the cycle they belong to (`docs/cycles/<cycle>/runs/`) and are listed in that cycle's report. See the [cycles index](../cycles/README.md).
 
 ## Check IDs
 

@@ -3,12 +3,15 @@
 //
 //   node scripts/lighthouse-summary.mjs mobile                   # compare with the baseline
 //   node scripts/lighthouse-summary.mjs mobile --save-baseline   # make this run the new baseline
+//   node scripts/lighthouse-summary.mjs mobile --open            # open the median HTML reports in the browser
 //
 // REQ-015 sets no threshold, so this only reports. Drops of 10+ points are flagged.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { spawn } from 'node:child_process';
 
 const device = process.argv[2] ?? 'mobile';
 const saveBaseline = process.argv.includes('--save-baseline');
+const openReports = process.argv.includes('--open');
 const manifestPath = `lighthouse-results/${device}/manifest.json`;
 const baselinePath = `lighthouse/baseline-${device}.json`;
 
@@ -20,7 +23,9 @@ if (!existsSync(manifestPath)) {
 // The manifest lists every run; the "representative" run per URL is the median one.
 const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
 const current = {};
+const htmlReports = [];
 for (const run of manifest.filter((r) => r.isRepresentativeRun)) {
+  htmlReports.push(run.htmlPath);
   const report = JSON.parse(readFileSync(run.jsonPath, 'utf8'));
   const path = new URL(run.url).pathname;
   current[path] = {
@@ -47,4 +52,13 @@ for (const [path, r] of Object.entries(current)) {
 if (saveBaseline) {
   writeFileSync(baselinePath, JSON.stringify({ date: new Date().toISOString().slice(0, 10), device, pages: current }, null, 2) + '\n');
   console.log(`\nSaved as the new baseline: ${baselinePath}`);
+}
+
+if (openReports) {
+  // The median ("representative") run of each page is the one summarised above.
+  const opener = process.platform === 'darwin' ? 'open' : process.platform === 'win32' ? 'explorer' : 'xdg-open';
+  for (const file of htmlReports) spawn(opener, [file], { stdio: 'ignore', detached: true }).unref();
+  console.log(`\nOpened ${htmlReports.length} reports.`);
+} else {
+  console.log(`\nFull reports: lighthouse-results/${device}/ (run with --open to view the median ones)`);
 }

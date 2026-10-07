@@ -2,11 +2,11 @@
 
 Session-based exploratory testing: time-boxed sessions (45–90 min) with a clear mission (a *charter*). Exploratory testing finds bugs that scripted test cases miss.
 
-One file per session: `YYYY-MM-DD-<short-topic>.md`. Start from [`_session-template.md`](_session-template.md).
+Session notes live in the cycle they belong to: `docs/cycles/<cycle>/exploratory/YYYY-MM-DD-<short-topic>.md`, started from the [session template](../templates/exploratory-session.md). This page keeps only the pool of charter ideas.
 
 ## Charter ideas
 
-The sessions for cycle 1 are fixed in [test plan §4.2](../02-test-plan.md#42-exploratory-sessions). The list below is the wider pool to pick from in later cycles.
+The sessions for cycle 1 are fixed in [test plan §4.2](../cycles/2026-10-cycle-1/test-plan.md#42-exploratory-sessions). The list below is the wider pool to pick from in later cycles.
 
 - **First session (from requirements analysis):** explore the global UI (mobile menu, search, the 404 page) to discover behaviour the requirements don't describe yet.
 - Explore **language switching** on every page type to discover pages without a counterpart or with a wrong redirect.
@@ -16,8 +16,4 @@ The sessions for cycle 1 are fixed in [test plan §4.2](../02-test-plan.md#42-ex
 
 ## Sessions
 
-| Date | Charter | Duration | Bugs |
-|---|---|---|---|
-| 2026-10-07 | [Global UI](2026-10-07-global-ui.md) (plan §4.2, #1) | ~10 min | BUG-006, BUG-007; SUG-004, SUG-005 |
-| 2026-10-07 | [Language switching](2026-10-07-language-switching.md) (plan §4.2, #2) | ~5 min | none new |
-| — | Real iPhone (plan §4.2, #3) | ⏸ on hold | |
+Listed in each cycle's report. See the [cycles index](../cycles/README.md).

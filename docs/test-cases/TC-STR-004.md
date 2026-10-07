@@ -33,7 +33,7 @@
 
 ## Notes
 
-Comes from the [global UI exploratory session](../exploratory/2026-10-07-global-ui.md), where this cross-check found BUG-006. Speaker and stream data is maintained by hand in several places, so it drifts. The check takes seconds when automated.
+Comes from the [global UI exploratory session](../cycles/2026-10-cycle-1/exploratory/2026-10-07-global-ui.md), where this cross-check found BUG-006. Speaker and stream data is maintained by hand in several places, so it drifts. The check takes seconds when automated.
 
 ## Execution history
 

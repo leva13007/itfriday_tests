@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 /**
  * Tests run against the live production site (there is no staging).
- * Keep the load low: few workers, no tight loops. See docs/01-test-strategy.md §6.
+ * Keep the load low: few workers, no tight loops. See docs/test-strategy.md §6.
  */
 export default defineConfig({
   testDir: './tests',

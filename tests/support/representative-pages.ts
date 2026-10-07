@@ -1,5 +1,5 @@
 /**
- * Representative pages: one per page type (docs/02-test-plan.md §4.1).
+ * Representative pages: one per page type (docs/cycles/2026-10-cycle-1/test-plan.md §4.1).
  * Deep checks (accessibility, layout, screenshots) run on these instead of all 82 pages.
  * "newest" is the newest stream; update it when a new stream is published,
  * or the visual baseline for it will change anyway.

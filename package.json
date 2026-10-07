@@ -14,7 +14,9 @@
     "test:visual": "playwright test --grep @visual",
     "test:visual:update": "playwright test --grep @visual --update-snapshots",
     "lighthouse": "lhci autorun && node scripts/lighthouse-summary.mjs mobile",
-    "lighthouse:desktop": "lhci autorun --config=lighthouserc.desktop.json && node scripts/lighthouse-summary.mjs desktop"
+    "lighthouse:desktop": "lhci autorun --config=lighthouserc.desktop.json && node scripts/lighthouse-summary.mjs desktop",
+    "lighthouse:open": "node scripts/lighthouse-summary.mjs mobile --open",
+    "lighthouse:desktop:open": "node scripts/lighthouse-summary.mjs desktop --open"
   },
   "engines": {
     "node": ">=20"

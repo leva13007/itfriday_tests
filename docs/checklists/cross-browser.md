@@ -1,6 +1,6 @@
 # Cross-browser and Responsive Checklist
 
-Checks that the representative pages render and behave the same on every configuration from the [test plan](../02-test-plan.md#5-environment-and-configurations). Safari (WebKit) and mobile viewports are where layouts usually differ from desktop Chrome.
+Checks that the representative pages render and behave the same on every configuration from the [test plan](../cycles/2026-10-cycle-1/test-plan.md#5-environment-and-configurations). Safari (WebKit) and mobile viewports are where layouts usually differ from desktop Chrome.
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@ Checks that the representative pages render and behave the same on every configu
 | Duration | ~30 min per configuration |
 | Version | 1.0 (2026-10-07) |
 
-**How to run:** copy to `runs/YYYY-MM-DD-cross-browser.md`. Fill one column per configuration. Use ✅ / ❌ (bug link) / ⏭ (why skipped).
+**How to run:** copy to `docs/cycles/<cycle>/runs/YYYY-MM-DD-cross-browser.md`. Fill one column per configuration. Use ✅ / ❌ (bug link) / ⏭ (why skipped).
 
 ## Run header
 
@@ -22,7 +22,7 @@ Checks that the representative pages render and behave the same on every configu
 
 ## A. Page rendering
 
-For each page: loads fully, layout isn't broken (no overlapping, cut-off or overflowing elements), images and icons visible, fonts render, no horizontal scroll. Representative pages come from [test plan §4.1](../02-test-plan.md#41-representative-pages).
+For each page: loads fully, layout isn't broken (no overlapping, cut-off or overflowing elements), images and icons visible, fonts render, no horizontal scroll. Representative pages come from [test plan §4.1](../cycles/2026-10-cycle-1/test-plan.md#41-representative-pages).
 
 | # | Page | C1 | C2 | C3 | C4 |
 |---|---|---|---|---|---|

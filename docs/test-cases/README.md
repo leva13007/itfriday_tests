@@ -1,6 +1,6 @@
 # Test Cases
 
-One file per test case: `TC-<MODULE>-<NNN>.md`. Start from [`_template.md`](_template.md). [`TC-NAV-001.md`](TC-NAV-001.md) shows the expected level of detail.
+One file per test case: `TC-<MODULE>-<NNN>.md`. Start from the [test case template](../templates/test-case.md). [`TC-NAV-001.md`](TC-NAV-001.md) shows the expected level of detail.
 
 ## Module codes
 

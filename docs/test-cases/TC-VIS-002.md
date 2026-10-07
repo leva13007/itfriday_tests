@@ -17,7 +17,7 @@
 
 ## Test data
 
-- Baseline: `docs/reports/cycle-1/visual-baseline/`
+- Baseline: `tests/visual.spec.ts-snapshots/` (automated), or the screenshots in the cycle folder (manual)
 
 ## Steps
 

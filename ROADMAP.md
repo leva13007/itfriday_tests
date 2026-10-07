@@ -29,8 +29,8 @@ Where the project is going and in what order. Each phase ends with a clear **def
 Goal: a complete, reviewed set of test docs, ready to execute.
 
 - [x] **1.1 Requirements.** Verify `requirements.md` against the live site, resolve the open questions, freeze the REQ list *(v1.0 frozen 2026-10-07)*
-- [x] **1.2 Test strategy.** Fill every section of `01-test-strategy.md` *(v1.0, 2026-10-07)*
-- [x] **1.3 Test plan.** Fill `02-test-plan.md`: browsers/devices, entry/exit criteria, order of execution, risks *(cycle 1 plan v1.0, 2026-10-07)*
+- [x] **1.2 Test strategy.** Fill every section of `test-strategy.md` *(v1.0, 2026-10-07)*
+- [x] **1.3 Test plan.** Fill the cycle 1 test plan: browsers/devices, entry/exit criteria, order of execution, risks *(cycle 1 plan v1.0, 2026-10-07)*
 - [x] **1.4 Checklists.** Write `smoke.md`, `cross-browser.md`, `links.md`, `a11y.md`, `seo.md` *(v1.0, 2026-10-07)*
 - [x] **1.5 Test cases.** At least one TC for every High and Medium REQ, with the `Automation` field set *(40 TCs covering all 17 REQs, 2026-10-07)*
 - [x] **1.6 Traceability.** Matrix is complete, no High REQ left with ❌
@@ -42,14 +42,14 @@ Goal: a complete, reviewed set of test docs, ready to execute.
 
 Goal: prove the docs work on the real site and find real bugs.
 
-- [x] Run the smoke checklist *([2026-10-07, C1](docs/checklists/runs/2026-10-07-smoke-C1.md): 15/15, GO)*
-- [x] Execute the TCs as the test plan's exit criteria require, and record results in each TC's execution history *([C1, 2026-10-07](docs/reports/cycle-1/2026-10-07-execution-C1.md): 33 pass, 4 fail, 2 blocked, 1 not run)*
-- [x] Run the links, SEO and a11y checklists *(2026-10-07, [runs](docs/checklists/runs/))*
+- [x] Run the smoke checklist *([2026-10-07, C1](docs/cycles/2026-10-cycle-1/runs/2026-10-07-smoke-C1.md): 15/15, GO)*
+- [x] Execute the TCs as the test plan's exit criteria require, and record results in each TC's execution history *([C1, 2026-10-07](docs/cycles/2026-10-cycle-1/execution.md): 33 pass, 4 fail, 2 blocked, 1 not run)*
+- [x] Run the links, SEO and a11y checklists *(2026-10-07, [runs](docs/cycles/2026-10-cycle-1/runs/))*
 - [ ] ⏸ Run the cross-browser / mobile checklist *(on hold, see below)*
 - [ ] At least 3 exploratory sessions (from the charter ideas) *(2 of 3 done 2026-10-07; session 3 needs a real iPhone, on hold)*
-- [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix *(7 bugs + 5 suggestions written in [docs/reports/cycle-1/bugs](docs/reports/cycle-1/bugs/), to be filed when the repo is on GitHub)*
+- [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix *(7 bugs + 5 suggestions written in [docs/reports/cycle-1/bugs](docs/defects/), to be filed when the repo is on GitHub)*
 - [ ] Retest fixed bugs (the site owner fixes them in the site repo)
-- [x] Write the first test summary report *([cycle 1](docs/reports/2026-10-07-cycle-1.md): closed with deviations, signed off 2026-10-07)*
+- [x] Write the first test summary report *([cycle 1](docs/cycles/2026-10-cycle-1/README.md): closed with deviations, signed off 2026-10-07)*
 
 **Done when:** the cycle 1 report is written and exit criteria are evaluated.
 

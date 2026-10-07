@@ -25,7 +25,7 @@
 |---|---|---|
 | 1 | Open each representative page and wait until images have loaded | Page fully rendered |
 | 2 | Take a full-page screenshot (DevTools → Cmd+Shift+P → "Capture full size screenshot") | Screenshot saved |
-| 3 | Name it `<config>-<lang>-<page>.png` and store it in `docs/reports/cycle-1/visual-baseline/` | One file per page × language × config |
+| 3 | Name it `<config>-<lang>-<page>.png` and store it in the cycle folder (`docs/cycles/<cycle>/evidence/`). Automated: `npm run test:visual:update` writes the baseline to `tests/visual.spec.ts-snapshots/` | One file per page × language × config |
 | 4 | Review every screenshot | No visible layout defects. Any defect found is reported as a bug before the screenshot is accepted as baseline |
 
 ## Postconditions

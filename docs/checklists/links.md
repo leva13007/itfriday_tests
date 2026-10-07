@@ -9,7 +9,7 @@ Checks that internal links never lead to a 404, and that external links resolve.
 | Duration | ~45 min |
 | Version | 1.0 (2026-10-07) |
 
-**How to run:** copy to `runs/YYYY-MM-DD-links.md`. Use ✅ / ❌ (bug link) / ⚠️ unverified (third-party blocked the check, see the rules below).
+**How to run:** copy to `docs/cycles/<cycle>/runs/YYYY-MM-DD-links.md`. Use ✅ / ❌ (bug link) / ⚠️ unverified (third-party blocked the check, see the rules below).
 
 ## Run header
 
@@ -56,7 +56,7 @@ done < /tmp/paths.txt
 
 ## C. Internal links in content
 
-On every representative page ([test plan §4.1](../02-test-plan.md#41-representative-pages)), UA and EN: click or inspect every link inside the page content.
+On every representative page ([test plan §4.1](../cycles/2026-10-cycle-1/test-plan.md#41-representative-pages)), UA and EN: click or inspect every link inside the page content.
 
 | # | Check | Expected | REQ | Result | Bug / note |
 |---|---|---|---|---|---|

@@ -13,7 +13,7 @@ Checks the metadata that search engines and link previews (Telegram, LinkedIn, D
 - **Required:** backed by a requirement (REQ-012, REQ-013). A failure is a **bug**.
 - **Advisory:** common good practice with no requirement behind it. A failure is reported as an **improvement suggestion** (GitHub Issue with the `enhancement` label), not a bug. If the site owner accepts it, it becomes a new requirement in the next version.
 
-**How to run:** copy to `runs/YYYY-MM-DD-seo.md`. Use ✅ / ❌ (bug or suggestion link) / ⏭.
+**How to run:** copy to `docs/cycles/<cycle>/runs/YYYY-MM-DD-seo.md`. Use ✅ / ❌ (bug or suggestion link) / ⏭.
 
 ## Run header
 

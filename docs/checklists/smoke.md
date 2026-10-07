@@ -11,7 +11,7 @@ A 10-minute sanity check that the site is up and its main paths work. A failure 
 
 **Automated:** all 15 checks run as [`tests/smoke.spec.ts`](../../tests/smoke.spec.ts) (`npm run test:smoke`). The manual procedure below stays valid, for example on a real device.
 
-**How to run manually:** copy this file to `runs/YYYY-MM-DD-smoke-<config>.md`, fill in the header, then mark each line ✅ pass, ❌ fail (link the bug) or ⏭ skipped (say why).
+**How to run manually:** copy this file to `docs/cycles/<cycle>/runs/YYYY-MM-DD-smoke-<config>.md`, fill in the header, then mark each line ✅ pass, ❌ fail (link the bug) or ⏭ skipped (say why).
 
 ## Run header
 

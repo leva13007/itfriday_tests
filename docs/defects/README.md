@@ -15,6 +15,7 @@ Statuses follow the defect lifecycle in the [test strategy](../test-strategy.md#
 | [BUG-005](BUG-005.md) | Stream #007: `chrome://webrtc-internals` link can't be opened | Trivial | Low | New | cycle 1 | — |
 | [BUG-006](BUG-006.md) | Speaker profile Олег Левченко: stream #012 is missing | Minor | Medium | New | cycle 1 | — |
 | [BUG-007](BUG-007.md) | Schedule page says the next stream is unannounced while #022 is announced | Minor | **High** | New | cycle 1 | — |
+| [BUG-008](BUG-008.md) | Repo files `README.md` and `CLAUDE.md` are published as pages | Minor | Medium | New | ad hoc (2026-10-08) | — |
 
 ## Improvement suggestions
 

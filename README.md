@@ -6,7 +6,7 @@ stack: Markdown, GitHub Issues, Playwright, TypeScript
 
 # itfriday_testing
 
-QA project for [itfriday.community](https://itfriday.community), the public website of the IT Friday community. It covers the whole testing cycle, from planning and test design to manual execution, bug reporting and (later) test automation with Playwright.
+QA project for [itfriday.community](https://itfriday.community), the public website of the IT Friday community. It covers the whole testing cycle, from planning and test design to manual execution, bug reporting and test automation with Playwright.
 
 Every step is documented: what is tested, how, and why. The repo can be read as a complete walkthrough of testing a real website.
 
@@ -34,12 +34,12 @@ The [quality audit](docs/audits/2026-10-quality-audit.md) summarises the state o
 ## approach
 
 1. **Analyse.** Map the site into testable requirements → [`docs/requirements.md`](docs/requirements.md)
-2. **Plan.** Strategy and plan → [`docs/01-test-strategy.md`](docs/test-strategy.md), [`docs/02-test-plan.md`](docs/cycles/2026-10-cycle-1/test-plan.md)
+2. **Plan.** Strategy and plan → [`docs/test-strategy.md`](docs/test-strategy.md), [cycle 1 test plan](docs/cycles/2026-10-cycle-1/test-plan.md)
 3. **Design.** Test cases and checklists → [`docs/test-cases/`](docs/test-cases/), [`docs/checklists/`](docs/checklists/)
-4. **Execute manually.** Scripted runs plus exploratory sessions → [`docs/exploratory/`](docs/exploratory/)
-5. **Report bugs.** GitHub Issues, using the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md)
+4. **Execute manually.** Scripted runs plus exploratory sessions → [charter ideas](docs/exploratory/README.md); runs and sessions are kept in each [cycle folder](docs/cycles/)
+5. **Report bugs.** [Defect register](docs/defects/README.md) and GitHub Issues, using the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md)
 6. **Trace.** Requirements ↔ test cases ↔ bugs → [`docs/traceability-matrix.md`](docs/traceability-matrix.md)
-7. **Summarise.** Test summary report per cycle → [`docs/reports/`](docs/cycles/)
+7. **Summarise.** Test summary report per cycle → [`docs/cycles/`](docs/cycles/README.md)
 8. **Automate.** Regression subset in Playwright + TypeScript (phases 3–4)
 
 ## test scope
@@ -128,11 +128,13 @@ docs/                      # see docs/README.md for the full map
 - **Phase 1, test documentation:** done (requirements v1.0, strategy, plan, 5 checklists, 40 test cases, traceability, review).
 - **Phase 2, cycle 1 manual execution:** closed with deviations, signed off 2026-10-07. 33/37 executed test cases passed; 7 bugs and 5 suggestions ([summary report](docs/cycles/2026-10-cycle-1/README.md)). Manual-only checks carry over to the next cycle.
 - **Phase 3, automation basics:** done. Playwright + TypeScript suite.
-- **Phase 4, automation coverage:** done. Page Object Model; checks over every page (links, anchors, files, SEO, UA/EN parity, language switcher, data consistency). 81 Playwright tests (incl. axe accessibility, keyboard, visual regression) plus Lighthouse CI. 41 of 42 test cases automated.
+- **Phase 4, automation coverage:** done. Page Object Model; checks over every page (links, anchors, files, SEO, UA/EN parity, language switcher, data consistency). Playwright tests (incl. axe accessibility, keyboard, visual regression) plus Lighthouse CI.
+- **Since phase 4:** expected-failure tests for BUG-007 (TC-STR-007, schedule vs. the next stream in the oracle), BUG-004 (TC-A11Y-005, contrast without exclusions) and BUG-008 (TC-ERR-002, repo files published as pages); [onboarding guide](docs/onboarding.md). Now **97 Playwright tests in 10 files** (69 in desktop Chrome, the rest `@mobile` in the two mobile projects) and **49 test cases, 48 automated** (TC-LNK-005 is manual-only: LinkedIn blocks automated requests).
+- **Phase 5, CI and reporting:** not started; the setup is still to decide. The content oracle (`test-data/`) is still a draft waiting for the site owner's review.
 
 ## next step
 
-Site owner: review `test-data/` (the content oracle) and mark it reviewed. Then phase 5: CI and reporting.
+File the 8 bugs and 5 suggestions from [`docs/defects/`](docs/defects/README.md) as GitHub Issues with the templates, and link each issue in the register, its TC and the traceability matrix.
 
 ## resources
 

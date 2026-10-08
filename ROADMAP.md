@@ -47,7 +47,7 @@ Goal: prove the docs work on the real site and find real bugs.
 - [x] Run the links, SEO and a11y checklists *(2026-10-07, [runs](docs/cycles/2026-10-cycle-1/runs/))*
 - [ ] ⏸ Run the cross-browser / mobile checklist *(on hold, see below)*
 - [ ] At least 3 exploratory sessions (from the charter ideas) *(2 of 3 done 2026-10-07; session 3 needs a real iPhone, on hold)*
-- [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix *(7 bugs + 5 suggestions written in [docs/reports/cycle-1/bugs](docs/defects/), to be filed when the repo is on GitHub)*
+- [ ] File every bug as a GitHub Issue using the template; link it in the TC and the matrix *(7 bugs + 5 suggestions from cycle 1, plus BUG-008 found ad hoc, written in [`docs/defects/`](docs/defects/README.md); the repo is public on GitHub with Issues enabled, so nothing blocks filing them)*
 - [ ] Retest fixed bugs (the site owner fixes them in the site repo)
 - [x] Write the first test summary report *([cycle 1](docs/cycles/2026-10-cycle-1/README.md): closed with deviations, signed off 2026-10-07)*
 
@@ -86,13 +86,13 @@ Goal: first green Playwright run.
 - [x] Broken link checker (internal + external, crawled from the site map) *([`tests/site-map.spec.ts`](tests/site-map.spec.ts): every page, anchor, image and file; invites in `content.spec.ts`. LinkedIn stays manual: TC-LNK-005)*
 - [x] Visual regression with `toHaveScreenshot` (desktop + mobile, key pages) *([`tests/visual.spec.ts`](tests/visual.spec.ts): 9 pages × desktop Chrome + iPhone/WebKit; unblocks TC-VIS-001. Baselines are macOS-specific, CI needs its own)*
 - [x] SEO checks (title, description, `lang`, OG tags) *(TC-SEO-001…004 on every page)*
-- [x] Accessibility with `@axe-core/playwright` *([`tests/a11y.spec.ts`](tests/a11y.spec.ts): axe on representative pages in both themes, skip link, keyboard (unblocks TC-A11Y-003), image alternatives)*
+- [x] Accessibility with `@axe-core/playwright` *([`tests/a11y.spec.ts`](tests/a11y.spec.ts): axe on representative pages in both themes, skip link, keyboard (unblocks TC-A11Y-003), image alternatives; TC-A11Y-005 checks the contrast excluded for BUG-004, as an expected failure)*
 - [x] Performance in automation: Lighthouse CI (`@lhci/cli`) over the key pages, median of 3 runs, compared against a saved baseline (`lighthouse/baseline-*.json`). Budgets once REQ-015 gets a threshold. In phase 5 the same job runs in GitHub Actions
 - [x] Data-driven tests over all stream/speaker pages *(site map crawl; TC-I18N-005, TC-I18N-007, TC-STR-004 from the exploratory follow-ups)*
 
-- [ ] Content oracle: expected streams and speakers in `test-data/`, checked by TC-STR-005, TC-STR-006, TC-SPK-003 *(draft generated from the site 2026-10-07, waiting for the site owner's review)*
+- [ ] Content oracle: expected streams and speakers in `test-data/`, checked by TC-STR-005, TC-STR-006, TC-SPK-003, TC-STR-007 *(draft generated from the site 2026-10-07, waiting for the site owner's review)*
 
-**Done when:** every `candidate` TC is `automated` or has a written reason why not. *(Met 2026-10-07: 41 of 42 automated; TC-LNK-005 stays manual-only because LinkedIn blocks automated requests.)*
+**Done when:** every `candidate` TC is `automated` or has a written reason why not. *(Met 2026-10-07: 41 of 42 automated; TC-LNK-005 stays manual-only because LinkedIn blocks automated requests. Since then 48 TCs, 47 automated.)*
 
 ## Phase 5: CI and reporting 💭
 
@@ -106,7 +106,8 @@ Not decided yet. Tests run manually for now. Options to evaluate:
 ## Phase 6: Polish and publish ⏳
 
 - [ ] README results overview: what was tested, coverage, bugs found, links to the reports
-- [ ] Clean up the repo history and docs, then publish on GitHub
+- [x] Publish on GitHub *(public: [leva13007/itfriday_tests](https://github.com/leva13007/itfriday_tests))*
+- [ ] Clean up the docs: numbers, links and the onboarding guide match the repo
 - [ ] Optional: an IT Friday stream or video about the project
 
 ---

@@ -176,6 +176,17 @@ test.describe('Errors and external links', () => {
     }
   });
 
+  test('TC-ERR-002 Repo files are not published as pages', async ({ request }) => {
+    test.info().annotations.push({ type: 'issue', description: 'BUG-008' });
+    test.fail();
+
+    // Not linked anywhere, so the crawled site map can't find them: checked by URL.
+    for (const url of ['/README', '/README.html', '/CLAUDE', '/CLAUDE.html']) {
+      const response = await request.get(url);
+      expect.soft(response.status(), url).toBe(404);
+    }
+  });
+
   test('TC-LNK-002 Home page hero buttons point to the community channels', async ({ page }) => {
     await page.goto('/');
     const hero = page.locator('.VPHero');

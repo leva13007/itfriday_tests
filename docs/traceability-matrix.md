@@ -32,6 +32,7 @@ Found by exploratory testing with the consistency oracle (see the strategy §7).
 |---|---|---|
 | [BUG-006](defects/BUG-006.md) | Exploratory: global UI; now covered by [TC-STR-004](test-cases/TC-STR-004.md) | Speaker profiles list every stream the speaker took part in |
 | [BUG-007](defects/BUG-007.md) | Exploratory: global UI; now covered by [TC-STR-007](test-cases/TC-STR-007.md) | REQ-022: the schedule page shows the next announced stream |
+| [BUG-008](defects/BUG-008.md) | Ad hoc, while working on the site (2026-10-08); covered by [TC-ERR-002](test-cases/TC-ERR-002.md) | REQ-025: only site content is published, repo files (README, CLAUDE) are not served |
 
 Coverage after cycle 1, test case execution on C1 (2026-10-07):
 ✅ passed: all linked TCs passed · ❌ failed: at least one linked TC failed · 🟡 partly executed: some TCs blocked or not run · ⏳ not executed

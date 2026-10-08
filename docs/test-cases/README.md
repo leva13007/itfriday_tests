@@ -31,7 +31,7 @@ One file per test case: `TC-<MODULE>-<NNN>.md`. Start from the [test case templa
 
 ## Index
 
-48 test cases · priority: 15 High, 27 Medium, 6 Low · automation: 47 automated (1 partly), 1 manual-only (TC-LNK-005: LinkedIn blocks automated requests)
+49 test cases · priority: 15 High, 28 Medium, 6 Low · automation: 48 automated (1 partly), 1 manual-only (TC-LNK-005: LinkedIn blocks automated requests)
 
 Smoke is covered by the [smoke checklist](../checklists/smoke.md), not by test cases.
 
@@ -85,3 +85,4 @@ Smoke is covered by the [smoke checklist](../checklists/smoke.md), not by test c
 | [TC-PERF-001](TC-PERF-001.md) | Lighthouse baseline is recorded for key pages | REQ-015 | Low | automated |
 | [TC-PERF-002](TC-PERF-002.md) | Page and image weight is recorded for every page | REQ-015 | Low | automated |
 | [TC-ERR-001](TC-ERR-001.md) | Unknown URL shows a 404 page with a way back home | REQ-017 | Low | automated |
+| [TC-ERR-002](TC-ERR-002.md) | Repo files are not published as pages | — (proposed REQ-025) | Medium | automated |
